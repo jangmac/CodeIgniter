@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
+
+</script>
 	<meta charset="utf-8">
 	<title>Welcome to CodeIgniter</title>
 
@@ -84,6 +86,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
+
+<?php
+$email="dreamload@";
+$check_email=preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $email);
+
+if($check_email==true)
+{
+   echo "올바른 이메일 형식입니다.";
+}
+else
+{
+   echo "잘못된 이메일 형식입니다.";
+}
+?>
 
 </body>
 </html>

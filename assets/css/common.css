@@ -1,0 +1,52 @@
+body{
+    font-size: 18px;
+    color: #000000;
+    background: #f2f2f2;
+
+}
+a {text-decoration: none; color: black;}
+a:link {text-decoration: none; color: white;}
+a:visited {text-decoration: none; color: green;}
+a:active {text-decoration: none; color: grey;}
+a:hover {text-decoration: underline; color: red;}
+
+#root{
+    margin: auto;
+    width:1280px;
+    height:900px;
+    border: groove;
+}
+
+#divpage {
+    border: groove;
+    height:10%;
+}
+
+#header_logo {
+    font-size: 40px;
+}
+#header_user{
+    text-align: right;
+}
+
+#rd_menu {
+    border: groove;
+    padding-top: 20px;
+    width: 20%;
+    height: 80%;
+    float: left;
+}
+
+#rd_content{
+    border: groove;
+    width: 80%;
+    height: 80%;
+    float: left;
+}
+
+#rd_foot{
+    border :groove;
+    width: 100%;
+    height:10%;
+    float: left;
+}

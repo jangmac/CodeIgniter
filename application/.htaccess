@@ -1,6 +1,26 @@
-<IfModule authz_core_module>
-    Require all denied
+#
+# CodeIgniter rewrite rules
+#
+
+
+#AuthName "NZINE Login"
+#AuthType Basic
+#AuthUserFile /var/www/.htpasswd
+#<Limit GET POST>
+#  require valid-user
+#</Limit>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond $1 !^(index\.php|images|include|uploads|robots\.txt|assets|external|userimg|files|favicon\.ico)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ /index.php/$1 [L]
+
+  ### never deliver .git folders, .gitIgnore
+  RewriteRule ^(.*/)?\.git+ - [R=404,L]
 </IfModule>
-<IfModule !authz_core_module>
-    Deny from all
-</IfModule>
+
+# 2nd line of defense (if no mod_rewrite)
+RedirectMatch 404 ^(.*/)?\.git+
