@@ -1,35 +1,31 @@
 <body>
-<div id="root">
-    <div id="divpage">
-        <div id="header_logo">
-            <a href="#">Software Manage</a>
-        </div>
-        <div id="header_user">
+
+<!-- Sidebar -->
+<section id="sidebar">
+    <div class="inner">
+        <nav>
             <ul>
-                <a href="index.php/user/member_login">로그인/로그아웃</a>
-                <a href="#">마이페이지</a>
+                <li><a href="#intro">Welcome</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Intro -->
+    <section id="intro" class="wrapper style1 fullscreen fade-up">
+        <div class="inner">
+            <h1>청주교차로 사내 전산관리프로그램</h1>
+            <p>사내 전산관리에 효율적으로 할수있도록 제작함. <a href="http://givepro.blog.me">장근식</a><br />
+            <ul class="actions">
+                <li><a href="/user/member_login" class="button scrolly">관리자 로그인</a></li>
             </ul>
         </div>
-    </div>
+    </section>
 
-    <div id="rd_menu">
-        <ul>
-            <li><a>soft_진행</a></li>
-            <li><a>soft_보관</a></li>
-            <li><a>soft_사용불가</a></li>
-            <li><a>kaspersky</a></li>
-            <li><a>전산사용대장</a></li>
-            <li><a>프린터</a></li>
-            <li><a>소프트웨어</a></li>
-        </ul>
 
-    </div>
-    <div id="rd_content">
-        공지사항
-        최근사용내역
-    </div>
-    <div id="rd_foot">
-        마무리
-    </div>
-</div>
-</body>
+
+    
+
