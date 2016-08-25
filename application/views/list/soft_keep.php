@@ -6,7 +6,7 @@
         <nav>
             <ul>
                 <li><a href="/main/lists">홈</a></li>
-                <li><a href="#intro">soft_진행</a></li>
+                <li><a href="/main/progress_list">soft_진행</a></li>
                 <li><a href="/main/keep_list">soft_보관</a></li>
                 <li><a href="/main/stop_list">soft_사용불가</a></li>
                 <li><a href="/main/kaspersky">카스퍼스키관리대장</a></li>
@@ -29,7 +29,7 @@
     <!-- Intro -->
     <section id="intro" class="wrapper style1 fullscreen fade-up">
         <div class="inner">
-            <h2>소프트웨어관리대장(진행)</h2>
+            <h2>소프트웨어관리대장(보관)</h2>
             <table cellspacing="0" cellpadding="0" class="table table-striped">
                 <thead>
                 <tr>
@@ -44,13 +44,12 @@
                     <th scope="col">패키지</th>
                     <th scope="col">라이선스</th>
                     <th scope="col">보관장소</th>
-                    <th scope="col">사용수</th>
                     <th scope="col">비고</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
-                foreach ($progress_list as $lt) {
+                foreach ($keep_list as $lt) {
                     ?>
                     <tr>
                         <th scope="row">
@@ -85,9 +84,6 @@
                         </td>
                         <td>
                             <?php echo $lt -> keep_place;?>
-                        </td>
-                        <td>
-                            <?php echo $lt -> use_num;?>
                         </td>
                         <td>
                             <?php echo $lt -> remarks;?>

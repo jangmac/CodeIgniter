@@ -6,7 +6,7 @@
         <nav>
             <ul>
                 <li><a href="/main/lists">홈</a></li>
-                <li><a href="#intro">soft_진행</a></li>
+                <li><a href="/main/progress_list">soft_진행</a></li>
                 <li><a href="/main/keep_list">soft_보관</a></li>
                 <li><a href="/main/stop_list">soft_사용불가</a></li>
                 <li><a href="/main/kaspersky">카스퍼스키관리대장</a></li>
@@ -29,28 +29,20 @@
     <!-- Intro -->
     <section id="intro" class="wrapper style1 fullscreen fade-up">
         <div class="inner">
-            <h2>소프트웨어관리대장(진행)</h2>
+            <h2>Asia Font 업그레이드</h2>
             <table cellspacing="0" cellpadding="0" class="table table-striped">
                 <thead>
                 <tr>
-                    <th scope="col">구분</th>
-                    <th scope="col">제품명</th>
-                    <th scope="col">버전</th>
-                    <th scope="col">제조사</th>
-                    <th scope="col">제품용도</th>
-                    <th scope="col">사용대상</th>
-                    <th scope="col">호환성</th>
-                    <th scope="col">시리얼번호</th>
-                    <th scope="col">패키지</th>
-                    <th scope="col">라이선스</th>
-                    <th scope="col">보관장소</th>
-                    <th scope="col">사용수</th>
+                    <th scope="col" width="5%">구분</th>
+                    <th scope="col">소프트웨어</th>
+                    <th scope="col">아이디</th>
+                    <th scope="col">패스워드</th>
                     <th scope="col">비고</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
-                foreach ($progress_list as $lt) {
+                foreach ($soft_account as $lt) {
                     ?>
                     <tr>
                         <th scope="row">
@@ -60,34 +52,10 @@
                             <?php echo $lt -> product_name;?>
                         </td>
                         <td>
-                            <?php echo $lt -> version;?>
+                            <?php echo $lt -> id;?>
                         </td>
                         <td>
-                            <?php echo $lt -> company;?>
-                        </td>
-                        <td>
-                            <?php echo $lt -> purpose;?>
-                        </td>
-                        <td>
-                            <?php echo $lt -> target;?>
-                        </td>
-                        <td>
-                            <?php echo $lt -> compatibility;?>
-                        </td>
-                        <td>
-                            <?php echo $lt -> sirial_num;?>
-                        </td>
-                        <td>
-                            <?php echo $lt -> package;?>
-                        </td>
-                        <td>
-                            <?php echo $lt -> license_numb;?>
-                        </td>
-                        <td>
-                            <?php echo $lt -> keep_place;?>
-                        </td>
-                        <td>
-                            <?php echo $lt -> use_num;?>
+                            <?php echo $lt -> pw;?>
                         </td>
                         <td>
                             <?php echo $lt -> remarks;?>
@@ -97,13 +65,6 @@
                 }
                 ?>
                 </tbody>
-                <tfoot>
-                <tr>
-                    <th colspan="4"><a href="/main/write/" class="btn btn-success">
-                            쓰기
-                        </a></th>
-                </tr>
-                </tfoot>
             </table>
         </div>
     </section>

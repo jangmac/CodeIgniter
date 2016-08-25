@@ -29,11 +29,35 @@
     <!-- Intro -->
     <section id="intro" class="wrapper style1 fullscreen fade-up">
         <div class="inner">
-            <h1>청주교차로 사내 전산관리프로그램</h1>
-            <p>사내 전산관리에 효율적으로 할수있도록 제작함. <a href="http://givepro.blog.me">장근식</a><br />
-            <ul class="actions">
-                <li><a href="/user/member_login" class="button scrolly">관리자 로그인</a></li>
-            </ul>
+            <h2>WINDOW XP 다운그레이드</h2>
+            <table cellspacing="0" cellpadding="0" class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col" width="10%">구분</th>
+                    <th scope="col">Window7 32Bit Professional</th>
+                    <th scope="col">Window XP Professional</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                foreach ($xp_down as $lt) {
+                    ?>
+                    <tr>
+                        <th scope="row">
+                            <?php echo $lt -> idx;?>
+                        </th>
+                        <td>
+                            <?php echo $lt -> window7;?>
+                        </td>
+                        <td>
+                            <?php echo "V9BG9-Q496K-4BXM7-RJCXG-QYGJT 8Copy"?>
+                        </td>
+                    </tr>
+                    <?php
+                }
+                ?>
+                </tbody>
+            </table>
         </div>
     </section>
 

@@ -44,36 +44,68 @@ class Main extends CI_Controller
 
 	public function progress_list()
 	{
-		$this -> load -> library('pagination');
-
-		// 페이지 네이션 설정
-		//$config['base_url'] = 'http://www.soft.com';
-		// 페이징 주소
-		$config['total_rows'] = $this -> soft_model -> get_progress_list($this -> uri -> segment(3), 'count');
-		// 게시물 전체 개수
-		$config['per_page'] = 5;
-		// 한 페이지에 표시할 게시물 수
-		$config['uri_segment'] = 5;
-		// 페이지 번호가 위치한 세그먼트
-
-		// 페이지네이션 초기화
-		$this -> pagination -> initialize($config);
-		// 페이지 링크를 생성하여 view에서 사용하 변수에 할당
-		$data['pagination'] = $this -> pagination -> create_links();
-
-		// 게시물 목록을 불러오기 위한 offset, limit 값 가져오기
-		$page = $this -> uri -> segment(5, 1);
-
-		if ($page > 1) {
-			$start = (($page / $config['per_page'])) * $config['per_page'];
-		} else {
-			$start = ($page - 1) * $config['per_page'];
-		}
-
-		$limit = $config['per_page'];
-
-		$data['progress_list'] = $this -> soft_model -> get_progress_list($this -> uri -> segment(3), '', $start, $limit);
+		$data['progress_list'] = $this -> soft_model -> get_progress_list();
 		$this->load->view('list/soft_progress', $data);
+	}
+
+	public function keep_list()
+	{
+		$data['keep_list'] = $this -> soft_model -> get_keep_list();
+		$this->load->view('list/soft_keep', $data);
+	}
+
+	public function stop_list()
+	{
+		$data['stop_list'] = $this -> soft_model -> get_stop_list();
+		$this->load->view('list/soft_stop', $data);
+	}
+
+	public function kaspersky()
+	{
+		$data['kaspersky'] = $this -> soft_model -> get_kaspersky_list();
+		$this->load->view('list/kaspersky', $data);
+	}
+
+	public function printer()
+	{
+		$data['printer'] = $this -> soft_model -> get_printer_list();
+		$this->load->view('list/printer', $data);
+	}
+	
+	public function software()
+	{
+		$data['software'] = $this -> soft_model -> get_software_list();
+		$this->load->view('list/software', $data);
+	}
+
+	public function xp_down()
+	{
+		$data['xp_down'] = $this -> soft_model -> get_xpdown_list();
+		$this->load->view('list/xp_down', $data);
+	}
+
+	public function ms_up()
+	{
+		$data['ms_up'] = $this -> soft_model -> get_ms_up_list();
+		$this->load->view('list/ms_up', $data);
+	}
+
+	public function quark_up()
+	{
+		$data['quark_up'] = $this -> soft_model -> get_quark_up_list();
+		$this->load->view('list/quark_up', $data);
+	}
+
+	public function asiafont_up()
+	{
+		$data['asiafont_up'] = $this -> soft_model -> get_asiafont_up_list();
+		$this->load->view('list/asiafont_up', $data);
+	}
+
+	public function soft_account()
+	{
+		$data['soft_account'] = $this -> soft_model -> get_soft_account_list();
+		$this->load->view('list/soft_account', $data);
 	}
 
 	/*
