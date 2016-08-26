@@ -30,6 +30,10 @@
     <section id="intro" class="wrapper style1 fullscreen fade-up">
         <div class="inner">
             <h2>소프트웨어관리대장(진행)</h2>
+            <a href="#" class="button scrolly">목록 </a>
+            <a href="#" class="button scrolly"> 수정 </a>
+            <a href="#" class="button scrolly"> 삭제 </a>
+            <a href="/main/write/" class="button scrolly">쓰기</a>
             <table cellspacing="0" cellpadding="0" class="table table-striped">
                 <thead>
                 <tr>
@@ -39,7 +43,6 @@
                     <th scope="col">제조사</th>
                     <th scope="col">제품용도</th>
                     <th scope="col">사용대상</th>
-                    <th scope="col">호환성</th>
                     <th scope="col">시리얼번호</th>
                     <th scope="col">패키지</th>
                     <th scope="col">라이선스</th>
@@ -57,7 +60,7 @@
                             <?php echo $lt -> idx;?>
                         </th>
                         <td>
-                            <?php echo $lt -> product_name;?>
+                            <a href="/main/modify/"><?php echo $lt -> product_name;?></a>
                         </td>
                         <td>
                             <?php echo $lt -> version;?>
@@ -70,9 +73,6 @@
                         </td>
                         <td>
                             <?php echo $lt -> target;?>
-                        </td>
-                        <td>
-                            <?php echo $lt -> compatibility;?>
                         </td>
                         <td>
                             <?php echo $lt -> sirial_num;?>
@@ -97,13 +97,6 @@
                 }
                 ?>
                 </tbody>
-                <tfoot>
-                <tr>
-                    <th colspan="4"><a href="/main/write/" class="btn btn-success">
-                            쓰기
-                        </a></th>
-                </tr>
-                </tfoot>
             </table>
         </div>
     </section>

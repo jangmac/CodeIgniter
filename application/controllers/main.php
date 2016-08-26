@@ -129,13 +129,14 @@ class Main extends CI_Controller
 		{
 			// 글쓰기 POST 전송 시
 
-			$content = $this->input->post('content', TRUE);
-			$created_on = $this->input->post('created_on', TRUE);
-			$due_date = $this->input->post('due_date', TRUE);
+			$product_name = $this->input->post('product_name', TRUE);
+			$version = $this->input->post('version', TRUE);
+			$company = $this->input->post('company', TRUE);
+			$purpose = $this->input->post('purpose', TRUE);
 
-			$this->soft_model->insert_soft($content, $created_on, $due_date);
+			$this->soft_model->insert_soft($product_name, $version, $company,$purpose);
 
-			redirect(base_url().'main/lists/');
+			redirect(base_url().'main/progress_list/');
 
 			exit;
 		}
@@ -143,6 +144,30 @@ class Main extends CI_Controller
 		{
 			// 쓰기 폼 view 호출
 			$this->load->view('list/soft_write');
+		}
+	}
+
+	public function modify()
+	{
+		if ( $_POST )
+		{
+			// 글쓰기 POST 전송 시
+
+			$product_name = $this->input->post('product_name', TRUE);
+			$version = $this->input->post('version', TRUE);
+			$company = $this->input->post('company', TRUE);
+			$purpose = $this->input->post('purpose', TRUE);
+
+			$this->soft_model->insert_soft($product_name, $version, $company,$purpose);
+
+			redirect(base_url().'main/progress_list/');
+
+			exit;
+		}
+		else
+		{
+			// 쓰기 폼 view 호출
+			$this->load->view('list/soft_progress_modify');
 		}
 	}
 

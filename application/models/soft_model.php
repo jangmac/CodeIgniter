@@ -154,8 +154,8 @@ class Soft_model extends CI_Model
      *
      */
 
-    function insert_soft($content, $created_on, $due_date) {
-        $sql = "INSERT INTO items3 (content, created_on, due_date) VALUES ('" . $content . "', '" . $created_on . "', '" . $due_date . "')";
+    function insert_soft($product_name, $version, $company, $purpose) {
+        $sql = "INSERT INTO soft_progress (product_name, version, company, purpose) VALUES ('" . $product_name . "', '" . $version . "', '" . $company . "', '" . $purpose . "')";
 
         $query = $this -> db -> query($sql);
     }

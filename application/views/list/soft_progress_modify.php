@@ -33,7 +33,7 @@
             <form class="form-horizontal" method="post" action="" id="write_action">
                 <table>
                     <tr>제품명</tr>
-                    <tr><input type="text" class="input-xlarge" id="product_name" name="product_name"></tr>
+                    <tr><input type="text" class="input-xlarge" id="product_name" name="<?$product_name ?>" value="<?php echo $views->product_name?>"</tr>
                     <tr>버전</tr>
                     <tr><input type="text" class="input-xlarge" id="version" name="version"></tr>
                     <tr>제조사</tr>
