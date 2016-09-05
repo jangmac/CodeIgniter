@@ -11,17 +11,20 @@ class User_model extends CI_Model
     }
 
     /**
-     * User 목록 가져오기
+     * 아이디 비밀번호 체크
+     *
+     * @param array $auth 폼 전송받은 아이디, 비밀번호
+     * @return array
      */
+    function login($auth) {
+        $sql = "SELECT username, email FROM users WHERE username = '" . $auth['username'] . "' AND password = '" . $auth['password'] . "' ";
 
-    function  get_list()
-    {
-        $sql = "SELECT * FROM user";
+        $query = $this -> db -> query($sql);
 
-        $query = $this->db->query($sql);
-
-        $result = $query->result();
-
-        return $result;
+        if ($query -> num_rows() > 0) {
+            return $query -> row();
+        } else {
+            return FALSE;
+        }
     }
 }

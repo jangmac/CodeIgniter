@@ -1,13 +1,13 @@
 <script>
     function chk_frm() {
-        if (!document.join.user_id.value) {
+        if (!document.join.username.value) {
             window.alert('아이디를 입력해 주세요');
-            document.join.user_id.focus();
+            document.join.username.focus();
             return false;
         }
-        if (!document.join.user_pw.value) {
+        if (!document.join.password.value) {
             window.alert('비밀번호를 입력해 주세요');
-            document.join.pw.focus();
+            document.join.password.focus();
             return false;
         }
         return true;
@@ -16,44 +16,54 @@
 
 <body>
 
-<!-- Sidebar -->
-<section id="sidebar">
-    <div class="inner">
-        <nav>
-            <ul>
-                <li><a href="#intro">Welcome</a></li>
-            </ul>
-        </nav>
-    </div>
-</section>
-
 <!-- Wrapper -->
-
-<div id="wrapper">
-
-    <!-- Intro -->
-    <section id="intro" class="wrapper style1 fullscreen fade-up">
-
-        <div class="inner">
-            <form action="login_ok.php" method="post" onsubmit="return chk_frm()" name="join">
-                <label class="col-sm-3 control-label" for="inputID">아이디</label>
-                <div class="col-sm-6">
-                    <input class="form-control" name="user_id" type="text" placeholder="아이디를 입력해주세요">
-                </div>
-                <br>
-                <label class="col-sm-3 control-label" for="inputPassword">비밀번호</label>
-                <div class="col-sm-6">
-                    <input class="form-control" name=user_pw type="password" placeholder="비밀번호를 입력해주세요">
-                </div>
-                <br>
-                <div class="col-sm-12 text-center">
-                    <button class="btn btn-success" type="submit">로그인</button>
-                    <a href="member_register_form" class="btn btn-danger">회원가입</a>
-                </div>
-            </form>
+<div class="container">
+    <div class="page-header" id="banner">
+        <div class="row">
+            <div class="col-lg-12" align="center">
+                <h1>관리자 로그인</h1>
+            </div>
         </div>
-
-    </section>
+    </div>
+    <div id="wrapper" class="">
+        <?php
+        $attributes = array(
+            'class' => 'form-horizontal',
+            'id' => 'auth_login'
+        );
+        echo form_open('/user', $attributes);
+        ?>
+        <!-- Intro -->
+        <form class="form-horizontal">
+            <div class="inner">
+                <div class="form-group">
+                    <label for="input1" class="col-lg-4 control-label">아이디</label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" id="input1" name="username"
+                               placeholder="아이디를 입력해주세요"
+                               value="<?php echo set_value('username'); ?>"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-4 control-label" for="input2">비밀번호</label>
+                    <div class="col-lg-4">
+                        <input type="password" class="form-control" id="input2" name="password"
+                               placeholder="비밀번호를 입력해주세요"
+                               value="<?php echo set_value('password'); ?>"/>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <p class="help-block"><?php echo validation_errors(); ?></p>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <button type="submit" class="btn btn-success">로그인</button>
+                    <a class="btn btn-default" href="#" onClick="history.back();">이전페이지로</a>
+                    <a class="btn btn-danger" href="user/user_register" class="btn btn-success">회원가입</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
 
 
