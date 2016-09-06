@@ -1,39 +1,20 @@
 <body>
 
-<!-- Sidebar -->
-<section id="sidebar">
-    <div class="inner">
-        <nav>
-            <ul>
-                <li><a href="/main/lists">홈</a></li>
-                <li><a href="/main/progress_list">soft_진행</a></li>
-                <li><a href="/main/keep_list">soft_보관</a></li>
-                <li><a href="/main/stop_list">soft_사용불가</a></li>
-                <li><a href="/main/kaspersky">카스퍼스키관리대장</a></li>
-                <li><a href="#intro">전산사용대장</a></li>
-                <li><a href="/main/printer">프린터</a></li>
-                <li><a href="/main/software">소프트웨어</a></li>
-                <li><a href="/main/xp_down">XP다운그레이드</a></li>
-                <li><a href="/main/ms_up">MS오피스업그레이드</a></li>
-                <li><a href="/main/quark_up">Quark업그레이드</a></li>
-                <li><a href="/main/asiafont_up">아시아폰트업그레이드</a></li>
-                <li><a href="/main/soft_account">소프트웨어 아이디/패스워드</a></li>
-            </ul>
-        </nav>
-    </div>
-</section>
-
 <!-- Wrapper -->
 <div id="wrapper">
 
     <!-- Intro -->
     <section id="intro" class="wrapper style1 fullscreen fade-up">
         <div class="inner">
-            <h2>QUARK 업그레이드</h2>
+            <h2>Quark 업그레이드</h2>
+            <a href="#" class="btn btn-primary">목록 </a>
+            <a href="#" class="btn btn-success"> 수정 </a>
+            <a href="#" class="btn btn-danger"> 삭제 </a>
+            <a href="/soft/write/" class="btn btn-warning">쓰기</a>
             <table cellspacing="0" cellpadding="0" class="table table-striped">
                 <thead>
                 <tr>
-                    <th scope="col" width="5%">구분</th>
+                    <th scope="col" width="3%">구분</th>
                     <th scope="col">Quark3</th>
                     <th scope="col">Quark4</th>
                     <th scope="col">Quark8</th>
@@ -68,7 +49,7 @@
                             <?php echo $lt -> quark2015;?>
                         </td>
                         <td>
-                            <?php echo $lt -> quark2015;?>
+                            <?php echo $lt -> quark2015_serial;?>
                         </td>
                         <td>
                             <?php echo $lt -> sejong_font;?>

@@ -36,62 +36,20 @@
         })();
 
     </script>
+
 </head>
 <body>
 <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a href="../main/lists" class="navbar-brand">(주)청주교차로</a>
+            <a href="../" class="navbar-brand">(주)청주교차로</a>
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-            <ul class="nav navbar-nav">
-                <!-- 소프트웨어 진행/보관/사용중지 -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">소프트웨어 <span
-                            class="caret"></span></a>
-                    <ul class="dropdown-menu" aria-labelledby="themes">
-                        <li><a href="/soft/progress_list">진행</a></li>
-                        <li class="divider"></li>
-                        <li><a href="/soft/keep_list">보관</a></li>
-                        <li class="divider"></li>
-                        <li><a href="/soft/stop_list">사용중지</a></li>
-                    </ul>
-                </li>
-                <!-- 전산사용대장 -->
-                <li>
-                    <a href="/soft/kaspersky">전산사용대장</a>
-                </li>
-                <!-- 카스퍼스키 -->
-                <li>
-                    <a href="/soft/kaspersky">카스퍼스키</a>
-                </li>
-                <!-- 프린터 -->
-                <li>
-                    <a href="/soft/printer">프린터</a>
-                </li>
-                <!-- XP_DOWN -->
-                <li>
-                    <a href="/soft/xp_down">XP다운그레이드</a>
-                </li>
-                <!-- MS_UP -->
-                <li>
-                    <a href="/soft/ms_up">MS-Office</a>
-                </li>
-                <!-- QUARK_UP -->
-                <li>
-                    <a href="/soft/quark_up">Quark(쿽)</a>
-                </li>
-                <!-- ASIAFONT_UP -->
-                <li>
-                    <a href="/soft/asiafont_up">아시아폰트</a>
-                </li>
-
-            </ul>
+        
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -100,17 +58,11 @@
                         ?>
                         <a href="/user/logout" class="btn btn-default">로그아웃</a>
                         <?php
-                    } else {
+                    }
                     ?>
-                <li><a href="/user" class="button scrolly">관리자 로그인</a></li>
-                <?php
-                }
-                ?>
-                </
-                li >
+                </li>
             </ul>
 
         </div>
     </div>
 </div>
-        

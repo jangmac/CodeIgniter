@@ -7,6 +7,7 @@ class Main extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+		$this->allow=array();
 		$this->load->database();
 		$this->load->model('soft_model');
 		$this->load->helper(array('url', 'date'));
@@ -38,7 +39,7 @@ class Main extends CI_Controller
 	public function lists()
 	{
 		$data['list'] = $this->soft_model->get_list();
-		$this->load->view('list/soft_list', $data);
+		$this->load->view('list/main', $data);
 	}
 }
 

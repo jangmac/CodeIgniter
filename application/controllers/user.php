@@ -19,7 +19,7 @@ class User extends CI_Controller
 
     public function _remap($method) {
         // 헤더 include
-        $this -> load -> view('header');
+        $this -> load -> view('user/u_header');
 
         if (method_exists($this, $method)) {
             $this -> {"{$method}"}();

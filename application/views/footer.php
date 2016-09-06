@@ -1,5 +1,13 @@
 <footer>
+    <!-- blind_con -->
+    <div class="blind_con"></div>
+    <!-- //blind_con -->
 
+    <!-- modalPopup -->
+    <div class="modalPopupContainer">
+        <div class="popupCon"></div>
+    </div>
+    <!-- //modalPopup -->
 </footer>
 
 
