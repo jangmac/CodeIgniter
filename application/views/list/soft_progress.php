@@ -37,7 +37,7 @@
                             <?php echo $lt -> idx;?>
                         </th>
                         <td>
-                            <a href="/main/modify/"><?php echo $lt -> product_name;?></a>
+                            <a href="/soft/modify/<?php echo $lt->idx ?>"><?php echo $lt -> product_name;?></a>
                         </td>
                         <td>
                             <?php echo $lt -> version;?>

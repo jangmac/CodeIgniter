@@ -98,18 +98,6 @@ class Soft extends CI_Controller
     }
 
     /*
-     * softmanage 조회
-     */
-    public function view()
-    {
-        $id = $this->uri->segment(3);
-        $data['views'] = $this->soft_model->get_view($id);
-
-        // view 호출
-        $this->load->view('list/soft_view', $data);
-    }
-
-    /*
      *  softmanage 등록
      */
     public function write()
@@ -118,6 +106,8 @@ class Soft extends CI_Controller
         {
             // 글쓰기 POST 전송 시
 
+            $this->load->helper('alert');
+            
             $product_name = $this->input->post('product_name', TRUE);
             $version = $this->input->post('version', TRUE);
             $company = $this->input->post('company', TRUE);
@@ -125,7 +115,8 @@ class Soft extends CI_Controller
 
             $this->soft_model->insert_soft($product_name, $version, $company,$purpose);
 
-            redirect(base_url().'main/progress_list/');
+            alert('게시물 등록 완료');
+            redirect(base_url().'soft/progress_list/');
 
             exit;
         }
@@ -138,25 +129,28 @@ class Soft extends CI_Controller
 
     public function modify()
     {
+
         if ( $_POST )
         {
-            // 글쓰기 POST 전송 시
+
+            $this->load->helper('alert');
 
             $product_name = $this->input->post('product_name', TRUE);
             $version = $this->input->post('version', TRUE);
             $company = $this->input->post('company', TRUE);
             $purpose = $this->input->post('purpose', TRUE);
 
-            $this->soft_model->insert_soft($product_name, $version, $company,$purpose);
+            $this->soft_model->modify_soft($product_name, $version, $company,$purpose);
 
-            redirect(base_url().'main/progress_list/');
+            alert('게시물 수정 완료');
+            redirect(base_url().'soft/progress_list/');
 
             exit;
         }
         else
         {
             // 쓰기 폼 view 호출
-            $this->load->view('list/soft_progress_modify');
+            $this->load->view('list/soft_modify');
         }
     }
 

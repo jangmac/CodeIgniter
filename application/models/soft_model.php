@@ -137,7 +137,7 @@ class Soft_model extends CI_Model
     }
 
     /*
-     * 게시글 view
+     * 게시글 상세페이지
      */
 
     function  get_view($id) {
@@ -151,13 +151,33 @@ class Soft_model extends CI_Model
     }
 
     /*
-     *
+     * 등록
      */
 
     function insert_soft($product_name, $version, $company, $purpose) {
         $sql = "INSERT INTO soft_progress (product_name, version, company, purpose) VALUES ('" . $product_name . "', '" . $version . "', '" . $company . "', '" . $purpose . "')";
-
         $query = $this -> db -> query($sql);
+    }
+
+    /*
+     * 수정
+     */
+    function modify_soft($arrays) {
+
+        $modify_array = array(
+            'product_name' => $arrays['product_name'],
+            'version' => $arrays['version'],
+            'company' => $arrays['company'],
+            'purpose' => $arrays['purpose']
+        );
+
+        $where = array(
+            'idx' => $arrays['idx']
+        );
+
+        $result = $this->db->update($arrays['table'], $modify_array, $where);
+
+        return $result;
     }
 
     function delete_soft($id)
