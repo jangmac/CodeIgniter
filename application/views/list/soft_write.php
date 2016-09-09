@@ -72,9 +72,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="package" class="col-lg-2 control-label" name="package">패키지 유/무</label>
+                    <label for="package" class="col-lg-2 control-label">패키지 유/무</label>
                     <div class="col-lg-10">
-                        <input type="checkbox"> 패키지 있으면 선택하세요
+                        <input type="checkbox" name="package" value="√"> 패키지 있으면 선택하세요
                     </div>
                 </div>
                 <div class="form-group">

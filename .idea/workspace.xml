@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49c9510d-296e-40ef-b4ca-43ea40eb1375" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/elements.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/generic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/list/list.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/list/soft_write.php.rej" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/view_v.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/write_v.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/soft.php" afterPath="$PROJECT_DIR$/application/controllers/soft.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/soft_model.php" afterPath="$PROJECT_DIR$/application/models/soft_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/list/main.php" afterPath="$PROJECT_DIR$/application/views/list/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/list/soft_progress.php" afterPath="$PROJECT_DIR$/application/views/list/soft_progress.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/list/soft_modify.php" afterPath="$PROJECT_DIR$/application/views/list/soft_modify.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/list/soft_write.php" afterPath="$PROJECT_DIR$/application/views/list/soft_write.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/alert_helper.php" afterPath="$PROJECT_DIR$/system/helpers/alert_helper.php" />
     </list>
     <ignored path="ci.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,95 +27,115 @@
     <favorites_list name="ci" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="soft.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/soft.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1833">
-              <caret line="144" column="27" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="27" />
-              <folding>
-                <marker date="1473317549717" expanded="true" signature="3088:4234" ph="..." />
-                <marker date="1473317549717" expanded="true" signature="3195:3284" ph="{...}" />
-                <marker date="1473317549717" expanded="true" signature="3325:3978" ph="{...}" />
-                <marker date="1473317549717" expanded="true" signature="3358:3860" ph="{...}" />
-                <marker date="1473317549717" expanded="true" signature="3882:3972" ph="{...}" />
-                <marker date="1473317549717" expanded="true" signature="3984:4015" ph="/*...*/" />
-                <marker date="1473317549717" expanded="true" signature="4049:4216" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="soft_progress.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/list/soft_progress.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="39" column="107" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="107" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="soft_modify.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/list/soft_modify.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="soft_write.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/list/soft_write.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2133">
-              <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="soft_model.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/models/soft_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="175" column="10" selection-start-line="175" selection-start-column="10" selection-end-line="175" selection-end-column="10" />
-              <folding>
-                <marker date="1473317639624" expanded="true" signature="273:293" ph="SELECT * FRO... items3" />
-                <marker date="1473317639624" expanded="true" signature="461:488" ph="SELECT * FRO... soft_progress" />
-                <marker date="1473317639624" expanded="true" signature="651:674" ph="SELECT * FRO... soft_keep" />
-                <marker date="1473317639624" expanded="true" signature="837:860" ph="SELECT * FRO... soft_stop" />
-                <marker date="1473317639624" expanded="true" signature="1028:1051" ph="SELECT * FRO... kaspersky" />
-                <marker date="1473317639624" expanded="true" signature="1217:1238" ph="SELECT * FRO... printer" />
-                <marker date="1473317639624" expanded="true" signature="1405:1427" ph="SELECT * FRO... software" />
-                <marker date="1473317639624" expanded="true" signature="1592:1613" ph="SELECT * FRO... xp_down" />
-                <marker date="1473317639624" expanded="true" signature="1777:1796" ph="SELECT * FRO... ms_up" />
-                <marker date="1473317639624" expanded="true" signature="1963:1985" ph="SELECT * FRO... quark_up" />
-                <marker date="1473317639624" expanded="true" signature="2155:2180" ph="SELECT * FRO... asiafont_up" />
-                <marker date="1473317639624" expanded="true" signature="2351:2377" ph="SELECT * FRO... soft_account" />
-                <marker date="1473317639624" expanded="true" signature="2572:2607" ph="SELECT * FRO... items3" />
-                <marker date="1473317639624" expanded="true" signature="2832:2992" ph="INSERT INTO soft_progress... " />
-                <marker date="1473317639624" expanded="true" signature="3575:3614" ph="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="board_m.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/board_m.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
-              <folding>
-                <marker date="1472193440673" expanded="true" signature="692:753" ph="SELECT * FRO... ${$table}" />
-                <marker date="1472193440673" expanded="true" signature="1326:1385" ph="SELECT * FRO... ${$table}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.61015785">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="soft.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/controllers/soft.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="402">
+                  <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+                  <folding>
+                    <marker date="1473381230551" expanded="true" signature="3735:4949" ph="..." />
+                    <marker date="1473381230551" expanded="true" signature="3842:3931" ph="{...}" />
+                    <marker date="1473381230551" expanded="true" signature="3972:4693" ph="{...}" />
+                    <marker date="1473381230551" expanded="true" signature="4006:4575" ph="{...}" />
+                    <marker date="1473381230551" expanded="true" signature="4597:4687" ph="{...}" />
+                    <marker date="1473381230551" expanded="true" signature="4699:4730" ph="/*...*/" />
+                    <marker date="1473381230551" expanded="true" signature="4764:4931" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="soft_progress.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/list/soft_progress.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="256">
+                  <caret line="39" column="84" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="soft_modify.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/application/views/list/soft_modify.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="432">
+                  <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="soft_write.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/list/soft_write.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="378">
+                  <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="soft_model.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/models/soft_model.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="336">
+                  <caret line="194" column="27" selection-start-line="194" selection-start-column="27" selection-end-line="194" selection-end-column="27" />
+                  <folding>
+                    <marker date="1473381125571" expanded="true" signature="277:297" ph="SELECT * FRO... items3" />
+                    <marker date="1473381125571" expanded="true" signature="467:494" ph="SELECT * FRO... soft_progress" />
+                    <marker date="1473381125571" expanded="true" signature="659:682" ph="SELECT * FRO... soft_keep" />
+                    <marker date="1473381125571" expanded="true" signature="847:870" ph="SELECT * FRO... soft_stop" />
+                    <marker date="1473381125571" expanded="true" signature="1040:1063" ph="SELECT * FRO... kaspersky" />
+                    <marker date="1473381125571" expanded="true" signature="1231:1252" ph="SELECT * FRO... printer" />
+                    <marker date="1473381125571" expanded="true" signature="1421:1443" ph="SELECT * FRO... software" />
+                    <marker date="1473381125571" expanded="true" signature="1610:1631" ph="SELECT * FRO... xp_down" />
+                    <marker date="1473381125571" expanded="true" signature="1797:1816" ph="SELECT * FRO... ms_up" />
+                    <marker date="1473381125571" expanded="true" signature="1985:2007" ph="SELECT * FRO... quark_up" />
+                    <marker date="1473381125571" expanded="true" signature="2179:2204" ph="SELECT * FRO... asiafont_up" />
+                    <marker date="1473381125571" expanded="true" signature="2377:2403" ph="SELECT * FRO... soft_account" />
+                    <marker date="1473381125571" expanded="true" signature="2599:2634" ph="SELECT * FRO... items3" />
+                    <marker date="1473381125571" expanded="true" signature="2959:3527" ph="INSERT INTO soft_progress... " />
+                    <marker date="1473381125571" expanded="true" signature="3657:3684" ph="SELECT * FRO... soft_progress ." />
+                    <marker date="1473381125571" expanded="true" signature="3657:3711" ph="SELECT * FRO... ${$table}" />
+                    <marker date="1473381125571" expanded="true" signature="3900:3943" ph="DELETE FROM " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="board_m.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/models/board_m.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="567">
+                  <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+                  <folding>
+                    <marker date="1472193440673" expanded="true" signature="692:753" ph="SELECT * FRO... ${$table}" />
+                    <marker date="1472193440673" expanded="true" signature="1326:1385" ph="SELECT * FRO... ${$table}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="soft.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/application/controllers/soft.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="486">
+                  <caret line="121" column="20" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -186,11 +196,11 @@
         <option value="$PROJECT_DIR$/assets/bootstrap/bootstrap.css" />
         <option value="$PROJECT_DIR$/assets/js/common.js" />
         <option value="$PROJECT_DIR$/application/views/list/main.php" />
-        <option value="$PROJECT_DIR$/application/views/list/soft_write.php" />
         <option value="$PROJECT_DIR$/system/helpers/alert_helper.php" />
         <option value="$PROJECT_DIR$/application/views/list/soft_progress.php" />
-        <option value="$PROJECT_DIR$/application/controllers/soft.php" />
+        <option value="$PROJECT_DIR$/application/views/list/soft_write.php" />
         <option value="$PROJECT_DIR$/application/models/soft_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/soft.php" />
         <option value="$PROJECT_DIR$/application/views/list/soft_modify.php" />
       </list>
     </option>
@@ -503,12 +513,12 @@
       <workItem from="1472688437874" duration="658000" />
       <workItem from="1473035189497" duration="19643000" />
       <workItem from="1473118492346" duration="14528000" />
-      <workItem from="1473294833712" duration="16791000" />
+      <workItem from="1473294833712" duration="19710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140597000" />
+    <option name="totallyTimeSpent" value="143516000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -861,22 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/list/soft_write.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2133">
-          <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/list/soft_progress.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="39" column="107" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/board_m.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -888,51 +882,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/list/soft_modify.php">
+    <entry file="file://$PROJECT_DIR$/application/views/list/soft_progress.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+        <state relative-caret-position="256">
+          <caret line="39" column="84" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/list/soft_write.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/soft.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1833">
-          <caret line="144" column="27" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="27" />
+        <state relative-caret-position="402">
+          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding>
-            <marker date="1473317549717" expanded="true" signature="3088:4234" ph="..." />
-            <marker date="1473317549717" expanded="true" signature="3195:3284" ph="{...}" />
-            <marker date="1473317549717" expanded="true" signature="3325:3978" ph="{...}" />
-            <marker date="1473317549717" expanded="true" signature="3358:3860" ph="{...}" />
-            <marker date="1473317549717" expanded="true" signature="3882:3972" ph="{...}" />
-            <marker date="1473317549717" expanded="true" signature="3984:4015" ph="/*...*/" />
-            <marker date="1473317549717" expanded="true" signature="4049:4216" ph="{...}" />
+            <marker date="1473381230551" expanded="true" signature="3735:4949" ph="..." />
+            <marker date="1473381230551" expanded="true" signature="3842:3931" ph="{...}" />
+            <marker date="1473381230551" expanded="true" signature="3972:4693" ph="{...}" />
+            <marker date="1473381230551" expanded="true" signature="4006:4575" ph="{...}" />
+            <marker date="1473381230551" expanded="true" signature="4597:4687" ph="{...}" />
+            <marker date="1473381230551" expanded="true" signature="4699:4730" ph="/*...*/" />
+            <marker date="1473381230551" expanded="true" signature="4764:4931" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/soft_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="175" column="10" selection-start-line="175" selection-start-column="10" selection-end-line="175" selection-end-column="10" />
+        <state relative-caret-position="336">
+          <caret line="194" column="27" selection-start-line="194" selection-start-column="27" selection-end-line="194" selection-end-column="27" />
           <folding>
-            <marker date="1473317639624" expanded="true" signature="273:293" ph="SELECT * FRO... items3" />
-            <marker date="1473317639624" expanded="true" signature="461:488" ph="SELECT * FRO... soft_progress" />
-            <marker date="1473317639624" expanded="true" signature="651:674" ph="SELECT * FRO... soft_keep" />
-            <marker date="1473317639624" expanded="true" signature="837:860" ph="SELECT * FRO... soft_stop" />
-            <marker date="1473317639624" expanded="true" signature="1028:1051" ph="SELECT * FRO... kaspersky" />
-            <marker date="1473317639624" expanded="true" signature="1217:1238" ph="SELECT * FRO... printer" />
-            <marker date="1473317639624" expanded="true" signature="1405:1427" ph="SELECT * FRO... software" />
-            <marker date="1473317639624" expanded="true" signature="1592:1613" ph="SELECT * FRO... xp_down" />
-            <marker date="1473317639624" expanded="true" signature="1777:1796" ph="SELECT * FRO... ms_up" />
-            <marker date="1473317639624" expanded="true" signature="1963:1985" ph="SELECT * FRO... quark_up" />
-            <marker date="1473317639624" expanded="true" signature="2155:2180" ph="SELECT * FRO... asiafont_up" />
-            <marker date="1473317639624" expanded="true" signature="2351:2377" ph="SELECT * FRO... soft_account" />
-            <marker date="1473317639624" expanded="true" signature="2572:2607" ph="SELECT * FRO... items3" />
-            <marker date="1473317639624" expanded="true" signature="2832:2992" ph="INSERT INTO soft_progress... " />
-            <marker date="1473317639624" expanded="true" signature="3575:3614" ph="DELETE FROM " />
+            <marker date="1473381125571" expanded="true" signature="277:297" ph="SELECT * FRO... items3" />
+            <marker date="1473381125571" expanded="true" signature="467:494" ph="SELECT * FRO... soft_progress" />
+            <marker date="1473381125571" expanded="true" signature="659:682" ph="SELECT * FRO... soft_keep" />
+            <marker date="1473381125571" expanded="true" signature="847:870" ph="SELECT * FRO... soft_stop" />
+            <marker date="1473381125571" expanded="true" signature="1040:1063" ph="SELECT * FRO... kaspersky" />
+            <marker date="1473381125571" expanded="true" signature="1231:1252" ph="SELECT * FRO... printer" />
+            <marker date="1473381125571" expanded="true" signature="1421:1443" ph="SELECT * FRO... software" />
+            <marker date="1473381125571" expanded="true" signature="1610:1631" ph="SELECT * FRO... xp_down" />
+            <marker date="1473381125571" expanded="true" signature="1797:1816" ph="SELECT * FRO... ms_up" />
+            <marker date="1473381125571" expanded="true" signature="1985:2007" ph="SELECT * FRO... quark_up" />
+            <marker date="1473381125571" expanded="true" signature="2179:2204" ph="SELECT * FRO... asiafont_up" />
+            <marker date="1473381125571" expanded="true" signature="2377:2403" ph="SELECT * FRO... soft_account" />
+            <marker date="1473381125571" expanded="true" signature="2599:2634" ph="SELECT * FRO... items3" />
+            <marker date="1473381125571" expanded="true" signature="2959:3527" ph="INSERT INTO soft_progress... " />
+            <marker date="1473381125571" expanded="true" signature="3657:3684" ph="SELECT * FRO... soft_progress ." />
+            <marker date="1473381125571" expanded="true" signature="3657:3711" ph="SELECT * FRO... ${$table}" />
+            <marker date="1473381125571" expanded="true" signature="3900:3943" ph="DELETE FROM " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/list/soft_modify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>

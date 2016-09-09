@@ -112,8 +112,19 @@ class Soft extends CI_Controller
             $version = $this->input->post('version', TRUE);
             $company = $this->input->post('company', TRUE);
             $purpose = $this->input->post('purpose', TRUE);
+            $target = $this->input->post('target', TRUE);
+            $compatibility = $this->input->post('compatibility', TRUE);
+            $sirial_num = $this->input->post('sirial_num', TRUE);
+            $package = $this->input->post('package', TRUE);
+            $license_numb = $this->input->post('license_numb', TRUE);
+            $keep_place = $this->input->post('keep_place', TRUE);
+            $use_num = $this->input->post('use_num', TRUE);
+            $remarks = $this->input->post('remarks', TRUE);
 
-            $this->soft_model->insert_soft($product_name, $version, $company,$purpose);
+            $this->soft_model->insert_soft(
+                $product_name, $version, $company,$purpose,$target,$compatibility,$sirial_num,
+                $package,$license_numb,$keep_place,$use_num,$remarks
+            );
 
             alert('게시물 등록 완료');
             redirect(base_url().'soft/progress_list/');
@@ -130,6 +141,7 @@ class Soft extends CI_Controller
     public function modify()
     {
 
+
         if ( $_POST )
         {
 
@@ -140,6 +152,7 @@ class Soft extends CI_Controller
             $company = $this->input->post('company', TRUE);
             $purpose = $this->input->post('purpose', TRUE);
 
+            $data['views'] = $this -> soft_model -> modify_soft();
             $this->soft_model->modify_soft($product_name, $version, $company,$purpose);
 
             alert('게시물 수정 완료');

@@ -29,7 +29,8 @@
                 </div>
             </div>
             -->
-            <input type="hidden" name="no" value="<?=$result->idx?>">
+            <input type="hidden" name="no" value="<?php echo $views -> idx;?>">
+
             <div class="form-group">
                 <label for="product_name" class="col-lg-2 control-label">제품명</label>
                 <div class="col-lg-10">
