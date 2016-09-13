@@ -6,38 +6,38 @@
     <!-- Intro -->
     <section id="intro" class="wrapper style1 fullscreen fade-up">
         <div class="inner">
-            <h2>소프트웨어관리대장(사용불가)</h2>
+            <h2>소프트웨어관리대장(진행)</h2>
             <a href="#" class="btn btn-primary">목록 </a>
             <a href="#" class="btn btn-success"> 수정 </a>
             <a href="#" class="btn btn-danger"> 삭제 </a>
-            <a href="/soft/write/" class="btn btn-warning">쓰기</a>
+            <a href="/soft/write_progress/" class="btn btn-warning">쓰기</a>
             <table cellspacing="0" cellpadding="0" class="table table-striped">
                 <thead>
                 <tr>
-                    <th scope="col">구분</th>
+                    <th scope="col" width="4%">구분</th>
                     <th scope="col">제품명</th>
                     <th scope="col">버전</th>
                     <th scope="col">제조사</th>
                     <th scope="col">제품용도</th>
                     <th scope="col">사용대상</th>
-                    <th scope="col">호환성</th>
                     <th scope="col">시리얼번호</th>
                     <th scope="col">패키지</th>
                     <th scope="col">라이선스</th>
                     <th scope="col">보관장소</th>
+                    <th scope="col">사용수</th>
                     <th scope="col">비고</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
-                foreach ($stop_list as $lt) {
+                foreach ($progress_list as $lt) {
                     ?>
                     <tr>
                         <th scope="row">
                             <?php echo $lt -> idx;?>
                         </th>
                         <td>
-                            <?php echo $lt -> product_name;?>
+                            <a href="/soft/view_progress/<?php echo $lt->idx ?>"><?php echo $lt -> product_name;?></a>
                         </td>
                         <td>
                             <?php echo $lt -> version;?>
@@ -52,9 +52,6 @@
                             <?php echo $lt -> target;?>
                         </td>
                         <td>
-                            <?php echo $lt -> compatibility;?>
-                        </td>
-                        <td>
                             <?php echo $lt -> sirial_num;?>
                         </td>
                         <td>
@@ -65,6 +62,9 @@
                         </td>
                         <td>
                             <?php echo $lt -> keep_place;?>
+                        </td>
+                        <td>
+                            <?php echo $lt -> use_num;?>
                         </td>
                         <td>
                             <?php echo $lt -> remarks;?>

@@ -6,11 +6,11 @@
     <!-- Intro -->
     <section id="intro" class="wrapper style1 fullscreen fade-up">
         <div class="inner">
-            <h2>카스퍼스키관리대장</h2>
+            <h2>소프트웨어관리대장(사용불가)</h2>
             <a href="#" class="btn btn-primary">목록 </a>
             <a href="#" class="btn btn-success"> 수정 </a>
             <a href="#" class="btn btn-danger"> 삭제 </a>
-            <a href="/soft/write/" class="btn btn-warning">쓰기</a>
+            <a href="/soft/write_stop/" class="btn btn-warning">쓰기</a>
             <table cellspacing="0" cellpadding="0" class="table table-striped">
                 <thead>
                 <tr>
@@ -19,8 +19,8 @@
                     <th scope="col">버전</th>
                     <th scope="col">제조사</th>
                     <th scope="col">제품용도</th>
+                    <th scope="col">사용대상</th>
                     <th scope="col">호환성</th>
-                    <th scope="col">사용기간(2년)</th>
                     <th scope="col">시리얼번호</th>
                     <th scope="col">패키지</th>
                     <th scope="col">라이선스</th>
@@ -30,14 +30,14 @@
                 </thead>
                 <tbody>
                 <?php
-                foreach ($kaspersky as $lt) {
+                foreach ($stop_list as $lt) {
                     ?>
                     <tr>
                         <th scope="row">
                             <?php echo $lt -> idx;?>
                         </th>
                         <td>
-                            <?php echo $lt -> product_name;?>
+                            <a href="/soft/view_stop/<?php echo $lt->idx ?>"><?php echo $lt -> product_name;?>
                         </td>
                         <td>
                             <?php echo $lt -> version;?>
@@ -49,10 +49,10 @@
                             <?php echo $lt -> purpose;?>
                         </td>
                         <td>
-                            <?php echo $lt -> compatibility;?>
+                            <?php echo $lt -> target;?>
                         </td>
                         <td>
-                            <?php echo $lt -> duration;?>
+                            <?php echo $lt -> compatibility;?>
                         </td>
                         <td>
                             <?php echo $lt -> sirial_num;?>

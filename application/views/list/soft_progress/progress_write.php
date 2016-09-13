@@ -4,31 +4,6 @@
         <fieldset>
             <legend>신규등록</legend>
             <form class="form-horizontal" method="post" action="" id="write_action">
-                <!-- 유형은 나중에
-                <div class="form-group">
-                    <label class="col-lg-2 control-label">등록유형</label>
-                    <div class="col-lg-10">
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                                소프트웨어관리대장(진행)
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                소프트웨어관리대장(보관)
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                소프트웨어관리대장(사용중지)
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                -->
                 <div class="form-group">
                     <label for="product_name" class="col-lg-2 control-label">제품명</label>
                     <div class="col-lg-10">
@@ -103,7 +78,7 @@
                 </div>
                 <div class="form-actions">
                     <div class="col-lg-10 col-lg-offset-2">
-                        <button class="btn btn-default" onclick="document.location.reload()">Cancel</button>
+                        <button class="btn btn-default" onclick="history.back();">Cancel</button>
                         <button type="submit" class="btn btn-primary" id="write_btn">Submit</button>
                     </div>
                 </div>

@@ -10,7 +10,7 @@
             <a href="#" class="btn btn-primary">목록 </a>
             <a href="#" class="btn btn-success"> 수정 </a>
             <a href="#" class="btn btn-danger"> 삭제 </a>
-            <a href="/soft/write/" class="btn btn-warning">쓰기</a>
+            <a href="/soft/write_keep/" class="btn btn-warning">쓰기</a>
             <table cellspacing="0" cellpadding="0" class="table table-striped">
                 <thead>
                 <tr>
@@ -37,7 +37,7 @@
                             <?php echo $lt -> idx;?>
                         </th>
                         <td>
-                            <?php echo $lt -> product_name;?>
+                            <a href="/soft/view_keep/<?php echo $lt->idx ?>"><?php echo $lt -> product_name;?>
                         </td>
                         <td>
                             <?php echo $lt -> version;?>

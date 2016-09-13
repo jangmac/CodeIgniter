@@ -9,9 +9,9 @@
     </div>
     <ul class="actions">
         <?php
-        if ( @$this -> session -> userdata('logged_in') == TRUE) {
+        if (@$this->session->userdata('logged_in') == TRUE) {
             ?>
-            <?php echo $this -> session -> userdata('username');?> 님 환영합니다.
+            <?php echo $this->session->userdata('username'); ?> 님 환영합니다.
             <?php
         } else {
             ?>
@@ -26,12 +26,11 @@
     <div class="col-lg-12">내용</div>
 
 
-
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
         Launch demo modal
     </button>
 
-    <!-- Modal -->
+    <!--
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -49,7 +48,7 @@
             </div>
         </div>
     </div>
-
+    Modal -->
 
 
 </div>
