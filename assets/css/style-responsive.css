@@ -1,20 +1,16 @@
 @media (min-width: 980px) {
-    /*-----*/
-    .custom-bar-chart {
-        margin-bottom: 40px;
-    }
 
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
 
-    /*-----*/
-    .custom-bar-chart {
-        margin-bottom: 40px;
+    .inbox-wrapper .inbox-left {
+        width: 30%;
     }
 
-    /*chat room*/
-
+    .inbox-wrapper .inbox-right {
+        width: 70%;
+    }
 
 }
 
@@ -58,6 +54,9 @@
         /*display: none !important;*/
     }
 
+    .mail-info, .mail-info:hover {
+        display: none !important;
+    }
     #sidebar ul > li > a .arrow, #sidebar > ul > li > a .arrow.open {
         margin-right: 10px;
         margin-top: 15px;
@@ -75,7 +74,7 @@
         background: transparent !important ;
     }
     #sidebar > ul > li > ul.sub > li > a:hover {
-        
+        /*background: #4A8BC2 !important ;*/
     }
 
 
@@ -103,14 +102,18 @@
 
     /*---------*/
 
-    .modal-footer .btn {
-        margin-bottom: 0px !important;
-    }
-
     .btn {
         margin-bottom: 5px;
     }
 
+
+    .inbox-wrapper aside {
+        display: block;
+    }
+
+    .inbox-wrapper .inbox-left , .inbox-wrapper .inbox-right{
+        width: 100% ;
+    }
 
     /* full calendar fix */
     .fc-header-right {
@@ -203,37 +206,42 @@
         /*margin-top: 0px;*/
     /*}*/
 
+    .timeline-desk .album a {
+        margin-bottom: 5px;
+        margin-right: 4px;
+    }
+
     .stepy-titles li {
         margin: 10px 3px;
     }
 
-    /*-----*/
-    .custom-bar-chart {
-        margin-bottom: 40px;
+    .mail-option .btn {
+        margin-bottom: 0;
     }
 
-    /*menu icon plus minus*/
-    .dcjq-icon {
-        top: 10px;
-    }
-    ul.sidebar-menu li ul.sub li a {
-        padding: 0;
-    }
 
-    /*---*/
-
-    .img-responsive {
-        width: 100%;
-    }
 
 }
 
 
+@media (max-width: 740px) {
+    #task_notificatoin_bar,#mail_notificatoin_bar,#alert_notificatoin_bar{
+        display: none;
+    }
+}
 
 @media (max-width: 480px) {
 
-    .notify-row, .search, .dont-show , .inbox-head .sr-input, .inbox-head .sr-btn{
+    .notification-row,.task_notificatoin_bar, .search-row,.knob-charts, .dont-show , .inbox-head .sr-input, .inbox-head .sr-btn{
         display: none;
+    }
+
+    .inbox-wrapper aside {
+        display: block;
+    }
+
+    .inbox-wrapper .inbox-left , .inbox-wrapper .inbox-right{
+        width: 100% ;
     }
 
     #top_menu .nav > li, ul.top-menu > li {
@@ -243,15 +251,26 @@
         display: none !important;
     }
 
+    .dataTables_filter {
+        float: left;
+    }
+
+    .dataTables_info {
+        margin-bottom: 10px;
+    }
+
+    .mail-option .btn {
+        margin-bottom: 0;
+    }
+
+    .mail-option .inbox-pagination {
+        margin-top: 10px;
+        float: left;
+    }
+
     .chart-position {
        margin-top: 0px;
      }
-
-    .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-        background-color: #ccc;
-        border-color:#ccc ;
-    }
-
 }
 
 @media (max-width:320px) {
@@ -259,8 +278,16 @@
         padding: 15px 17px !important;
     }
 
-    .notify-row, .search, .dont-show, .inbox-head .sr-input, .inbox-head .sr-btn {
+    .notification-row, .search, .dont-show, .inbox-head .sr-input, .inbox-head .sr-btn {
         display: none;
+    }
+
+    .inbox-wrapper aside {
+        display: block ;
+    }
+
+    .inbox-wrapper .inbox-left , .inbox-wrapper .inbox-right{
+        width: 100% ;
     }
 
     #top_menu .nav > li, ul.top-menu > li {
@@ -271,21 +298,25 @@
         display: none !important;
     }
 
+    .dataTables_filter {
+        float: left;
+    }
+
+    .dataTables_info {
+        margin-bottom: 10px;
+    }
+
+    .mail-option .btn {
+        margin-bottom: 0;
+    }
+
+    .mail-option .inbox-pagination {
+        margin-top: 10px;
+        float: left;
+    }
+
     .chart-position {
         margin-top: 0px;
-    }
-
-    .lock-wrapper {
-        margin: 10% auto;
-        max-width: 310px;
-    }
-    .lock-input {
-        width: 82%;
-    }
-
-    .cmt-form {
-        display: inline-block;
-        width: 75%;
     }
 
 }

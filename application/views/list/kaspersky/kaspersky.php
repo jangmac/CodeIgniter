@@ -1,17 +1,23 @@
-<body>
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <!--overview start-->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-laptop"></i> 카스퍼스키</h3>
+                <a class="btn btn-primary btn-sm" href="/soft/write_kaspersky/">등록</a>
+                <a class="btn btn-danger btn-sm"> 삭제</a>
+            </div>
+        </div>
+        <br/>
 
-<!-- Wrapper -->
-<div id="wrapper">
-
-    <!-- Intro -->
-    <section id="intro" class="wrapper style1 fullscreen fade-up">
-        <div class="inner">
-            <h2>카스퍼스키관리대장</h2>
-            <a href="#" class="btn btn-primary">목록 </a>
-            <a href="#" class="btn btn-success"> 수정 </a>
-            <a href="#" class="btn btn-danger"> 삭제 </a>
-            <a href="/soft/write_kaspersky/" class="btn btn-warning">쓰기</a>
-            <table cellspacing="0" cellpadding="0" class="table table-striped">
+        <div class="row">
+            <div class="col-lg-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        목록
+                    </header>
+                    <table class="table table-striped table-advance table-hover">
                 <thead>
                 <tr>
                     <th scope="col">구분</th>

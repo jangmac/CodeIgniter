@@ -26,7 +26,7 @@ class User extends CI_Controller
         }
 
         // 푸터 include
-        $this -> load -> view('footer');
+        $this -> load -> view('user/u_footer');
     }
 
     /*
@@ -59,10 +59,10 @@ class User extends CI_Controller
 
                 $this -> session -> set_userdata($newdata);
 
-                alert('로그인 되었습니다.', '/main/lists');
+                alert('로그인 되었습니다.', '/index.php');
                 exit;
             } else {
-                alert('아이디나 비밀번호를 확인해 주세요.', '/user');
+                alert('아이디와 비밀번호를 확인해 주세요.', '/user');
                 exit;
             }
         } else {
