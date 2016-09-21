@@ -64,7 +64,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>목록</th>
-                                <th>가장많은 소프트웨어</th>
+                                <th>보관장소</th>
                                 <th>등록수</th>
                                 <th>Active</th>
                             </tr>
@@ -73,77 +73,91 @@
                             <tr>
                                 <td>1</td>
                                 <td>소프트웨어관리대장(진행)</td>
-                                <td>-</td>
-                                <td>-</td>
+                                <td>전산실</td>
+                                <td><?php echo $counter['soft_progress'];?></td>
                                 <td>
-                                    <div class="progress thin">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar"
-                                             aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"
-                                             style="width: 73%">
-                                        </div>
-                                        <div class="progress-bar progress-bar-warning" role="progressbar"
-                                             aria-valuenow="27" aria-valuemin="0" aria-valuemax="100"
-                                             style="width: 27%">
-                                        </div>
-                                    </div>
-                                    <span class="sr-only">73%</span>
+                                    <a class="btn btn-primary btn-sm" href="/soft/write_progress/">신규 등록</a>
+                                    <a class="btn btn-success btn-sm" href="/soft/progress_list/"> 목록 바로가기</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>소프트웨어관리대장(보관)</td>
-                                <td>-</td>
-                                <td>-</td>
+                                <td>전산실</td>
+                                <td><?php echo $counter['soft_keep'];?></td>
                                 <td>
-                                    <div class="progress thin">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar"
-                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-                                             style="width: 20%">
-                                        </div>
-                                        <div class="progress-bar progress-bar-warning" role="progressbar"
-                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                             style="width: 80%">
-                                        </div>
-                                    </div>
-                                    <span class="sr-only">20%</span>
+                                    <a class="btn btn-primary btn-sm" href="/soft/write_keep/">신규 등록</a>
+                                    <a class="btn btn-success btn-sm" href="/soft/keep_list/"> 목록 바로가기</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>소프트웨어관리대장(사용불가)</td>
-                                <td>-</td>
-                                <td>-</td>
+                                <td>전산실</td>
+                                <td><?php echo $counter['soft_stop'];?></td>
                                 <td>
-                                    <div class="progress thin">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar"
-                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-                                             style="width: 20%">
-                                        </div>
-                                        <div class="progress-bar progress-bar-warning" role="progressbar"
-                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                             style="width: 80%">
-                                        </div>
-                                    </div>
-                                    <span class="sr-only">20%</span>
+                                    <a class="btn btn-primary btn-sm" href="/soft/write_stop/">신규 등록</a>
+                                    <a class="btn btn-success k btn-sm" href="/soft/stop_list/"> 목록 바로가기</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>카스퍼스키관리대장</td>
-                                <td>-</td>
-                                <td>-</td>
+                                <td>전산실</td>
+                                <td><?php echo $counter['kaspersky'];?></td>
                                 <td>
-                                    <div class="progress thin">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar"
-                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-                                             style="width: 20%">
-                                        </div>
-                                        <div class="progress-bar progress-bar-warning" role="progressbar"
-                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                             style="width: 80%">
-                                        </div>
-                                    </div>
-                                    <span class="sr-only">20%</span>
+                                    <a class="btn btn-primary btn-sm" href="/soft/write_kaspersky/">신규 등록</a>
+                                    <a class="btn btn-success k btn-sm" href="/soft/kaspersky/"> 목록 바로가기</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>프린터관리대장</td>
+                                <td>전산실</td>
+                                <td><?php echo $counter['printer'];?></td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="/soft/write_printer/">신규 등록</a>
+                                    <a class="btn btn-success k btn-sm" href="/soft/printer/"> 목록 바로가기</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>XP 업/다운그레이드</td>
+                                <td>전산실</td>
+                                <td><?php echo $counter['xp_down'];?></td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="/soft/write_xp_down/">신규 등록</a>
+                                    <a class="btn btn-success k btn-sm" href="/soft/xp_down/"> 목록 바로가기</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>MS-Office 관리대장</td>
+                                <td>전산실</td>
+                                <td><?php echo $counter['ms_up'];?></td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="/soft/write_ms_up/">신규 등록</a>
+                                    <a class="btn btn-success k btn-sm" href="/soft/ms_up/"> 목록 바로가기</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Quark(쿽) 관리대장</td>
+                                <td>전산실</td>
+                                <td><?php echo $counter['quark_up'];?></td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="/soft/write_quark_up/">신규 등록</a>
+                                    <a class="btn btn-success k btn-sm" href="/soft/quark_up/"> 목록 바로가기</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>아시아폰트 관리대장</td>
+                                <td>전산실</td>
+                                <td><?php echo $counter['asiafont_up'];?></td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="/soft/write_asiafont_up/">신규 등록</a>
+                                    <a class="btn btn-success k btn-sm" href="/soft/asiafont_up/"> 목록 바로가기</a>
                                 </td>
                             </tr>
                             </tbody>

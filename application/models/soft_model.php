@@ -15,17 +15,6 @@ class Soft_model extends CI_Model
      * 리스트가져오기
      */
 
-    function get_list()
-    {
-        $sql = "SELECT * FROM items3";
-
-        $query = $this->db->query($sql);
-
-        $result = $query->result();
-
-        return $result;
-    }
-
     function get_progress_list()
     {
 

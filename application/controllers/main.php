@@ -9,7 +9,7 @@ class Main extends CI_Controller
 		parent::__construct();
 		$this->allow=array();
 		$this->load->database();
-		$this->load->model('soft_model');
+		$this->load->model('main_model');
 		$this->load->helper(array('url', 'date'));
 	}
 
@@ -30,7 +30,13 @@ class Main extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('index');
+		$data= array();
+		//$data['views'] = $this->main_model->get_count();
+
+		$counter = $this->main_model->get_count();
+		$data['counter'] = $counter;
+
+		$this->load->view('index', $data);
 	}
 
 	/*

@@ -62,7 +62,7 @@
                     ?>
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <?php echo $this -> session -> userdata('username');?>
+                            관리자(<?php echo $this -> session -> userdata('username');?>)님 환영합니다.
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
@@ -95,6 +95,21 @@
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
+                        <i class="icon_desktop"></i>
+                        <span>전산사용대장</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="/group/g_gs">경영지원본부</a></li>
+                        <li><a class="" href="/soft/">광고1부</a></li>
+                        <li><a class="" href="/soft/">광고2부</a></li>
+                        <li><a class="" href="/soft/">리크루트/편집</a></li>
+                        <li><a class="" href="/soft/">여행사업팀</a></li>
+                        <li><a class="" href="/soft/">기타</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
                         <i class="icon_document_alt"></i>
                         <span>소프트웨어</span>
                         <span class="menu-arrow arrow_carrot-right"></span>
@@ -104,12 +119,6 @@
                         <li><a class="" href="/soft/keep_list">보관</a></li>
                         <li><a class="" href="/soft/stop_list">사용불가</a></li>
                     </ul>
-                </li>
-                <li>
-                    <a class="" href="/soft/kaspersky">
-                        <i class="icon_genius"></i>
-                        <span>전산사용대장</span>
-                    </a>
                 </li>
                 <li>
                     <a class="" href="/soft/kaspersky">
