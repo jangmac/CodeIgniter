@@ -280,6 +280,7 @@ textarea {
 }
 a {
   color: #007aff;
+  font-weight: 900;
   text-decoration: none;
 }
 a:hover,
@@ -1283,11 +1284,13 @@ table {
   background-color: transparent;
 }
 th {
-  text-align: left;
+  text-align: center;
+  vertical-align:middle;
 }
 .table {
   width: 100%;
   margin-bottom: 20px;
+  text-align: center;
 }
 .table thead > tr > th,
 .table tbody > tr > th,

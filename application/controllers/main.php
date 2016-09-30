@@ -38,15 +38,6 @@ class Main extends CI_Controller
 
 		$this->load->view('index', $data);
 	}
-
-	/*
-	 * 로그인후 메인페이지
-	 */
-	public function lists()
-	{
-		$data['list'] = $this->soft_model->get_list();
-		$this->load->view('list/main', $data);
-	}
 }
 
 

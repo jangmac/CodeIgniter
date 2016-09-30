@@ -4,14 +4,13 @@
         <!--overview start-->
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="page-header"><i class="fa fa-laptop"></i> Dashboard</h3>
+                <h3 class="page-header"><i class="fa fa-laptop"></i>전산 현황</h3>
                 <ol class="breadcrumb">
-                    <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                    <li><i class="fa fa-home"></i>Home</li>
                     <li><i class="fa fa-laptop"></i>Dashboard</li>
                 </ol>
             </div>
         </div>
-
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="info-box blue-bg">
@@ -20,7 +19,6 @@
                     <div class="title">Download</div>
                 </div><!--/.info-box-->
             </div><!--/.col-->
-
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="info-box brown-bg">
                     <i class="fa fa-shopping-cart"></i>
@@ -28,7 +26,6 @@
                     <div class="title">Purchased</div>
                 </div><!--/.info-box-->
             </div><!--/.col-->
-
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="info-box dark-bg">
                     <i class="fa fa-thumbs-o-up"></i>
@@ -36,7 +33,6 @@
                     <div class="title">Order</div>
                 </div><!--/.info-box-->
             </div><!--/.col-->
-
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="info-box green-bg">
                     <i class="fa fa-cubes"></i>
@@ -44,15 +40,9 @@
                     <div class="title">Stock</div>
                 </div><!--/.info-box-->
             </div><!--/.col-->
-
         </div><!--/.row-->
-
-
         <!-- Today status end -->
-
-
         <div class="row">
-
             <div class="col-lg-12 col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -74,7 +64,7 @@
                                 <td>1</td>
                                 <td>소프트웨어관리대장(진행)</td>
                                 <td>전산실</td>
-                                <td><?php echo $counter['soft_progress'];?></td>
+                                <td><?php echo $counter['soft_progress']; ?></td>
                                 <td>
                                     <a class="btn btn-primary btn-sm" href="/soft/write_progress/">신규 등록</a>
                                     <a class="btn btn-success btn-sm" href="/soft/progress_list/"> 목록 바로가기</a>
@@ -84,7 +74,7 @@
                                 <td>2</td>
                                 <td>소프트웨어관리대장(보관)</td>
                                 <td>전산실</td>
-                                <td><?php echo $counter['soft_keep'];?></td>
+                                <td><?php echo $counter['soft_keep']; ?></td>
                                 <td>
                                     <a class="btn btn-primary btn-sm" href="/soft/write_keep/">신규 등록</a>
                                     <a class="btn btn-success btn-sm" href="/soft/keep_list/"> 목록 바로가기</a>
@@ -94,7 +84,7 @@
                                 <td>3</td>
                                 <td>소프트웨어관리대장(사용불가)</td>
                                 <td>전산실</td>
-                                <td><?php echo $counter['soft_stop'];?></td>
+                                <td><?php echo $counter['soft_stop']; ?></td>
                                 <td>
                                     <a class="btn btn-primary btn-sm" href="/soft/write_stop/">신규 등록</a>
                                     <a class="btn btn-success k btn-sm" href="/soft/stop_list/"> 목록 바로가기</a>
@@ -104,7 +94,7 @@
                                 <td>4</td>
                                 <td>카스퍼스키관리대장</td>
                                 <td>전산실</td>
-                                <td><?php echo $counter['kaspersky'];?></td>
+                                <td><?php echo $counter['kaspersky']; ?></td>
                                 <td>
                                     <a class="btn btn-primary btn-sm" href="/soft/write_kaspersky/">신규 등록</a>
                                     <a class="btn btn-success k btn-sm" href="/soft/kaspersky/"> 목록 바로가기</a>
@@ -114,7 +104,7 @@
                                 <td>5</td>
                                 <td>프린터관리대장</td>
                                 <td>전산실</td>
-                                <td><?php echo $counter['printer'];?></td>
+                                <td><?php echo $counter['printer']; ?></td>
                                 <td>
                                     <a class="btn btn-primary btn-sm" href="/soft/write_printer/">신규 등록</a>
                                     <a class="btn btn-success k btn-sm" href="/soft/printer/"> 목록 바로가기</a>
@@ -124,7 +114,7 @@
                                 <td>6</td>
                                 <td>XP 업/다운그레이드</td>
                                 <td>전산실</td>
-                                <td><?php echo $counter['xp_down'];?></td>
+                                <td><?php echo $counter['xp_down']; ?></td>
                                 <td>
                                     <a class="btn btn-primary btn-sm" href="/soft/write_xp_down/">신규 등록</a>
                                     <a class="btn btn-success k btn-sm" href="/soft/xp_down/"> 목록 바로가기</a>
@@ -134,7 +124,7 @@
                                 <td>7</td>
                                 <td>MS-Office 관리대장</td>
                                 <td>전산실</td>
-                                <td><?php echo $counter['ms_up'];?></td>
+                                <td><?php echo $counter['ms_up']; ?></td>
                                 <td>
                                     <a class="btn btn-primary btn-sm" href="/soft/write_ms_up/">신규 등록</a>
                                     <a class="btn btn-success k btn-sm" href="/soft/ms_up/"> 목록 바로가기</a>
@@ -144,7 +134,7 @@
                                 <td>8</td>
                                 <td>Quark(쿽) 관리대장</td>
                                 <td>전산실</td>
-                                <td><?php echo $counter['quark_up'];?></td>
+                                <td><?php echo $counter['quark_up']; ?></td>
                                 <td>
                                     <a class="btn btn-primary btn-sm" href="/soft/write_quark_up/">신규 등록</a>
                                     <a class="btn btn-success k btn-sm" href="/soft/quark_up/"> 목록 바로가기</a>
@@ -154,7 +144,7 @@
                                 <td>9</td>
                                 <td>아시아폰트 관리대장</td>
                                 <td>전산실</td>
-                                <td><?php echo $counter['asiafont_up'];?></td>
+                                <td><?php echo $counter['asiafont_up']; ?></td>
                                 <td>
                                     <a class="btn btn-primary btn-sm" href="/soft/write_asiafont_up/">신규 등록</a>
                                     <a class="btn btn-success k btn-sm" href="/soft/asiafont_up/"> 목록 바로가기</a>
@@ -163,18 +153,10 @@
                             </tbody>
                         </table>
                     </div>
-
                 </div>
-
             </div><!--/col-->
-
-
         </div>
-
-
         <!-- statics end -->
-
-
         <!-- project team & activity start -->
         <div class="row">
             <div class="col-lg-12">
@@ -196,84 +178,14 @@
                             <td>관리자</td>
                         </tr>
                         <tr>
-                            <td>Yesterday</td>
+                            <td>2016-09-12</td>
                             <td>
-                                Project Design Task
+                                소프트웨어(진행) 수정
                             </td>
                             <td>
                                 <span class="badge bg-success">등록</span>
-                            </td>
-                            <td>
-                                장근식
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>21-10-14</td>
-                            <td>
-                                Generate Invoice
-                            </td>
-                            <td>
-                                <span class="badge bg-success">등록</span>
-                            </td>
-                            <td>
-                                장근식
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>22-10-14</td>
-                            <td>
-                                Project Testing
-                            </td>
-                            <td>
-                                <span class="badge bg-primary">수정</span>
-                            </td>
-                            <td>
-                                장근식
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>24-10-14</td>
-                            <td>
-                                Project Release Date
-                            </td>
-                            <td>
-                                <span class="badge bg-info">삭제</span>
-                            </td>
-                            <td>
-                                장근식
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>28-10-14</td>
-                            <td>
-                                Project Release Date
-                            </td>
-                            <td>
-                                <span class="badge bg-primary">수정</span>
-                            </td>
-                            <td>
-                                장근식
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Last week</td>
-                            <td>
-                                Project Release Date
-                            </td>
-                            <td>
-                                <span class="badge bg-primary">수정</span>
-                            </td>
-                            <td>
-                                장근식
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>last month</td>
-                            <td>
-                                Project Release Date
-                            </td>
-                            <td>
-                                <span class="badge bg-primary">수정</span>
+                                <span class="badge bg-info">수정</span>
+                                <span class="badge bg-warning">삭제</span>
                             </td>
                             <td>
                                 장근식
@@ -285,24 +197,8 @@
                 <!--Project Activity end-->
             </div>
         </div>
-        <br><br>
-
-
-        <!-- Footer goes here -->
-        </div>
-        </div>
-        </div>
-
-        </div>
-
-        </div>
-        <!-- project team & activity end -->
-
     </section>
 </section>
-<!--main content end-->
-</section>
-<!-- container section start -->
 
 
 

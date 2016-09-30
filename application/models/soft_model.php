@@ -684,10 +684,86 @@ class Soft_model extends CI_Model
 
     }
 
-    function delete_soft($id)
+    /*
+     * 소프트웨어 데이터 삭제
+     */
+    function delete_soft_progress($idx)
     {
-        $sql = "DELETE FROM items3 WHERE id = '" . $id . "'";
+        $sql = "DELETE FROM soft_progress WHERE idx = '" . $idx . "'";
 
-        $this->db->query($sql);
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+    function delete_soft_keep($idx)
+    {
+        $sql = "DELETE FROM soft_keep WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function delete_soft_stop($idx)
+    {
+        $sql = "DELETE FROM soft_stop WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function delete_kaspersky($idx)
+    {
+        $sql = "DELETE FROM kaspersky WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function delete_printer($idx)
+    {
+        $sql = "DELETE FROM printer WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function delete_xp_down($idx)
+    {
+        $sql = "DELETE FROM xp_down WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function delete_ms_up($idx)
+    {
+        $sql = "DELETE FROM ms_up WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function delete_quark_up($idx)
+    {
+        $sql = "DELETE FROM quark_up WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function delete_asiafont_up($idx)
+    {
+        $sql = "DELETE FROM asiafont_up WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
     }
 }

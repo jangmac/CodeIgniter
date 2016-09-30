@@ -47,7 +47,7 @@
 
     <header class="header dark-bg">
         <div class="toggle-nav">
-            <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            <div class="icon-reorder tooltips" data-original-title="sidebar 접기/펼치기" data-placement="bottom"><i class="icon_menu"></i></div>
         </div>
 
         <!--logo start-->
@@ -101,11 +101,11 @@
                     </a>
                     <ul class="sub">
                         <li><a class="" href="/group/g_gs">경영지원본부</a></li>
-                        <li><a class="" href="/soft/">광고1부</a></li>
-                        <li><a class="" href="/soft/">광고2부</a></li>
-                        <li><a class="" href="/soft/">리크루트/편집</a></li>
-                        <li><a class="" href="/soft/">여행사업팀</a></li>
-                        <li><a class="" href="/soft/">기타</a></li>
+                        <li><a class="" href="/group/g_ad1">광고1부</a></li>
+                        <li><a class="" href="/group/g_ad2">광고2부</a></li>
+                        <li><a class="" href="/group/g_em_edit">리크루트/편집</a></li>
+                        <li><a class="" href="/group/g_tv">여행사업팀</a></li>
+                        <li><a class="" href="/group/g_etc">기타</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">

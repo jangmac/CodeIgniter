@@ -5,8 +5,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h3 class="page-header"><i class="fa fa-laptop"></i> Quark(쿽) 업그레이드</h3>
-                <a class="btn btn-primary btn-sm" href="/soft/write_quark_up/">등록</a>
-                <a class="btn btn-danger btn-sm"> 삭제</a>
+                <a class="btn btn-success btn-sm" href="/soft/write_quark_up/">신규 등록</a>
             </div>
         </div>
         <br/>
@@ -20,7 +19,7 @@
                     <table class="table table-striped table-advance table-hover">
                 <thead>
                 <tr>
-                    <th scope="col" width="3%">구분</th>
+                    <th scope="col">구분</th>
                     <th scope="col">Quark3</th>
                     <th scope="col">Quark4</th>
                     <th scope="col">Quark8</th>
@@ -37,10 +36,10 @@
                     ?>
                     <tr>
                         <th scope="row">
-                            <a href="/soft/view_quark_up/<?php echo $lt->idx ?>"><?php echo $lt -> idx;?>
+                            <?php echo $lt->idx; ?>
                         </th>
                         <td>
-                            <?php echo $lt -> quark3;?>
+                            <a href="/soft/view_quark_up/<?php echo $lt->idx ?>"><?php echo $lt -> quark3;?>
                         </td>
                         <td>
                             <?php echo $lt -> quark4;?>

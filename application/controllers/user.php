@@ -33,10 +33,13 @@ class User extends CI_Controller
      * 로그인 처리
      */
     public function login() {
+        // Form validation 라이브러리 로드 ( 폼 검증 라이브러리 로드)
         $this -> load -> library('form_validation');
 
+        // Alert 라이브러리 로드(메시지)
         $this -> load -> helper('alert');
 
+        // 폼 검증 필드와 규칙 사전 정의
         $this -> form_validation -> set_rules('username', '아이디', 'required|alpha_numeric');
         $this -> form_validation -> set_rules('password', '비밀번호', 'required');
 
@@ -53,7 +56,7 @@ class User extends CI_Controller
             if ($result) {
                 $newdata = array(
                     'username' => $result -> username,
-                    'email' => $result -> email,
+                    //'email' => $result -> email,
                     'logged_in' => TRUE
                 );
 
@@ -75,8 +78,10 @@ class User extends CI_Controller
      */
 
     public function logout() {
+
         $this -> load -> helper('alert');
 
+        // 현재 세션을 버림.
         $this -> session -> sess_destroy();
 
         echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';

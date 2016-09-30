@@ -54,8 +54,8 @@
                                     </div>
                                     <div class="form-actions">
                                         <div class="col-lg-10 col-lg-offset-2">
-                                            <button class="btn btn-default" onclick="history.back();">취소</button>
                                             <button type="submit" class="btn btn-primary" id="write_btn">등록</button>
+                                            <button class="btn btn-default" onclick="history.back();">취소</button>
                                         </div>
                                     </div>
                                 </form>

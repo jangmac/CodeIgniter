@@ -1,9 +1,5 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-/*
- * soft 모델
- */
-
 class Main_model extends CI_Model
 {
     function __construct()
@@ -13,7 +9,7 @@ class Main_model extends CI_Model
     }
 
     /*
-     * dashboard - 목록별 row 카운트
+     * dashboard - list(소프트웨어 진행~아시아폰트) 목록별 row 카운트
      */
 
     function get_count()

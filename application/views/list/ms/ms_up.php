@@ -5,8 +5,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h3 class="page-header"><i class="fa fa-laptop"></i> MS-Office 업그레이드</h3>
-                <a class="btn btn-primary btn-sm" href="/soft/write_ms_up/">등록</a>
-                <a class="btn btn-danger btn-sm"> 삭제</a>
+                <a class="btn btn-success btn-sm" href="/soft/write_ms_up/">신규 등록</a>
             </div>
         </div>
         <br/>

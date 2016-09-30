@@ -5,8 +5,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h3 class="page-header"><i class="fa fa-laptop"></i> 소프트웨어(사용불가)</h3>
-                <a class="btn btn-primary btn-sm" href="/soft/write_stop/">등록</a>
-                <a class="btn btn-danger btn-sm"> 삭제</a>
+                <a class="btn btn-success btn-sm" href="/soft/write_stop/">신규 등록</a>
             </div>
         </div>
         <br/>
@@ -20,13 +19,11 @@
                     <table class="table table-striped table-advance table-hover">
                         <thead>
                         <tr>
-                            <th scope="col">구분</th>
                             <th scope="col">제품명</th>
                             <th scope="col">버전</th>
                             <th scope="col">제조사</th>
                             <th scope="col">제품용도</th>
                             <th scope="col">사용대상</th>
-                            <th scope="col">호환성</th>
                             <th scope="col">시리얼번호</th>
                             <th scope="col">패키지</th>
                             <th scope="col">라이선스</th>
@@ -39,9 +36,6 @@
                         foreach ($stop_list as $lt) {
                             ?>
                             <tr>
-                                <th scope="row">
-                                    <?php echo $lt->idx; ?>
-                                </th>
                                 <td>
                                     <a href="/soft/view_stop/<?php echo $lt->idx ?>"><?php echo $lt->product_name; ?>
                                 </td>
@@ -58,13 +52,10 @@
                                     <?php echo $lt->target; ?>
                                 </td>
                                 <td>
-                                    <?php echo $lt->compatibility; ?>
-                                </td>
-                                <td>
                                     <?php echo $lt->sirial_num; ?>
                                 </td>
                                 <td>
-                                    <?php echo $lt->package; ?>
+                                    <?php if($lt->package) echo "√";?>
                                 </td>
                                 <td>
                                     <?php echo $lt->license_numb; ?>

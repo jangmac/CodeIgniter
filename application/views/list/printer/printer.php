@@ -5,8 +5,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h3 class="page-header"><i class="fa fa-laptop"></i> 프린터</h3>
-                <a class="btn btn-primary btn-sm" href="/soft/write_printer/">등록</a>
-                <a class="btn btn-danger btn-sm"> 삭제</a>
+                <a class="btn btn-success btn-sm" href="/soft/write_printer/">신규 등록</a>
             </div>
         </div>
         <br/>
@@ -20,7 +19,7 @@
                     <table class="table table-striped table-advance table-hover">
                 <thead>
                 <tr>
-                    <th scope="col" rowspan="3" >구분</th>
+                    <th scope="col" rowspan="2" >구분</th>
                     <th scope="col" rowspan="2">제품명</th>
                     <th scope="col" rowspan="2">사용장소</th>
                     <th scope="col" rowspan="2">계약기간</th>

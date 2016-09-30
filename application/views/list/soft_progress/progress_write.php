@@ -45,7 +45,7 @@
                                 <div class="form-group">
                                     <label for="target" class="col-lg-2 control-label">사용대상</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="target" name="target">
+                                        <textarea class="form-control " id="target" name="target" ></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -57,7 +57,7 @@
                                 <div class="form-group">
                                     <label for="sirial_num" class="col-lg-2 control-label">시리얼번호</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="sirial_num" name="sirial_num">
+                                        <textarea class="form-control " id="sirial_num" name="sirial_num" ></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">

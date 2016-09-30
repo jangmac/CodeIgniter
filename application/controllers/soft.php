@@ -34,6 +34,7 @@ class Soft extends CI_Controller
     public function progress_list()
     {
         $data['progress_list'] = $this -> soft_model -> get_progress_list();
+
         $this->load->view('list/soft_progress/soft_progress', $data);
     }
 
@@ -126,8 +127,7 @@ class Soft extends CI_Controller
                 $package,$license_numb,$keep_place,$use_num,$remarks
             );
 
-            alert('게시물 등록 완료');
-            redirect(base_url().'soft/progress_list/');
+            alert('게시물 등록 완료','../progress_list/');
 
             exit;
         }
@@ -149,6 +149,8 @@ class Soft extends CI_Controller
 
         // view 호출
         $this -> load -> view('list/soft_progress/progress_detail', $data);
+
+
 
         if ( $_POST )
         {
@@ -187,24 +189,29 @@ class Soft extends CI_Controller
 
             $this->soft_model->modify_soft_progress($params);
 
-            alert('게시물 수정 완료');
-            redirect(base_url().'soft/progress_list/');
+            alert('게시물 수정 완료','../progress_list');
 
             exit;
         }
     }
 
     /*
-     * softmanage 삭제
+     * soft_progress 데이터 삭제
      */
-    public function delete()
+    public function soft_progress_delete()
     {
+        $this->load->helper('alert');
         // 게시물 번호에 해당하는 게시물 삭제
-        $id = $this->uri->segment(3);
+        $idx = $this->uri->segment(3);
+        $return = $this->soft_model->delete_soft_progress($idx);
 
-        $this->soft_model->delete_soft($id);
-
-        redirect(base_url().'main/lists/');
+        if ($return) {
+            alert('데이터 삭제되었습니다.', '../progress_list');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.', '../progress_list');
+            exit;
+        }
     }
 
     /*
@@ -235,8 +242,7 @@ class Soft extends CI_Controller
                 $package,$license_numb,$keep_place,$remarks
             );
 
-            alert('게시물 등록 완료');
-            redirect(base_url().'soft/keep_list/');
+            alert('게시물 등록 완료','../keep_list/');
 
             exit;
         }
@@ -294,9 +300,27 @@ class Soft extends CI_Controller
 
             $this->soft_model->modify_soft_keep($params);
 
-            alert('게시물 수정 완료');
-            redirect(base_url().'soft/keep_list/');
+            alert('게시물 수정 완료','../keep_list/');
 
+            exit;
+        }
+    }
+
+    /*
+     * soft_keep 데이터 삭제
+     */
+    public function soft_keep_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->soft_model->delete_soft_keep($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.', '../keep_list');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.', '../keep_list');
             exit;
         }
     }
@@ -329,8 +353,7 @@ class Soft extends CI_Controller
                 $package,$license_numb,$keep_place,$remarks
             );
 
-            alert('게시물 등록 완료');
-            redirect(base_url().'soft/stop_list/');
+            alert('게시물 등록 완료','../stop_list/');
 
             exit;
         }
@@ -388,9 +411,27 @@ class Soft extends CI_Controller
 
             $this->soft_model->modify_soft_stop($params);
 
-            alert('게시물 수정 완료');
-            redirect(base_url().'soft/stop_list/');
+            alert('게시물 수정 완료','../stop_list/');
 
+            exit;
+        }
+    }
+
+    /*
+     * soft_stop 데이터 삭제
+     */
+    public function soft_stop_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->soft_model->delete_soft_stop($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.', '../stop_list');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.', '../stop_list');
             exit;
         }
     }
@@ -423,8 +464,7 @@ class Soft extends CI_Controller
                 $package,$license_numb,$keep_place,$remarks
             );
 
-            alert('게시물 등록 완료');
-            redirect(base_url().'soft/kaspersky/');
+            alert('게시물 등록 완료','../kaspersky/');
 
             exit;
         }
@@ -482,9 +522,27 @@ class Soft extends CI_Controller
 
             $this->soft_model->modify_kaspersky($params);
 
-            alert('게시물 수정 완료');
-            redirect(base_url().'soft/kaspersky/');
+            alert('게시물 수정 완료','../kaspersky/');
 
+            exit;
+        }
+    }
+
+    /*
+     * kaspersky 데이터 삭제
+     */
+    public function kaspersky_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->soft_model->delete_kaspersky($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.', '../kaspersky');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.', '../kaspersky');
             exit;
         }
     }
@@ -513,8 +571,7 @@ class Soft extends CI_Controller
                 $product_name, $use_place, $term,$cost,$color_a4,$color_a3,$black_a4, $black_a3
             );
 
-            alert('게시물 등록 완료');
-            redirect(base_url().'soft/printer/');
+            alert('게시물 등록 완료','../printer/');
 
             exit;
         }
@@ -566,9 +623,27 @@ class Soft extends CI_Controller
 
             $this->soft_model->modify_printer($params);
 
-            alert('게시물 수정 완료');
-            redirect(base_url().'soft/printer/');
+            alert('게시물 수정 완료','../printer/');
 
+            exit;
+        }
+    }
+
+    /*
+     * printer 데이터 삭제
+     */
+    public function printer_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->soft_model->delete_printer($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.', '../printer');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.', '../printer');
             exit;
         }
     }
@@ -590,8 +665,7 @@ class Soft extends CI_Controller
                 $window7
             );
 
-            alert('게시물 등록 완료');
-            redirect(base_url().'soft/xp_down/');
+            alert('게시물 등록 완료','../xp_down/');
 
             exit;
         }
@@ -629,17 +703,34 @@ class Soft extends CI_Controller
 
             $this->soft_model->modify_xp_down($params);
 
-            alert('게시물 수정 완료');
-            redirect(base_url().'soft/xp_down/');
+            alert('게시물 수정 완료','../xp_down/');
 
             exit;
         }
     }
 
+    /*
+     * xp_down 데이터 삭제
+     */
+    public function xp_down_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->soft_model->delete_xp_down($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.', '../xp_down');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.', '../xp_down');
+            exit;
+        }
+    }
     
     /*
-         *  ms_up 등록
-         */
+     * ms_up 등록
+     */
     public function write_ms_up()
     {
         if ( $_POST )
@@ -656,8 +747,7 @@ class Soft extends CI_Controller
                 $office2007_pro
             );
 
-            alert('게시물 등록 완료');
-            redirect(base_url().'soft/ms_up/');
+            alert('게시물 등록 완료','../ms_up/');
 
             exit;
         }
@@ -697,9 +787,27 @@ class Soft extends CI_Controller
 
             $this->soft_model->modify_ms_up($params);
 
-            alert('게시물 수정 완료');
-            redirect(base_url().'soft/ms_up/');
+            alert('게시물 수정 완료','../ms_up/');
 
+            exit;
+        }
+    }
+
+    /*
+     * ms_up 데이터 삭제
+     */
+    public function ms_up_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->soft_model->delete_ms_up($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.', '../ms_up');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.', '../ms_up');
             exit;
         }
     }
@@ -735,8 +843,7 @@ class Soft extends CI_Controller
                 $user
             );
 
-            alert('게시물 등록 완료');
-            redirect(base_url().'soft/quark_up/');
+            alert('게시물 등록 완료','../quark_up/');
 
             exit;
         }
@@ -788,9 +895,27 @@ class Soft extends CI_Controller
 
             $this->soft_model->modify_quark_up($params);
 
-            alert('게시물 수정 완료');
-            redirect(base_url().'soft/quark_up/');
+            alert('게시물 수정 완료','../quark_up/');
 
+            exit;
+        }
+    }
+
+    /*
+     * quark_up 데이터 삭제
+     */
+    public function quark_up_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->soft_model->delete_quark_up($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.', '../quark_up');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.', '../quark_up');
             exit;
         }
     }
@@ -814,8 +939,7 @@ class Soft extends CI_Controller
                 $integrated_Package
             );
 
-            alert('게시물 등록 완료');
-            redirect(base_url().'soft/asiafont_up/');
+            alert('게시물 등록 완료','../asiafont_up/');
 
             exit;
         }
@@ -855,9 +979,27 @@ class Soft extends CI_Controller
 
             $this->soft_model->modify_asiafont_up($params);
 
-            alert('게시물 수정 완료');
-            redirect(base_url().'soft/asiafont_up/');
+            alert('게시물 수정 완료','../asiafont_up/');
 
+            exit;
+        }
+    }
+
+    /*
+     * asiafont_up 데이터 삭제
+     */
+    public function asiafont_up_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->soft_model->delete_asiafont_up($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.', '../asiafont_up');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.', '../asiafont_up');
             exit;
         }
     }
