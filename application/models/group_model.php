@@ -498,4 +498,60 @@ class Group_model extends CI_Model
 
     }
 
+    /*
+     * 전산 항목 부분추가(ADD)
+     */
+
+    function g_add_moniter(
+        $user_idx, $m_company, $m_product_name, $m_model_code,
+        $m_model_name, $m_identify, $m_produce_ym, $m_soft_num, $m_gian_num, $m_buy_day)
+    {
+        $sql = "INSERT INTO g_moniter (
+        user_idx, company, product_name, model_code, model_name, identify, produce_ym ,soft_num, gian_num, buy_day
+        ) 
+        VALUES (
+        '" . $user_idx . "',
+        '" . $m_company . "',
+        '" . $m_product_name . "',
+        '" . $m_model_code . "',
+        '" . $m_model_name . "',
+        '" . $m_identify . "',
+        '" . $m_produce_ym . "',
+        '" . $m_soft_num . "',
+        '" . $m_gian_num . "',
+        '" . $m_buy_day . "'
+        )";
+        $query = $this->db->query($sql);
+    }
+
+    function g_add_pc(
+        $user_idx, $p_company, $p_model_name, $p_model_code, $p_produce_number, $p_product_code, $p_identify, $p_produce_ym,
+        $p_g_cpu, $p_g_ram, $p_g_hdd_c, $p_g_hdd_d, $p_g_graphic, $p_gian_num, $p_buy_day
+    )
+    {
+        $sql = "INSERT INTO g_pc (
+        user_idx, company, model_name, model_code, produce_number, product_code, identify, produce_ym, 
+        g_cpu, g_ram, g_hdd_c, g_hdd_d, g_graphic, gian_num, buy_day
+        ) 
+        VALUES (
+        '" . $user_idx . "',
+        '" . $p_company . "',
+        '" . $p_model_name . "',
+        '" . $p_model_code . "',
+        '" . $p_produce_number . "',
+        '" . $p_product_code . "',
+        '" . $p_identify . "',
+        '" . $p_produce_ym . "',
+        '" . $p_g_cpu . "',
+        '" . $p_g_ram . "',
+        '" . $p_g_hdd_c . "',
+        '" . $p_g_hdd_d . "',
+        '" . $p_g_graphic . "',
+        '" . $p_gian_num . "',
+        '" . $p_buy_day . "'
+        )";
+        $query = $this->db->query($sql);
+    }
+
+
 }

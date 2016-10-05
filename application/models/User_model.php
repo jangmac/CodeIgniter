@@ -120,7 +120,8 @@ class User_model extends CI_Model
     
 
     /*
-     * 경영지원본부 그룹원 등록
+     * 그룹원 등록
+     * g_gs가 전체 그룹원 테이블임.
      */
 
     function insert_gs_user($user_name, $user_email, $user_group, $user_grade, $user_number, $group_key)
@@ -182,6 +183,18 @@ class User_model extends CI_Model
 
         $sql = "insert into g_compress(user_idx) (select max(idx) from g_gs)";
         $query = $this->db->query($sql);
+
+    }
+
+    /*
+     * 그룹원 수정
+     */
+    public function view_gs_user($idx)
+    {
+        $sql = "SELECT * FROM g_gs WHERE idx=$idx";
+        $query = $this->db->query($sql);
+        $result = $query->row();
+        return $result;
 
     }
 

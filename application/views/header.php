@@ -15,6 +15,9 @@
     <!-- bootstrap theme -->
     <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
     <!--external css-->
+    <!--jquery 추가해야함 -->
+    <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
     <!-- font icon -->
     <link href="/assets/css/elegant-icons-style.css" rel="stylesheet" />
     <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
