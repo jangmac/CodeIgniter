@@ -211,6 +211,28 @@ class Soft_model extends CI_Model
         return $result;
     }
 
+    function get_keep_keyboard()
+    {
+        $sql = "SELECT * FROM jeonsan_keyboard";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
+    function get_keep_mouse()
+    {
+        $sql = "SELECT * FROM jeonsan_mouse";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
     /*
      * soft_progress 등록
      */

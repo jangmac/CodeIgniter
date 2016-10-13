@@ -1074,11 +1074,20 @@ class Group_model extends CI_Model
         $query = $this->db->query($sql);
     }
 
-    ### 전산실 보관하기 ###
+    ### 전산실 보관하기,삭제하기 ###
 
     function add_keep_pc($idx)
     {
         $sql = "INSERT INTO jeonsan_pc SELECT * FROM g_pc WHERE idx=$idx";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function delete_keep_pc($idx)
+    {
+        $sql = "DELETE FROM jeonsan_pc WHERE idx = '" . $idx . "'";
 
         $result = $this->db->query($sql);
 
@@ -1094,8 +1103,19 @@ class Group_model extends CI_Model
         return $result;
     }
 
+    function delete_keep_moniter($idx)
+    {
+        $sql = "DELETE FROM jeonsan_moniter WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+
+
     /*
-     * 모니터 데이터 삭제
+     * 모니터 데이터 삭제 (g_view)
      */
     function delete_part_moniter($idx)
     {

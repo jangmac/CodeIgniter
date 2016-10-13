@@ -172,7 +172,8 @@
                                                                         <?php if (($lt->product_name) != '') {
                                                                             ?>
                                                                             <div class="btn-group">
-                                                                                <a class="btn btn-success">보관</a>
+                                                                                <a class="btn btn-success"
+                                                                                   href="/group/jeonsan_keep_keyboard/<?php echo $lt->idx; ?>">보관</a>
                                                                                 <a class="btn btn-primary"
                                                                                    href="/group/g_keyboard/<?php echo $lt->idx; ?>">수정</a>
                                                                                 <a class="btn btn-danger"

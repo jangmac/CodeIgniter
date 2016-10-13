@@ -144,6 +144,18 @@ class Soft extends CI_Controller
         $this->load->view('list/jeonsan/j_item_moniter', $data);
     }
 
+    public function keep_keyboard()
+    {
+        $data['keep_keyboard'] = $this->soft_model->get_keep_keyboard();
+        $this->load->view('list/jeonsan/j_item_keyboard', $data);
+    }
+
+    public function keep_mouse()
+    {
+        $data['keep_mouse'] = $this->soft_model->get_keep_mouse();
+        $this->load->view('list/jeonsan/j_item_mouse', $data);
+    }
+
     /*
      *  soft_progress 등록
      */
