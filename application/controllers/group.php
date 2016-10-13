@@ -10,6 +10,7 @@ class Group extends CI_Controller
         $this->allow = array();
         $this->load->database();
         $this->load->model('user_model');
+        $this->load->model('group_model');
         $this->load->helper(array('url', 'date'));
     }
 
@@ -188,7 +189,23 @@ class Group extends CI_Controller
         $this->load->model('group_model');
 
         $user_idx = $this->uri->segment(3);
-        $data['g_view'] = $this->group_model->get_g_view($user_idx);
+        //$data['g_view'] = $this->group_model->get_g_view($user_idx);
+        $data['view_user'] = $this->group_model->get_view_user($user_idx);
+        $data['view_moniter'] = $this->group_model->get_view_moniter($user_idx);
+        $data['view_pc'] = $this->group_model->get_view_pc($user_idx);
+        $data['view_keyboard'] = $this->group_model->get_view_keyboard($user_idx);
+        $data['view_mouse'] = $this->group_model->get_view_mouse($user_idx);
+        $data['view_headset'] = $this->group_model->get_view_headset($user_idx);
+        $data['view_cell'] = $this->group_model->get_view_cell($user_idx);
+        $data['view_window'] = $this->group_model->get_view_window($user_idx);
+        $data['view_ms'] = $this->group_model->get_view_ms($user_idx);
+        $data['view_hangul'] = $this->group_model->get_view_hangul($user_idx);
+        $data['view_security'] = $this->group_model->get_view_security($user_idx);
+        $data['view_quark'] = $this->group_model->get_view_quark($user_idx);
+        $data['view_adobe'] = $this->group_model->get_view_adobe($user_idx);
+        $data['view_font'] = $this->group_model->get_view_font($user_idx);
+        $data['view_compress'] = $this->group_model->get_view_compress($user_idx);
+        
 
         $this->load->view('list/computational/g_view', $data);
     }
@@ -201,8 +218,8 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
-        $data['views'] = $this->group_model->get_g_view($user_idx);
+        $idx = $this->uri->segment(3);
+        $data['views'] = $this->group_model->update_view_moniter($idx);
 
         // view 호출
         $this->load->view('list/computational/register/g_moniter', $data);
@@ -232,7 +249,7 @@ class Group extends CI_Controller
                 "soft_num" => $soft_num,
                 "gian_num" => $gian_num,
                 "buy_day" => $buy_day,
-                "user_idx" => $user_idx
+                "idx" => $idx
             );
 
             $this->group_model->update_g_moniter($params);
@@ -252,10 +269,8 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
-
-        $data['views'] = $this->group_model->get_g_view($user_idx);
-
+        $idx = $this->uri->segment(3);
+        $data['views'] = $this->group_model->update_view_pc($idx);
         // view 호출
         $this->load->view('list/computational/register/g_pc', $data);
 
@@ -263,7 +278,7 @@ class Group extends CI_Controller
             // 글쓰기 POST 전송 시
 
             $this->load->helper('alert');
-
+            $idx = trim($this->input->post("idx"));
             $company = trim($this->input->post("company"));
             $model_name = trim($this->input->post("model_name"));
             $model_code = trim($this->input->post("model_code"));
@@ -280,6 +295,7 @@ class Group extends CI_Controller
             $buy_day = trim($this->input->post("buy_day"));
 
             $params = array(
+                "idx" => $idx,
                 "company" => $company,
                 "model_name" => $model_name,
                 "model_code" => $model_code,
@@ -293,8 +309,7 @@ class Group extends CI_Controller
                 "g_hdd_d" => $g_hdd_d,
                 "g_graphic" => $g_graphic,
                 "gian_num" => $gian_num,
-                "buy_day" => $buy_day,
-                "user_idx" => $user_idx
+                "buy_day" => $buy_day
             );
 
             $this->group_model->update_g_pc($params);
@@ -314,9 +329,9 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
+        $idx = $this->uri->segment(3);
 
-        $data['views'] = $this->group_model->get_g_view($user_idx);
+        $data['views'] = $this->group_model->update_view_keyboard($idx);
 
         // view 호출
         $this->load->view('list/computational/register/g_keyboard', $data);
@@ -338,7 +353,7 @@ class Group extends CI_Controller
                 "produce_ym" => $produce_ym,
                 "gian_num" => $gian_num,
                 "buy_day" => $buy_day,
-                "user_idx" => $user_idx
+                "idx" => $idx
             );
 
             $this->group_model->update_g_keyboard($params);
@@ -358,9 +373,9 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
+        $idx = $this->uri->segment(3);
 
-        $data['views'] = $this->group_model->get_g_view($user_idx);
+        $data['views'] = $this->group_model->update_view_mouse($idx);
 
         // view 호출
         $this->load->view('list/computational/register/g_mouse', $data);
@@ -382,7 +397,7 @@ class Group extends CI_Controller
                 "produce_ym" => $produce_ym,
                 "gian_num" => $gian_num,
                 "buy_day" => $buy_day,
-                "user_idx" => $user_idx
+                "idx" => $idx
             );
 
             $this->group_model->update_g_mouse($params);
@@ -402,9 +417,9 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
+        $idx = $this->uri->segment(3);
 
-        $data['views'] = $this->group_model->get_g_view($user_idx);
+        $data['views'] = $this->group_model->update_view_headset($idx);
 
         // view 호출
         $this->load->view('list/computational/register/g_headset', $data);
@@ -426,7 +441,7 @@ class Group extends CI_Controller
                 "produce_ym" => $produce_ym,
                 "gian_num" => $gian_num,
                 "buy_day" => $buy_day,
-                "user_idx" => $user_idx
+                "idx" => $idx
             );
 
             $this->group_model->update_g_headset($params);
@@ -446,9 +461,9 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
+        $idx = $this->uri->segment(3);
 
-        $data['views'] = $this->group_model->get_g_view($user_idx);
+        $data['views'] = $this->group_model->update_view_cell($idx);
 
         // view 호출
         $this->load->view('list/computational/register/g_cell', $data);
@@ -459,18 +474,14 @@ class Group extends CI_Controller
             $this->load->helper('alert');
 
             $product_name = trim($this->input->post("product_name"));
-            $identify = trim($this->input->post("identify"));
-            $produce_ym = trim($this->input->post("produce_ym"));
             $gian_num = trim($this->input->post("gian_num"));
             $buy_day = trim($this->input->post("buy_day"));
 
             $params = array(
                 "product_name" => $product_name,
-                "identify" => $identify,
-                "produce_ym" => $produce_ym,
                 "gian_num" => $gian_num,
                 "buy_day" => $buy_day,
-                "user_idx" => $user_idx
+                "idx" => $idx
             );
 
             $this->group_model->update_g_cell($params);
@@ -490,9 +501,9 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
+        $idx = $this->uri->segment(3);
 
-        $data['views'] = $this->group_model->get_g_view($user_idx);
+        $data['views'] = $this->group_model->update_view_window($idx);
 
         // view 호출
         $this->load->view('list/computational/register/g_window', $data);
@@ -510,7 +521,7 @@ class Group extends CI_Controller
                 "product_number" => $product_number,
                 "gian_num" => $gian_num,
                 "duration" => $duration,
-                "user_idx" => $user_idx
+                "idx" => $idx
             );
 
             $this->group_model->update_g_window($params);
@@ -530,9 +541,9 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
+        $idx = $this->uri->segment(3);
 
-        $data['views'] = $this->group_model->get_g_view($user_idx);
+        $data['views'] = $this->group_model->update_view_ms($idx);
 
         // view 호출
         $this->load->view('list/computational/register/g_ms', $data);
@@ -550,7 +561,7 @@ class Group extends CI_Controller
                 "product_number" => $product_number,
                 "gian_num" => $gian_num,
                 "duration" => $duration,
-                "user_idx" => $user_idx
+                "idx" => $idx
             );
 
             $this->group_model->update_g_ms($params);
@@ -570,9 +581,9 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
+        $idx = $this->uri->segment(3);
 
-        $data['views'] = $this->group_model->get_g_view($user_idx);
+        $data['views'] = $this->group_model->update_view_hangul($idx);
 
         // view 호출
         $this->load->view('list/computational/register/g_hangul', $data);
@@ -590,7 +601,7 @@ class Group extends CI_Controller
                 "product_number" => $product_number,
                 "gian_num" => $gian_num,
                 "duration" => $duration,
-                "user_idx" => $user_idx
+                "idx" => $idx
             );
 
             $this->group_model->update_g_hangul($params);
@@ -610,9 +621,9 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
+        $idx = $this->uri->segment(3);
 
-        $data['views'] = $this->group_model->get_g_view($user_idx);
+        $data['views'] = $this->group_model->update_view_security($idx);
 
         // view 호출
         $this->load->view('list/computational/register/g_security', $data);
@@ -630,7 +641,7 @@ class Group extends CI_Controller
                 "product_number" => $product_number,
                 "gian_num" => $gian_num,
                 "duration" => $duration,
-                "user_idx" => $user_idx
+                "idx" => $idx
             );
 
             $this->group_model->update_g_security($params);
@@ -650,9 +661,9 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
+        $idx = $this->uri->segment(3);
 
-        $data['views'] = $this->group_model->get_g_view($user_idx);
+        $data['views'] = $this->group_model->update_view_quark($idx);
 
         // view 호출
         $this->load->view('list/computational/register/g_quark', $data);
@@ -672,7 +683,7 @@ class Group extends CI_Controller
                 "font" => $font,
                 "gian_num" => $gian_num,
                 "duration" => $duration,
-                "user_idx" => $user_idx
+                "idx" => $idx
             );
 
             $this->group_model->update_g_quark($params);
@@ -692,9 +703,9 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
+        $idx = $this->uri->segment(3);
 
-        $data['views'] = $this->group_model->get_g_view($user_idx);
+        $data['views'] = $this->group_model->update_view_adobe($idx);
 
         // view 호출
         $this->load->view('list/computational/register/g_adobe', $data);
@@ -720,7 +731,7 @@ class Group extends CI_Controller
                 "gian_num" => $gian_num,
                 "duration" => $duration,
                 "remarks" => $remarks,
-                "user_idx" => $user_idx
+                "idx" => $idx
             );
 
             $this->group_model->update_g_adobe($params);
@@ -740,9 +751,9 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
+        $idx = $this->uri->segment(3);
 
-        $data['views'] = $this->group_model->get_g_view($user_idx);
+        $data['views'] = $this->group_model->update_view_font($idx);
 
         // view 호출
         $this->load->view('list/computational/register/g_font', $data);
@@ -766,7 +777,7 @@ class Group extends CI_Controller
                 "mukhyang" => $mukhyang,
                 "m_gian_num" => $m_gian_num,
                 "m_duration" => $m_duration,
-                "user_idx" => $user_idx
+                "idx" => $idx
             );
 
             $this->group_model->update_g_font($params);
@@ -786,9 +797,9 @@ class Group extends CI_Controller
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
-        $user_idx = $this->uri->segment(3);
+        $idx = $this->uri->segment(3);
 
-        $data['views'] = $this->group_model->get_g_view($user_idx);
+        $data['views'] = $this->group_model->update_view_compress($idx);
 
         // view 호출
         $this->load->view('list/computational/register/g_compress', $data);
@@ -806,7 +817,7 @@ class Group extends CI_Controller
                 "alzip" => $alzip,
                 "gian_num" => $gian_num,
                 "duration" => $duration,
-                "user_idx" => $user_idx
+                "idx" => $idx
             );
 
             $this->group_model->update_g_compress($params);
@@ -817,25 +828,26 @@ class Group extends CI_Controller
             exit;
         }
     }
-    
+
     /*
      * 전산기록부 항목 추가
      */
-    public function g_add_option() {
+    public function g_add_option()
+    {
 
         $this->load->model('group_model');
         // 번호에 해당하는 데이터 가져오기
         $user_idx = $this->uri->segment(3);
-        
+
         if ($_POST) {
             // 글쓰기 POST 전송 시
 
             $this->load->helper('alert');
             //radio버튼 value 테이블명 
             $table = $this->input->post('radioName', TRUE);
-            
+
             //모니터
-            if ($table=="g_moniter"){
+            if ($table == "g_moniter") {
                 $m_company = $this->input->post('m_company', TRUE);
                 $m_product_name = $this->input->post('m_product_name', TRUE);
                 $m_model_code = $this->input->post('m_model_code', TRUE);
@@ -850,7 +862,8 @@ class Group extends CI_Controller
                     $user_idx, $m_company, $m_product_name, $m_model_code, $m_model_name, $m_identify, $m_produce_ym, $m_soft_num, $m_gian_num, $m_buy_day
 
                 );
-            } else if ($table=="g_pc") {
+
+            } else if ($table == "g_pc") {
                 $p_company = $this->input->post('p_company', TRUE);
                 $p_model_name = $this->input->post('p_model_name', TRUE);
                 $p_model_code = $this->input->post('p_model_code', TRUE);
@@ -870,19 +883,385 @@ class Group extends CI_Controller
                     $user_idx, $p_company, $p_model_name, $p_model_code, $p_produce_number, $p_product_code, $p_identify, $p_produce_ym,
                     $p_g_cpu, $p_g_ram, $p_g_hdd_c, $p_g_hdd_d, $p_g_hdd_d, $p_g_graphic, $p_gian_num, $p_buy_day
                 );
+            } else if ($table == "g_keyboard") {
+                $k_product_name = $this->input->post('k_product_name', TRUE);
+                $k_identify = $this->input->post('k_identify', TRUE);
+                $k_produce_ym = $this->input->post('k_produce_ym', TRUE);
+                $k_gian_num = $this->input->post('k_gian_num', TRUE);
+                $k_buy_day = $this->input->post('k_buy_day', TRUE);
+
+                $this->group_model->g_add_keyboard(
+                    $user_idx, $k_product_name, $k_identify, $k_produce_ym, $k_gian_num, $k_buy_day
+                );
+            } else if ($table == "g_mouse") {
+                $mu_product_name = $this->input->post('mu_product_name', TRUE);
+                $mu_identify = $this->input->post('mu_identify', TRUE);
+                $mu_produce_ym = $this->input->post('mu_produce_ym', TRUE);
+                $mu_gian_num = $this->input->post('mu_gian_num', TRUE);
+                $mu_buy_day = $this->input->post('mu_buy_day', TRUE);
+
+                $this->group_model->g_add_mouse(
+                    $user_idx, $mu_product_name, $mu_identify, $mu_produce_ym, $mu_gian_num, $mu_buy_day
+                );
+            } else if ($table == "g_headset") {
+                $h_product_name = $this->input->post('h_product_name', TRUE);
+                $h_gian_num = $this->input->post('h_gian_num', TRUE);
+                $h_buy_day = $this->input->post('h_buy_day', TRUE);
+
+                $this->group_model->g_add_headset(
+                    $user_idx, $h_product_name, $h_gian_num, $h_buy_day
+                );
+            } else if ($table == "g_cell") {
+                $c_product_name = $this->input->post('c_product_name', TRUE);
+                $c_gian_num = $this->input->post('c_gian_num', TRUE);
+                $c_buy_day = $this->input->post('c_buy_day', TRUE);
+
+                $this->group_model->g_add_cell(
+                    $user_idx, $c_product_name, $c_gian_num, $c_buy_day
+                );
+            } else if ($table == "g_window") {
+                $win_product_number = $this->input->post('win_product_number', TRUE);
+                $win_gian_num = $this->input->post('win_gian_num', TRUE);
+                $win_duration = $this->input->post('win_duration', TRUE);
+
+                $this->group_model->g_add_window(
+                    $user_idx, $win_product_number, $win_gian_num, $win_duration
+                );
+            } else if ($table == "g_ms") {
+                $ms_product_number = $this->input->post('ms_product_number', TRUE);
+                $ms_gian_num = $this->input->post('ms_gian_num', TRUE);
+                $ms_duration = $this->input->post('ms_duration', TRUE);
+
+                $this->group_model->g_add_ms(
+                    $user_idx, $ms_product_number, $ms_gian_num, $ms_duration
+                );
+            } else if ($table == "g_hangul") {
+                $han_product_number = $this->input->post('han_product_number', TRUE);
+                $han_gian_num = $this->input->post('han_gian_num', TRUE);
+                $han_duration = $this->input->post('han_duration', TRUE);
+
+                $this->group_model->g_add_hangul(
+                    $user_idx, $han_product_number, $han_gian_num, $han_duration
+                );
+            } else if ($table == "g_security") {
+                $security_product_number = $this->input->post('security_product_number', TRUE);
+                $security_gian_num = $this->input->post('security_gian_num', TRUE);
+                $security_duration = $this->input->post('security_duration', TRUE);
+
+                $this->group_model->g_add_security(
+                    $user_idx, $security_product_number, $security_gian_num, $security_duration
+                );
+            } else if ($table == "g_quark") {
+                $quark_product_number = $this->input->post('quark_product_number', TRUE);
+                $quark_font = $this->input->post('quark_font', TRUE);
+                $quark_gian_num = $this->input->post('quark_gian_num', TRUE);
+                $quark_duration = $this->input->post('quark_duration', TRUE);
+
+                $this->group_model->g_add_quark(
+                    $user_idx, $quark_product_number, $quark_font, $quark_gian_num, $quark_duration
+                );
+            } else if ($table == "g_adobe") {
+                $adobe_product = $this->input->post('adobe_product', TRUE);
+                $adobe_gian_num = $this->input->post('adobe_gian_num', TRUE);
+                $adobe_duration = $this->input->post('adobe_duration', TRUE);
+                $adobe_remarks = $this->input->post('adobe_remarks', TRUE);
+
+                $this->group_model->g_add_adobe(
+                    $user_idx, $adobe_product, $adobe_gian_num, $adobe_duration, $adobe_remarks
+                );
+            } else if ($table == "g_font") {
+                $font_asia = $this->input->post('font_asia', TRUE);
+                $font_a_gian_num = $this->input->post('font_a_gian_num', TRUE);
+                $font_a_duration = $this->input->post('font_a_duration', TRUE);
+                $font_mukhyang = $this->input->post('font_mukhyang', TRUE);
+                $font_m_gian_num = $this->input->post('font_m_gian_num', TRUE);
+                $font_m_duration = $this->input->post('font_m_duration', TRUE);
+
+                $this->group_model->g_add_font(
+                    $user_idx, $font_asia, $font_a_gian_num, $font_a_duration, $font_mukhyang, $font_m_gian_num, $font_m_duration
+                );
+            } else if ($table == "g_compress") {
+                $compress_alzip = $this->input->post('compress_alzip', TRUE);
+                $compress_gian_num = $this->input->post('compress_gian_num', TRUE);
+                $compress_duration = $this->input->post('compress_duration', TRUE);
+
+                $this->group_model->g_add_compress(
+                    $user_idx, $compress_alzip, $compress_gian_num, $compress_duration
+                );
             }
+            
 
-            alert('게시물 등록 완료', '../g_gs/');
-
+            alert('데이터 추가 완료');
             exit;
+
         } else {
             // 쓰기 폼 view 호출
             $this->load->view('list/computational/register/g_add_option');
         }
-        
+
     }
-    
-    
+
+    ### 전상항목 전산실 보관 ###
+
+    public function jeonsan_keep_pc()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->add_keep_pc($idx);
+
+        if ($return) {
+            alert('데이터 보관되었습니다.');
+            exit;
+        } else {
+            alert('보관 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function jeonsan_keep_moniter()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->add_keep_moniter($idx);
+
+        if ($return) {
+            alert('데이터 보관되었습니다.');
+            exit;
+        } else {
+            alert('보관 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+
+    ### 전산항목 삭제 ###
+
+    public function part_moniter_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_moniter($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function part_pc_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_pc($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function part_keyboard_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_keyboard($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function part_mouse_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_mouse($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function part_headset_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_headset($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function part_cell_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_cell($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function part_window_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_window($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function part_ms_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_ms($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function part_hangul_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_hangul($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function part_security_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_security($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function part_quark_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_quark($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function part_adobe_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_adobe($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function part_font_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_font($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function part_compress_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_part_compress($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
 
     /*
      * 전산기록부로 엑셀 데이터 출력해본다
@@ -896,7 +1275,22 @@ class Group extends CI_Controller
         # 자료 가져오기
         $this->load->model('group_model');
         $user_idx = $this->uri->segment(3);
-        $data['g_view'] = $this->group_model->get_g_view($user_idx);
+        //$data['g_view'] = $this->group_model->get_g_view($user_idx);
+        $data['view_user'] = $this->group_model->get_view_user($user_idx);
+        $data['view_moniter'] = $this->group_model->get_view_moniter($user_idx);
+        $data['view_pc'] = $this->group_model->get_view_pc($user_idx);
+        $data['view_keyboard'] = $this->group_model->get_view_keyboard($user_idx);
+        $data['view_mouse'] = $this->group_model->get_view_mouse($user_idx);
+        $data['view_headset'] = $this->group_model->get_view_headset($user_idx);
+        $data['view_cell'] = $this->group_model->get_view_cell($user_idx);
+        $data['view_window'] = $this->group_model->get_view_window($user_idx);
+        $data['view_ms'] = $this->group_model->get_view_ms($user_idx);
+        $data['view_hangul'] = $this->group_model->get_view_hangul($user_idx);
+        $data['view_security'] = $this->group_model->get_view_security($user_idx);
+        $data['view_quark'] = $this->group_model->get_view_quark($user_idx);
+        $data['view_adobe'] = $this->group_model->get_view_adobe($user_idx);
+        $data['view_font'] = $this->group_model->get_view_font($user_idx);
+        $data['view_compress'] = $this->group_model->get_view_compress($user_idx);
 
         # 시트지정
         $this->phpexcel->setActiveSheetIndex(0);
@@ -904,8 +1298,25 @@ class Group extends CI_Controller
 
         # 테두리
         # 셀 전체(윤곽선 + 안쪽)
-        $this->phpexcel->getActiveSheet()->getStyle('A1:B84')->getBorders()
+        $this->phpexcel->getActiveSheet()->getStyle('A1:C84')->getBorders()
             ->getAllBorders()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+
+        # 전체 폰트 및 텍스트정렬 설정
+        $this->phpexcel->getActiveSheet()->duplicateStyleArray(
+            array(
+                'font' => array(
+                    'size' => 11
+                ),
+                'alignment' => array(
+                    'horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_LEFT,
+                    'vertical'   => PHPExcel_Style_Alignment::VERTICAL_CENTER
+                )
+            ),
+            'A1:C81'
+        );
+
+        //개행문자처리
+        $this->phpexcel->getActiveSheet()->getStyle('A1:C81')->getAlignment()->setWrapText(true);
 
         # cell 헤더 설정
         $this->phpexcel->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
@@ -987,31 +1398,31 @@ class Group extends CI_Controller
         $this->phpexcel->getActiveSheet()->getStyle('A74')->getFont()->setBold(true);
         $this->phpexcel->getActiveSheet()->getStyle('A81')->getFont()->setBold(true);
 
-
         /*
          * cell 헤더 병합
          */
-        $this->phpexcel->getActiveSheet()->mergeCells('A1:B1');
-        $this->phpexcel->getActiveSheet()->mergeCells('A3:B3');
-        $this->phpexcel->getActiveSheet()->mergeCells('A13:B13');
-        $this->phpexcel->getActiveSheet()->mergeCells('A28:B28');
-        $this->phpexcel->getActiveSheet()->mergeCells('A34:B34');
-        $this->phpexcel->getActiveSheet()->mergeCells('A40:B40');
-        $this->phpexcel->getActiveSheet()->mergeCells('A44:B44');
-        $this->phpexcel->getActiveSheet()->mergeCells('A48:B48');
-        $this->phpexcel->getActiveSheet()->mergeCells('A52:B52');
-        $this->phpexcel->getActiveSheet()->mergeCells('A56:B56');
-        $this->phpexcel->getActiveSheet()->mergeCells('A60:B60');
-        $this->phpexcel->getActiveSheet()->mergeCells('A64:B64');
-        $this->phpexcel->getActiveSheet()->mergeCells('A69:B69');
-        $this->phpexcel->getActiveSheet()->mergeCells('A74:B74');
-        $this->phpexcel->getActiveSheet()->mergeCells('A81:B81');
+        $this->phpexcel->getActiveSheet()->mergeCells('A1:C1');
+        $this->phpexcel->getActiveSheet()->mergeCells('B2:C2');
+        $this->phpexcel->getActiveSheet()->mergeCells('A3:C3');
+        $this->phpexcel->getActiveSheet()->mergeCells('A13:C13');
+        $this->phpexcel->getActiveSheet()->mergeCells('A28:C28');
+        $this->phpexcel->getActiveSheet()->mergeCells('A34:C34');
+        $this->phpexcel->getActiveSheet()->mergeCells('A40:C40');
+        $this->phpexcel->getActiveSheet()->mergeCells('A44:C44');
+        $this->phpexcel->getActiveSheet()->mergeCells('A48:C48');
+        $this->phpexcel->getActiveSheet()->mergeCells('A52:C52');
+        $this->phpexcel->getActiveSheet()->mergeCells('A56:C56');
+        $this->phpexcel->getActiveSheet()->mergeCells('A60:C60');
+        $this->phpexcel->getActiveSheet()->mergeCells('A64:C64');
+        $this->phpexcel->getActiveSheet()->mergeCells('A69:C69');
+        $this->phpexcel->getActiveSheet()->mergeCells('A74:C74');
+        $this->phpexcel->getActiveSheet()->mergeCells('A81:C81');
 
         /*
          * cell 헤더 출력
          */
         // 개인정보
-        $this->phpexcel->getActiveSheet()->setCellValue('B2', '' . $data['g_view']->user_name . '');
+        $this->phpexcel->getActiveSheet()->setCellValue('B2', '' . $data['view_user']->user_name . '');
 
         //모니터
         $this->phpexcel->getActiveSheet()->setCellValue('A4', '제조사');
@@ -1110,8 +1521,9 @@ class Group extends CI_Controller
         $this->phpexcel->getActiveSheet()->setCellValue('A84', '사용기간');
 
         # CELL 크기 지정
-        $this->phpexcel->getActiveSheet()->getColumnDimension('A')->setWidth(20);
-        $this->phpexcel->getActiveSheet()->getColumnDimension('B')->setWidth(100);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('A')->setWidth(14);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('B')->setWidth(60);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('C')->setWidth(60);
 
         # CELL 열 넓이 자동조절 - 전체
         //for ($col = 'B'; $col !== 'H'; $col++){
@@ -1122,105 +1534,159 @@ class Group extends CI_Controller
          * cell 데이터 출력
          */
         // 모니터
-        $this->phpexcel->getActiveSheet()->setCellValue('B4', $data['g_view']->m_company);
-        $this->phpexcel->getActiveSheet()->setCellValue('B5', $data['g_view']->m_product_name);
-        $this->phpexcel->getActiveSheet()->setCellValue('B6', $data['g_view']->m_model_code);
-        $this->phpexcel->getActiveSheet()->setCellValue('B7', $data['g_view']->m_model_name);
-        $this->phpexcel->getActiveSheet()->setCellValue('B8', $data['g_view']->m_identify);
-        $this->phpexcel->getActiveSheet()->setCellValue('B9', $data['g_view']->m_produce_ym);
-        $this->phpexcel->getActiveSheet()->setCellValue('B10', $data['g_view']->m_soft_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B11', $data['g_view']->m_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B12', $data['g_view']->m_buy_day);
+        $col='B';
+        foreach ($data['view_moniter'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'4', $lt->company);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'5', $lt->product_name);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'6', $lt->model_code);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'7', $lt->model_name);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'8', $lt->identify);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'9', $lt->produce_ym);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'10', $lt->soft_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'11', $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'12', $lt->buy_day);
+            $col++;
+        endforeach;
 
         // 본체
-        $this->phpexcel->getActiveSheet()->setCellValue('B14', $data['g_view']->p_company);
-        $this->phpexcel->getActiveSheet()->setCellValue('B15', $data['g_view']->p_model_name);
-        $this->phpexcel->getActiveSheet()->setCellValue('B16', $data['g_view']->p_model_code);
-        $this->phpexcel->getActiveSheet()->setCellValue('B17', $data['g_view']->p_produce_number);
-        $this->phpexcel->getActiveSheet()->setCellValue('B18', $data['g_view']->p_product_code);
-        $this->phpexcel->getActiveSheet()->setCellValue('B19', $data['g_view']->p_identify);
-        $this->phpexcel->getActiveSheet()->setCellValue('B20', $data['g_view']->p_produce_ym);
-        $this->phpexcel->getActiveSheet()->setCellValue('B21', $data['g_view']->p_g_cpu);
-        $this->phpexcel->getActiveSheet()->setCellValue('B22', $data['g_view']->p_g_ram);
-        $this->phpexcel->getActiveSheet()->setCellValue('B23', $data['g_view']->p_g_hdd_c);
-        $this->phpexcel->getActiveSheet()->setCellValue('B24', $data['g_view']->p_g_hdd_d);
-        $this->phpexcel->getActiveSheet()->setCellValue('B25', $data['g_view']->p_g_graphic);
-        $this->phpexcel->getActiveSheet()->setCellValue('B26', $data['g_view']->p_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B27', $data['g_view']->p_buy_day);
+        $col='B';
+        foreach ($data['view_pc'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'14', $lt->company);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'15', $lt->model_name);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'16', $lt->model_code);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'17', $lt->produce_number);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'18', $lt->product_code);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'19', $lt->identify);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'20', $lt->produce_ym);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'21', $lt->g_cpu);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'22', $lt->g_ram);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'23', $lt->g_hdd_c);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'24', $lt->g_hdd_d);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'25', $lt->g_graphic);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'26', $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'27', $lt->buy_day);
+            $col++;
+        endforeach;
 
         // 키보드
-        $this->phpexcel->getActiveSheet()->setCellValue('B29', $data['g_view']->k_product_name);
-        $this->phpexcel->getActiveSheet()->setCellValue('B30', $data['g_view']->k_identify);
-        $this->phpexcel->getActiveSheet()->setCellValue('B31', $data['g_view']->k_produce_ym);
-        $this->phpexcel->getActiveSheet()->setCellValue('B32', $data['g_view']->k_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B33', $data['g_view']->k_buy_day);
+        $col='B';
+        foreach ($data['view_keyboard'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'29', $lt->product_name);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'30', $lt->identify);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'31', $lt->produce_ym);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'32', $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'33', $lt->buy_day);
+            $col++;
+        endforeach;
 
         // 마우스
-        $this->phpexcel->getActiveSheet()->setCellValue('B35', $data['g_view']->mu_product_name);
-        $this->phpexcel->getActiveSheet()->setCellValue('B36', $data['g_view']->mu_identify);
-        $this->phpexcel->getActiveSheet()->setCellValue('B37', $data['g_view']->mu_produce_ym);
-        $this->phpexcel->getActiveSheet()->setCellValue('B38', $data['g_view']->mu_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B39', $data['g_view']->mu_buy_day);
+        $col='B';
+        foreach ($data['view_mouse'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'35', $lt->product_name);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'36', $lt->identify);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'37', $lt->produce_ym);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'38', $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'39', $lt->buy_day);
+            $col++;
+        endforeach;
 
         // 헤드셋
-        $this->phpexcel->getActiveSheet()->setCellValue('B41', $data['g_view']->h_product_name);
-        $this->phpexcel->getActiveSheet()->setCellValue('B42', $data['g_view']->h_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B43', $data['g_view']->h_buy_day);
+        $col='B';
+        foreach ($data['view_headset'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'41', $lt->product_name);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'42', $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'43', $lt->buy_day);
+            $col++;
+        endforeach;
 
         // 전화기
-        $this->phpexcel->getActiveSheet()->setCellValue('B45', $data['g_view']->c_product_name);
-        $this->phpexcel->getActiveSheet()->setCellValue('B46', $data['g_view']->c_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B47', $data['g_view']->c_buy_day);
+        $col='B';
+        foreach ($data['view_cell'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'45', $lt->product_name);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'46', $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'47', $lt->buy_day);
+            $col++;
+        endforeach;
 
         // Window OS
-        $this->phpexcel->getActiveSheet()->setCellValue('B49', nl2br($data['g_view']->win_product_number));
-        $this->phpexcel->getActiveSheet()->setCellValue('B50', $data['g_view']->win_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B51', $data['g_view']->win_duration);
+        $col='B';
+        foreach ($data['view_window'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'49', $lt->product_number);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'50', $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'51', $lt->duration);
+            $col++;
+        endforeach;
 
-        // MS-OFFICE
-        $this->phpexcel->getActiveSheet()->setCellValue('B53', nl2br($data['g_view']->ms_product_number));
-        $this->phpexcel->getActiveSheet()->setCellValue('B54', $data['g_view']->ms_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B55', $data['g_view']->ms_duration);
+        // MS-Office
+        $col='B';
+        foreach ($data['view_ms'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'53', $lt->product_number);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'54', $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'55', $lt->duration);
+            $col++;
+        endforeach;
 
         // 한글
-        $this->phpexcel->getActiveSheet()->setCellValue('B57', nl2br($data['g_view']->han_product_number));
-        $this->phpexcel->getActiveSheet()->setCellValue('B58', $data['g_view']->han_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B59', $data['g_view']->han_duration);
+        $col='B';
+        foreach ($data['view_hangul'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'57', $lt->product_number);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'58', $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'59', $lt->duration);
+            $col++;
+        endforeach;
 
         // 보안프로그램
-        $this->phpexcel->getActiveSheet()->setCellValue('B61', nl2br($data['g_view']->security_product_number));
-        $this->phpexcel->getActiveSheet()->setCellValue('B62', $data['g_view']->security_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B63', $data['g_view']->security_duration);
+        $col='B';
+        foreach ($data['view_security'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'61', $lt->product_number);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'62', $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'63', $lt->duration);
+            $col++;
+        endforeach;
 
-        // QUARK
-        $this->phpexcel->getActiveSheet()->setCellValue('B65', $data['g_view']->quark_product_number);
-        $this->phpexcel->getActiveSheet()->setCellValue('B66', $data['g_view']->quark_font);
-        $this->phpexcel->getActiveSheet()->setCellValue('B67', $data['g_view']->quark_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B68', $data['g_view']->quark_duration);
+        // Quark
+        $col='B';
+        foreach ($data['view_quark'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'65', $lt->product_number);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'66', $lt->font);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'67', $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'68', $lt->duration);
+            $col++;
+        endforeach;
 
-        // ADOBE
-        $this->phpexcel->getActiveSheet()->setCellValue('B70', nl2br($data['g_view']->adobe_product));
-        $this->phpexcel->getActiveSheet()->setCellValue('B71', $data['g_view']->adobe_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B72', $data['g_view']->adobe_duration);
-        $this->phpexcel->getActiveSheet()->setCellValue('B73', $data['g_view']->adobe_remarks);
+        // Adobe
+        $col='B';
+        foreach ($data['view_adobe'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'70', $lt->adobe_product);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'71', $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'72', $lt->duration);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'73', $lt->remarks);
+            $col++;
+        endforeach;
 
-        // FONT
-        $this->phpexcel->getActiveSheet()->setCellValue('B75', $data['g_view']->font_asia);
-        $this->phpexcel->getActiveSheet()->setCellValue('B76', $data['g_view']->font_a_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B77', $data['g_view']->font_a_duration);
-        $this->phpexcel->getActiveSheet()->setCellValue('B78', $data['g_view']->font_mukhyang);
-        $this->phpexcel->getActiveSheet()->setCellValue('B79', $data['g_view']->font_m_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B80', $data['g_view']->font_m_duration);
+        // FONT(폰트)
+        $col='B';
+        foreach ($data['view_font'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'75', $lt->asia);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'76', $lt->a_gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'77', $lt->a_duration);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'78', $lt->mukhyang);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'79', $lt->m_gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'80', $lt->m_duration);
+            $col++;
+        endforeach;
 
         // 압축프로그램
-        $this->phpexcel->getActiveSheet()->setCellValue('B82', $data['g_view']->compress_alzip);
-        $this->phpexcel->getActiveSheet()->setCellValue('B83', $data['g_view']->compress_gian_num);
-        $this->phpexcel->getActiveSheet()->setCellValue('B84', $data['g_view']->compress_duration);
-        
-
+        $col='B';
+        foreach ($data['view_compress'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'82', $lt->alzip);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'83', $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue($col.'84', $lt->duration);
+            $col++;
+        endforeach;
 
         # 파일로 내보낸다. 파일명은 'filename.xls' 이다.
-        $filename = '' . $data['g_view']->user_name . '_전산기록부_' . date('Ymd') . '.xls';
+        $filename = '' . $data['view_user']->user_name . '_전산기록부_' . date('Ymd') . '.xls';
         header('Content-Type: application/vnd.ms-excel');
         header('Content-Disposition: attachment;filename="' . $filename . '"');
         header('Cache-Control: max-age=0');

@@ -19,43 +19,43 @@
                                 <div class="form-group">
                                     <label for="product_name" class="col-lg-2 control-label">제품명</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="product_name" name="product_name" value=<?php echo $views -> product_name;?>>
+                                        <input type="text" class="form-control" id="product_name" name="product_name" value="<?php echo $views -> product_name;?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="version" class="col-lg-2 control-label">버전</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="version" name="version" value=<?php echo $views -> version;?>>
+                                        <input type="text" class="form-control" id="version" name="version" value="<?php echo $views -> version;?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="company" class="col-lg-2 control-label">제조사</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="company" name="company" value=<?php echo $views -> company;?>>
+                                        <input type="text" class="form-control" id="company" name="company" value="<?php echo $views -> company;?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="purpose" class="col-lg-2 control-label">제품용도</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="purpose" name="purpose" value=<?php echo $views -> purpose;?>>
+                                        <input type="text" class="form-control" id="purpose" name="purpose" value="<?php echo $views -> purpose;?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="target" class="col-lg-2 control-label">사용대상</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="target" name="target" value=<?php echo $views -> target;?>>
+                                        <input type="text" class="form-control" id="target" name="target" value="<?php echo $views -> target;?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="compatibility" class="col-lg-2 control-label">호환성</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="compatibility" name="compatibility" value=<?php echo $views -> compatibility;?>>
+                                        <input type="text" class="form-control" id="compatibility" name="compatibility" value="<?php echo $views -> compatibility;?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="sirial_num" class="col-lg-2 control-label">시리얼번호</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="sirial_num" name="sirial_num" value=<?php echo $views -> sirial_num;?>>
+                                        <input type="text" class="form-control" id="sirial_num" name="sirial_num" value="<?php echo $views -> sirial_num;?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -67,19 +67,19 @@
                                 <div class="form-group">
                                     <label for="license_numb" class="col-lg-2 control-label">라이선스</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="license_numb" name="license_numb" value=<?php echo $views -> license_numb;?>>
+                                        <input type="text" class="form-control" id="license_numb" name="license_numb" value="<?php echo $views -> license_numb;?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="keep_place" class="col-lg-2 control-label">보관장소</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="keep_place" name="keep_place" value=<?php echo $views -> keep_place;?>>
+                                        <input type="text" class="form-control" id="keep_place" name="keep_place" value="<?php echo $views -> keep_place;?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="remarks" class="col-lg-2 control-label">비고</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="remarks" name="remarks" value=<?php echo $views -> remarks;?>>
+                                        <input type="text" class="form-control" id="remarks" name="remarks" value="<?php echo $views -> remarks;?>">
                                     </div>
                                 </div>
                                 <div class="form-actions">

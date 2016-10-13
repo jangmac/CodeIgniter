@@ -14,14 +14,14 @@
                         <form class="form-validate form-horizontal" method="post" action=""
                               id="write_action">
                             <div class="form">
-                                <input type="hidden" class="form-control" id="user_idx"
-                                       name="user_idx"
-                                       value="<?php echo $views->m_user_idx; ?>">
+                                <input type="hidden" class="form-control" id="idx"
+                                       name="idx"
+                                       value="<?php echo $views->idx; ?>">
                                 <div class="form-group ">
                                     <label for="product_number"
                                            class="control-label col-lg-2">제품번호</label>
                                     <div class="col-lg-10">
-                                        <textarea class="form-control " id="product_number" name="product_number"><?php echo $views->ms_product_number; ?></textarea>
+                                        <textarea class="form-control " id="product_number" name="product_number"><?php echo $views->product_number; ?></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -30,7 +30,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control " id="gian_num"
                                                type="text" name="gian_num"
-                                               value=<?php echo $views->ms_gian_num; ?>>
+                                               value=<?php echo $views->gian_num; ?>>
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -39,7 +39,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control " id="duration"
                                                type="text" name="duration"
-                                               value=<?php echo $views->ms_duration; ?>>
+                                               value=<?php echo $views->duration; ?>>
                                     </div>
                                 </div>
                                 <div class="form-actions">

@@ -138,6 +138,32 @@ class Soft_model extends CI_Model
     }
 
     /*
+     * 전산실
+     */
+
+    function get_keep_pc()
+    {
+        $sql = "SELECT * FROM jeonsan_pc";
+        
+        $query = $this->db->query($sql);
+        
+        $result = $query->result();
+        
+        return $result;
+    }
+
+    function get_keep_moniter()
+    {
+        $sql = "SELECT * FROM jeonsan_moniter";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
+    /*
      * soft_progress 등록
      */
 

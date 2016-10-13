@@ -72,28 +72,28 @@
                                     <div class="col-lg-10">
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="option_group" id="group_gs" value="gs"
+                                                <input type="radio" name="group_key" id="group_gs" value="gs"
                                                     <?php if ($g_user->group_key == 'gs') echo "checked"; ?>>
                                                 경영지원본부
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="option_group" id="group_ad1" value="ad1"
+                                                <input type="radio" name="group_key" id="group_ad1" value="ad1"
                                                     <?php if ($g_user->group_key == 'ad1') echo "checked"; ?>>
                                                 광고1부
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="option_group" id="group_ad2" value="ad2"
+                                                <input type="radio" name="group_key" id="group_ad2" value="ad2"
                                                     <?php if ($g_user->group_key == 'ad2') echo "checked"; ?>>
                                                 광고2부
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="option_group" id="group_em_edit"
+                                                <input type="radio" name="group_key" id="group_em_edit"
                                                        value="em_edit"
                                                     <?php if ($g_user->group_key == 'em_edit') echo "checked"; ?>>
                                                 리크루트/편집
@@ -101,14 +101,14 @@
                                         </div>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="option_group" id="group_tv" value="tv"
+                                                <input type="radio" name="group_key" id="group_tv" value="tv"
                                                     <?php if ($g_user->group_key == 'tv') echo "checked"; ?>>
                                                 여행사업팀
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="option_group" id="group_etc" value="etc"
+                                                <input type="radio" name="group_key" id="group_etc" value="etc"
                                                     <?php if ($g_user->group_key == 'etc') echo "checked"; ?>>
                                                 기타
                                             </label>

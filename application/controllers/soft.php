@@ -98,6 +98,23 @@ class Soft extends CI_Controller
         $data['soft_account'] = $this->soft_model->get_soft_account_list();
         $this->load->view('list/account/soft_account', $data);
     }
+    
+    /*
+     * 전산실 목록불러오기
+     * PC,모니터,키보드,마우스
+     */
+
+    public function keep_pc()
+    {
+        $data['keep_pc'] = $this->soft_model->get_keep_pc();
+        $this->load->view('list/jeonsan/j_item_pc', $data);
+    }
+
+    public function keep_moniter()
+    {
+        $data['keep_moniter'] = $this->soft_model->get_keep_moniter();
+        $this->load->view('list/jeonsan/j_item_moniter', $data);
+    }
 
     /*
      *  soft_progress 등록
@@ -1011,7 +1028,6 @@ class Soft extends CI_Controller
         // 서버에 파일을 쓰지 않고 바로 다운로드 받습니다.
         $objWriter->save('php://output');
     }
-
 }
 
 

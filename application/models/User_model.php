@@ -187,7 +187,7 @@ class User_model extends CI_Model
     }
 
     /*
-     * 그룹원 수정
+     * 그룹원 수정 - view
      */
     public function view_gs_user($idx)
     {
@@ -195,6 +195,32 @@ class User_model extends CI_Model
         $query = $this->db->query($sql);
         $result = $query->row();
         return $result;
+
+    }
+
+    /*
+     * 그룹원 수정 - update
+     */
+    function edit_gs_user($params)
+    {
+
+        $sql = "
+			UPDATE  g_gs  
+			SET user_name =?, user_email =?, user_group =?, user_grade =?, user_number =?, group_key =?			 
+			WHERE idx =? ;
+        ";
+
+        $result_query = $this->db->query($sql, array(
+            $params['user_name'],
+            $params['user_email'],
+            $params['user_group'],
+            $params['user_grade'],
+            $params['user_number'],
+            $params['group_key'],
+            $params['idx'],
+        ));
+
+        return $result_query;
 
     }
 

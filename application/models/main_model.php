@@ -65,6 +65,86 @@ class Main_model extends CI_Model
         $result = $this->db->query($sql)->result_array();
         $dash_count += ["asiafont_up" => $result[0]['cnt']];
         
+        ## 전산등록인원 ##
+        //전체
+        $sql = "SELECT count(*) as cnt FROM g_gs";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["g_total" => $result[0]['cnt']];
+        //경영지원본부
+        $sql = "SELECT count(*) as cnt FROM g_gs WHERE group_key='gs'";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["g_gs" => $result[0]['cnt']];
+
+        $sql = "SELECT count(*) as cnt FROM g_gs WHERE group_key='ad1'";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["g_ad1" => $result[0]['cnt']];
+
+        $sql = "SELECT count(*) as cnt FROM g_gs WHERE group_key='ad2'";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["g_ad2" => $result[0]['cnt']];
+
+        $sql = "SELECT count(*) as cnt FROM g_gs WHERE group_key='em_edit'";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["g_em_edit" => $result[0]['cnt']];
+
+        $sql = "SELECT count(*) as cnt FROM g_gs WHERE group_key='tv'";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["g_tv" => $result[0]['cnt']];
+
+        ## PC 사용현황 ##
+        //모니터
+        $sql = "SELECT count(*) as cnt FROM g_moniter";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["g_moniter" => $result[0]['cnt']];
+        //본체
+        $sql = "SELECT count(*) as cnt FROM g_pc";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["g_pc" => $result[0]['cnt']];
+        //키보드
+        $sql = "SELECT count(*) as cnt FROM g_keyboard";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["g_keyboard" => $result[0]['cnt']];
+        //마우스
+        $sql = "SELECT count(*) as cnt FROM g_mouse";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["g_mouse" => $result[0]['cnt']];
+        //헤드셋
+        $sql = "SELECT count(*) as cnt FROM g_headset";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["g_headset" => $result[0]['cnt']];
+        //전화기
+        $sql = "SELECT count(*) as cnt FROM g_cell";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["g_cell" => $result[0]['cnt']];
+
+        ## 전산 소프트웨어 현재사용내역
+        //
+        $sql = "SELECT count(*) as cnt FROM g_window 
+                WHERE product_number LIKE \"%CQBVJ-9J697-PWB9R-4K7W4-2BT4%\"";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["win1" => $result[0]['cnt']];
+
+        ## 전산실 보관 ##
+        //모니터
+        $sql = "SELECT count(*) as cnt FROM jeonsan_moniter";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["jeonsan_moniter" => $result[0]['cnt']];
+        //본체
+        $sql = "SELECT count(*) as cnt FROM jeonsan_pc";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["jeonsan_pc" => $result[0]['cnt']];
+        //키보드
+        //$sql = "SELECT count(*) as cnt FROM jeonsan_keyboard";
+        //$result = $this->db->query($sql)->result_array();
+        //$dash_count += ["jeonsan_keyboard" => $result[0]['cnt']];
+        //마우스
+        //$sql = "SELECT count(*) as cnt FROM jeonsan_mouse";
+        //$result = $this->db->query($sql)->result_array();
+        //$dash_count += ["jeonsan_mouse" => $result[0]['cnt']];
+        //헤드셋
+        //$sql = "SELECT count(*) as cnt FROM jeonsan_headset";
+        //$result = $this->db->query($sql)->result_array();
+        //$dash_count += ["jeonsan_headset" => $result[0]['cnt']];
         
         return $dash_count;
         

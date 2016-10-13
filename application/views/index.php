@@ -12,35 +12,159 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <div class="info-box blue-bg">
-                    <i class="fa fa-cloud-download"></i>
-                    <div class="count">사용자 인원</div>
-                    <div class="title">Download</div>
-                </div><!--/.info-box-->
-            </div><!--/.col-->
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <div class="info-box brown-bg">
-                    <i class="fa fa-shopping-cart"></i>
-                    <div class="count">전산실 서버현황</div>
-                    <div class="title">Purchased</div>
-                </div><!--/.info-box-->
-            </div><!--/.col-->
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <div class="info-box dark-bg">
-                    <i class="fa fa-thumbs-o-up"></i>
-                    <div class="count">PC 개수</div>
-                    <div class="title">Order</div>
-                </div><!--/.info-box-->
-            </div><!--/.col-->
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <div class="info-box green-bg">
-                    <i class="fa fa-cubes"></i>
-                    <div class="count">모니터 개수</div>
-                    <div class="title">Stock</div>
-                </div><!--/.info-box-->
-            </div><!--/.col-->
-        </div><!--/.row-->
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2><i class="fa fa-flag-o red"></i><strong>그룹원 등록현황</strong></h2>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table bootstrap-datatable countries">
+                            <tr>
+                                <th>부서</th>
+                                <th>등록 인원</th>
+                            </tr>
+                            <tr>
+                                <td>경영지원본부</td>
+                                <td><?php echo $counter['g_gs']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>광고1부</td>
+                                <td><?php echo $counter['g_ad1']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>광고2부</td>
+                                <td><?php echo $counter['g_ad2']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>리크루트/편집</td>
+                                <td><?php echo $counter['g_em_edit']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>여행사업팀</td>
+                                <td><?php echo $counter['g_tv']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>전체</td>
+                                <td><?php echo $counter['g_total']; ?></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2><i class="fa fa-flag-o red"></i><strong>보급품 사용현황</strong></h2>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table bootstrap-datatable countries">
+                            <tr>
+                                <th>항목</th>
+                                <th>현재 사용 갯수</th>
+                            </tr>
+                            <tr>
+                                <td>모니터</td>
+                                <td><?php echo $counter['g_moniter']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>본체</td>
+                                <td><?php echo $counter['g_pc']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>키보드</td>
+                                <td><?php echo $counter['g_keyboard']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>마우스</td>
+                                <td><?php echo $counter['g_mouse']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>헤드셋</td>
+                                <td><?php echo $counter['g_headset']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>전화기</td>
+                                <td><?php echo $counter['g_cell']; ?></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2><i class="fa fa-flag-o red"></i><strong>전산실 보관현황</strong></h2>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table bootstrap-datatable countries">
+                            <tr>
+                                <th>항목</th>
+                                <th>보관 갯수</th>
+                            </tr>
+                            <tr>
+                                <td>모니터</td>
+                                <td><?php echo $counter['jeonsan_moniter']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>본체</td>
+                                <td><?php echo $counter['jeonsan_pc']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>키보드</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>마우스</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>헤드셋</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>전화기</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2><i class="fa fa-flag-o red"></i><strong>전산 소프트웨어 현재사용내역</strong></h2>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table bootstrap-datatable countries">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>목록</th>
+                                <th>사용갯수</th>
+                                <th>라이센스제한갯수</th>
+                                <th>Active</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Window7 Home Premium<br>
+                                    CQBVJ-9J697-PWB9R-4K7W4-2BT4</td>
+                                <td><?php echo $counter['win1']; ?></td>
+                                <td>-</td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="/soft/write_progress/">신규 등록</a>
+                                    <a class="btn btn-success btn-sm" href="/soft/progress_list/"> 목록 바로가기</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div><!--/col-->
+        </div>
         <!-- Today status end -->
         <div class="row">
             <div class="col-lg-12 col-md-12">

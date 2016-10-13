@@ -14,9 +14,9 @@
                         <form class="form-validate form-horizontal" method="post" action=""
                               id="write_action">
                             <div class="form">
-                                <input type="hidden" class="form-control" id="user_idx"
-                                       name="user_idx"
-                                       value="<?php echo $views->m_user_idx; ?>">
+                                <input type="hidden" class="form-control" id="idx"
+                                       name="idx"
+                                       value="<?php echo $views->idx; ?>">
                                 <div class="form-group ">
                                     <label for="adobe_product"
                                            class="control-label col-lg-2">제품명</label>
@@ -31,7 +31,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control" id="gian_num"
                                                name="gian_num" type="text"
-                                               value=<?php echo $views->adobe_gian_num; ?>
+                                               value=<?php echo $views->gian_num; ?>
                                         >
                                     </div>
                                 </div>
@@ -41,16 +41,14 @@
                                     <div class="col-lg-10">
                                         <input class="form-control " id="duration"
                                                type="text" name="duration"
-                                               value=<?php echo $views->adobe_duration; ?>>
+                                               value=<?php echo $views->duration; ?>>
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <label for="remarks"
                                            class="control-label col-lg-2">비고</label>
                                     <div class="col-lg-10">
-                                        <input class="form-control " id="remarks"
-                                               type="text" name="remarks"
-                                               value=<?php echo $views->adobe_remarks; ?>>
+                                        <textarea class="form-control " id="remarks" name="remarks"><?php echo $views->remarks; ?></textarea>
                                     </div>
                                 </div>
                                 <div class="form-actions">

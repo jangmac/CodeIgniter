@@ -13,17 +13,16 @@
                         <form class="form-validate form-horizontal" method="post" action=""
                               id="write_action">
                             <div class="form">
-                                <input type="hidden" class="form-control" id="user_idx"
-                                       name="user_idx"
-                                       value="<?php echo $views->m_user_idx; ?>">
+                                <input type="hidden" class="form-control" id="idx"
+                                       name="idx"
+                                       value="<?php echo $views->idx; ?>">
                                 <div class="form-group ">
                                     <label for="company"
                                            class="control-label col-lg-2">제조사</label>
                                     <div class="col-lg-10">
                                         <input class="form-control" id="company"
-                                               name="company" minlength="5" type="text"
-                                               value=<?php echo $views->m_company; ?>
-                                        >
+                                               name="company" type="text"
+                                               value="<?php echo $views->company; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -32,7 +31,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control " id="product_name"
                                                type="text" name="product_name"
-                                               value=<?php echo $views->m_product_name; ?>>
+                                               value="<?php echo $views->product_name; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -41,7 +40,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control " id="model_code"
                                                type="text" name="model_code"
-                                               value=<?php echo $views->m_model_code; ?>>
+                                               value="<?php echo $views->model_code; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -49,7 +48,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control" id="model_name"
                                                name="model_name" type="text"
-                                               value=<?php echo $views->m_model_name; ?>>
+                                               value="<?php echo $views->model_name; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -58,7 +57,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control " id="identify"
                                                type="text" name="identify"
-                                               value=<?php echo $views->m_identify; ?>>
+                                               value="<?php echo $views->identify; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -67,7 +66,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control " id="produce_ym"
                                                type="text" name="produce_ym"
-                                               value=<?php echo $views->m_produce_ym; ?>>
+                                               value="<?php echo $views->produce_ym; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -76,7 +75,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control " id="soft_num"
                                                type="text" name="soft_num"
-                                               value=<?php echo $views->m_soft_num; ?>>
+                                               value="<?php echo $views->soft_num; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -85,7 +84,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control " id="gian_num"
                                                type="text" name="gian_num"
-                                               value=<?php echo $views->m_gian_num; ?>>
+                                               value="<?php echo $views->gian_num; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -94,7 +93,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control " id="buy_day"
                                                type="text" name="buy_day"
-                                               value=<?php echo $views->m_buy_day; ?>>
+                                               value="<?php echo $views->buy_day; ?>">
                                     </div>
                                 </div>
                                 <div class="form-actions">

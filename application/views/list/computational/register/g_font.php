@@ -14,16 +14,16 @@
                         <form class="form-validate form-horizontal" method="post" action=""
                               id="write_action">
                             <div class="form">
-                                <input type="hidden" class="form-control" id="user_idx"
-                                       name="user_idx"
-                                       value="<?php echo $views->m_user_idx; ?>">
+                                <input type="hidden" class="form-control" id="idx"
+                                       name="idx"
+                                       value="<?php echo $views->idx; ?>">
                                 <div class="form-group ">
                                     <label for="asia"
                                            class="control-label col-lg-2">Asia</label>
                                     <div class="col-lg-10">
                                         <input class="form-control" id="asia"
                                                name="asia" type="text"
-                                               value=<?php echo $views->font_asia; ?>
+                                               value=<?php echo $views->asia; ?>
                                         >
                                     </div>
                                 </div>
@@ -33,7 +33,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control" id="a_gian_num"
                                                name="a_gian_num" type="text"
-                                               value=<?php echo $views->font_a_gian_num; ?>
+                                               value=<?php echo $views->a_gian_num; ?>
                                         >
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control" id="a_duration"
                                                name="a_duration" type="text"
-                                               value=<?php echo $views->font_a_duration; ?>
+                                               value=<?php echo $views->a_duration; ?>
                                         >
                                     </div>
                                 </div>
@@ -54,7 +54,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control" id="mukhyang"
                                                name="mukhyang" type="text"
-                                               value=<?php echo $views->font_mukhyang; ?>
+                                               value=<?php echo $views->mukhyang; ?>
                                         >
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control " id="m_gian_num"
                                                type="text" name="m_gian_num"
-                                               value=<?php echo $views->font_m_gian_num; ?>>
+                                               value=<?php echo $views->m_gian_num; ?>>
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -73,7 +73,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control " id="m_duration"
                                                type="text" name="m_duration"
-                                               value=<?php echo $views->font_m_duration; ?>>
+                                               value=<?php echo $views->m_duration; ?>>
                                     </div>
                                 </div>
                                 <div class="form-actions">

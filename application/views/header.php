@@ -123,6 +123,17 @@
                         <li><a class="" href="/soft/stop_list">사용불가</a></li>
                     </ul>
                 </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon_table"></i>
+                        <span>전산실</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="/soft/progress_list">서버</a></li>
+                        <li><a class="" href="/soft/keep_pc">보관물품</a></li>
+                    </ul>
+                </li>
                 <li>
                     <a class="" href="/soft/kaspersky">
                         <i class="icon_genius"></i>
