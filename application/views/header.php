@@ -151,7 +151,7 @@
                 <li>
                     <a class="" href="/soft/xp_down">
                         <i class="icon_genius"></i>
-                        <span>XP 업/다운그레이드</span>
+                        <span>XP 업/다운</span>
 
                     </a>
 

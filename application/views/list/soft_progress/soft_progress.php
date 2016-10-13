@@ -6,6 +6,18 @@
             <div class="col-lg-12">
                 <h3 class="page-header"><i class="fa fa-laptop"></i> 소프트웨어(진행)</h3>
                 <a class="btn btn-success btn-sm" href="/soft/write_progress/">신규 등록</a>
+                <div class="btn-group">
+                    <a class="btn btn-default" href="" title="현재페이지">제품조회 선택</a>
+                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href=""
+                       title="Bootstrap 3 themes generator"><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/soft/progress_list" title="현재페이지">전체(Default)</a></li>
+                        <li><a href="/soft/progress_list_window" title="윈도우">Window</a></li>
+                        <li><a href="/soft/progress_list_ms" title="MS오피스">MS-Office</a></li>
+                        <li><a href="/soft/progress_list_hangul" title="한글(한컴)">한글</a></li>
+                        <li><a href="/soft/progress_list_etc" title="기타">그외</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <br/>
@@ -44,9 +56,9 @@
                                 <td><?php echo nl2br($lt->target); ?></td>
                                 <td><?php echo nl2br($lt->sirial_num); ?></td>
                                 <td><?php echo $lt->package; ?></td>
-                                <td><?php if(($lt->license_numb)>0) echo $lt->license_numb ; ?></td>
+                                <td><?php if (($lt->license_numb) > 0) echo $lt->license_numb; ?></td>
                                 <td><?php echo $lt->keep_place; ?></td>
-                                <td><?php if(($lt->use_num)>0) echo $lt->use_num ; ?></td>
+                                <td><?php if (($lt->use_num) > 0) echo $lt->use_num; ?></td>
                                 <td><?php echo $lt->remarks; ?></td>
                             </tr>
                             <?php

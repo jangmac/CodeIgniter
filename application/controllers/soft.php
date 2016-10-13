@@ -39,6 +39,34 @@ class Soft extends CI_Controller
         $this->load->view('list/soft_progress/soft_progress', $data);
     }
 
+    public function progress_list_window()
+    {
+        $data['progress_list'] = $this->soft_model->get_progress_window_list();
+
+        $this->load->view('list/soft_progress/soft_progress', $data);
+    }
+
+    public function progress_list_ms()
+    {
+        $data['progress_list'] = $this->soft_model->get_progress_ms_list();
+
+        $this->load->view('list/soft_progress/soft_progress', $data);
+    }
+
+    public function progress_list_hangul()
+    {
+        $data['progress_list'] = $this->soft_model->get_progress_hangul_list();
+
+        $this->load->view('list/soft_progress/soft_progress', $data);
+    }
+
+    public function progress_list_etc()
+    {
+        $data['progress_list'] = $this->soft_model->get_progress_etc_list();
+
+        $this->load->view('list/soft_progress/soft_progress', $data);
+    }
+
     public function keep_list()
     {
         $data['keep_list'] = $this->soft_model->get_keep_list();

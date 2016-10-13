@@ -27,6 +27,54 @@ class Soft_model extends CI_Model
         return $result;
     }
 
+    function get_progress_window_list()
+    {
+
+        $sql = "SELECT * FROM soft_progress WHERE product_name LIKE  \"%window%\"";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
+    function get_progress_ms_list()
+    {
+
+        $sql = "SELECT * FROM soft_progress WHERE product_name LIKE  \"%MS-Office%\"";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
+    function get_progress_hangul_list()
+    {
+
+        $sql = "SELECT * FROM soft_progress WHERE product_name LIKE  \"%한글%\"";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
+    function get_progress_etc_list()
+    {
+
+        $sql = "SELECT * FROM soft_progress WHERE NOT product_name LIKE \"Window%\" AND NOT product_name LIKE \"MS%\" AND NOT product_name LIKE \"한글%\"";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
     function get_keep_list()
     {
         $sql = "SELECT * FROM soft_keep";

@@ -236,7 +236,7 @@
                             </tr>
                             <tr>
                                 <td>6</td>
-                                <td>XP 업/다운그레이드</td>
+                                <td>XP 업/다운</td>
                                 <td>전산실</td>
                                 <td><?php echo $counter['xp_down']; ?></td>
                                 <td>
