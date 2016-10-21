@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49c9510d-296e-40ef-b4ca-43ea40eb1375" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/group.php" afterPath="$PROJECT_DIR$/application/controllers/group.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/list/computational/register/g_headset.php" afterPath="$PROJECT_DIR$/application/views/list/computational/register/g_headset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/list/jeonsan/j_item_cell.php" afterPath="$PROJECT_DIR$/application/views/list/jeonsan/j_item_cell.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/list/jeonsan/j_item_headset.php" afterPath="$PROJECT_DIR$/application/views/list/jeonsan/j_item_headset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/list/jeonsan/j_item_keyboard.php" afterPath="$PROJECT_DIR$/application/views/list/jeonsan/j_item_keyboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/list/jeonsan/j_item_moniter.php" afterPath="$PROJECT_DIR$/application/views/list/jeonsan/j_item_moniter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/list/jeonsan/j_item_mouse.php" afterPath="$PROJECT_DIR$/application/views/list/jeonsan/j_item_mouse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/list/jeonsan/j_item_pc.php" afterPath="$PROJECT_DIR$/application/views/list/jeonsan/j_item_pc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/user_login.php" afterPath="$PROJECT_DIR$/application/views/user/user_login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/User.php" afterPath="$PROJECT_DIR$/application/controllers/User.php" />
     </list>
     <ignored path="ci.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,142 +24,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="group.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/group.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="1192" column="16" selection-start-line="1192" selection-start-column="16" selection-end-line="1192" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Group_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Group_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="1169" column="13" selection-start-line="1169" selection-start-column="13" selection-end-line="1169" selection-end-column="13" />
-              <folding>
-                <marker date="1477018472862" expanded="true" signature="337:4687" ph="SELECT g_mon... g_moniter" />
-                <marker date="1477018472862" expanded="true" signature="4867:4890" ph="SELECT * FRO... g_moniter" />
-                <marker date="1477018472862" expanded="true" signature="4867:4917" ph="SELECT * FRO... g_moniter" />
-                <marker date="1477018472862" expanded="true" signature="5093:5138" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="5316:5367" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="5542:5590" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="5767:5817" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="5991:6038" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="6214:6263" ph="SELECT * FRO... g_cell" />
-                <marker date="1477018472862" expanded="true" signature="6435:6480" ph="SELECT * FRO... g_window" />
-                <marker date="1477018472862" expanded="true" signature="6656:6705" ph="SELECT * FRO... g_window" />
-                <marker date="1477018472862" expanded="true" signature="6883:6934" ph="SELECT * FRO... g_window" />
-                <marker date="1477018472862" expanded="true" signature="7109:7157" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="7332:7380" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="7554:7601" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="7779:7830" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="8004:8044" ph="SELECT * FRO... g_gs" />
-                <marker date="1477018472862" expanded="true" signature="8216:8250" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="8421:8435" ph="SELECT * FRO... soft_progress" />
-                <marker date="1477018472862" expanded="true" signature="8421:8450" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="8627:8662" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="8836:8868" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="9044:9078" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="9251:9282" ph="SELECT * FRO... g_pc" />
-                <marker date="1477018472862" expanded="true" signature="9457:9490" ph="SELECT * FRO... g_cell" />
-                <marker date="1477018472862" expanded="true" signature="9661:9690" ph="SELECT * FRO... g_ms" />
-                <marker date="1477018472862" expanded="true" signature="9866:9899" ph="SELECT * FRO... g_hangul" />
-                <marker date="1477018472862" expanded="true" signature="10077:10112" ph="SELECT * FRO... g_security" />
-                <marker date="1477018472862" expanded="true" signature="10286:10318" ph="SELECT * FRO... g_quark" />
-                <marker date="1477018472862" expanded="true" signature="10492:10524" ph="SELECT * FRO... g_adobe" />
-                <marker date="1477018472862" expanded="true" signature="10697:10728" ph="SELECT * FRO... g_font" />
-                <marker date="1477018472862" expanded="true" signature="10905:10940" ph="SELECT * FRO... g_compress" />
-                <marker date="1477018472862" expanded="true" signature="11414:11584" ph="UPDATE g_mon... " />
-                <marker date="1477018472862" expanded="true" signature="12131:12359" ph="UPDATE g_pc " />
-                <marker date="1477018472862" expanded="true" signature="13077:13193" ph="UPDATE g_key... " />
-                <marker date="1477018472862" expanded="true" signature="13609:13722" ph="UPDATE g_mou... " />
-                <marker date="1477018472862" expanded="true" signature="14140:14255" ph="UPDATE g_hea... " />
-                <marker date="1477018472862" expanded="true" signature="14670:14754" ph="UPDATE g_cel... " />
-                <marker date="1477018472862" expanded="true" signature="15109:15198" ph="UPDATE g_win... " />
-                <marker date="1477018472862" expanded="true" signature="15552:15637" ph="UPDATE g_ms " />
-                <marker date="1477018472862" expanded="true" signature="15988:16077" ph="UPDATE g_han... " />
-                <marker date="1477018472862" expanded="true" signature="16434:16525" ph="UPDATE g_sec... " />
-                <marker date="1477018472862" expanded="true" signature="16878:16975" ph="UPDATE g_qua... " />
-                <marker date="1477018472862" expanded="true" signature="17357:17455" ph="UPDATE g_ado... " />
-                <marker date="1477018472862" expanded="true" signature="17837:17960" ph="UPDATE g_fon... " />
-                <marker date="1477018472862" expanded="true" signature="18414:18495" ph="UPDATE g_com... " />
-                <marker date="1477018472862" expanded="true" signature="18979:19470" ph="INSERT INTO g_moniter... " />
-                <marker date="1477018472862" expanded="true" signature="19787:20485" ph="INSERT INTO g_pc... " />
-                <marker date="1477018472862" expanded="true" signature="20681:21003" ph="INSERT INTO g_keyboard... " />
-                <marker date="1477018472862" expanded="true" signature="21201:21525" ph="INSERT INTO g_mouse... " />
-                <marker date="1477018472862" expanded="true" signature="21692:21927" ph="INSERT INTO g_headset... " />
-                <marker date="1477018472862" expanded="true" signature="22091:22323" ph="INSERT INTO g_cell... " />
-                <marker date="1477018472862" expanded="true" signature="22498:22744" ph="INSERT INTO g_window... " />
-                <marker date="1477018472862" expanded="true" signature="22912:23151" ph="INSERT INTO g_window... " />
-                <marker date="1477018472862" expanded="true" signature="23326:23572" ph="INSERT INTO g_window... " />
-                <marker date="1477018472862" expanded="true" signature="23764:24027" ph="INSERT INTO g_window... " />
-                <marker date="1477018472862" expanded="true" signature="24220:24508" ph="INSERT INTO g_security... " />
-                <marker date="1477018472862" expanded="true" signature="24697:24846" ph="INSERT INTO g_security... " />
-                <marker date="1477018472862" expanded="true" signature="24697:24983" ph="INSERT INTO g_security... " />
-                <marker date="1477018472862" expanded="true" signature="25205:25580" ph="INSERT INTO g_security... " />
-                <marker date="1477018472862" expanded="true" signature="25763:26008" ph="INSERT INTO g_security... " />
-                <marker date="1477018472862" expanded="true" signature="26139:26176" ph="INSERT INTO je... " />
-                <marker date="1477018472862" expanded="true" signature="26139:26186" ph="INSERT INTO jeonsan_pc... " />
-                <marker date="1477018472862" expanded="true" signature="26139:26191" ph="INSERT INTO jeonsan_pc... " />
-                <marker date="1477018472862" expanded="true" signature="26162:26175" ph="SELECT * FRO... " />
-                <marker date="1477018472862" expanded="true" signature="26331:26393" ph="INSERT INTO jeonsan_moniter... " />
-                <marker date="1477018472862" expanded="true" signature="26359:26393" ph="SELECT * FRO... g_moniter" />
-                <marker date="1477018472862" expanded="true" signature="26534:26598" ph="INSERT INTO jeonsan_moniter... " />
-                <marker date="1477018472862" expanded="true" signature="26563:26598" ph="SELECT * FRO... g_moniter" />
-                <marker date="1477018472862" expanded="true" signature="26736:26797" ph="INSERT INTO jeonsan_moniter... " />
-                <marker date="1477018472862" expanded="true" signature="26762:26797" ph="SELECT * FRO... g_moniter" />
-                <marker date="1477018472862" expanded="true" signature="26937:26999" ph="INSERT INTO jeonsan_mouse... " />
-                <marker date="1477018472862" expanded="true" signature="26965:26999" ph="SELECT * FRO... g_keyboard" />
-                <marker date="1477018472862" expanded="true" signature="27136:27192" ph="INSERT INTO jeonsan_mouse... " />
-                <marker date="1477018472862" expanded="true" signature="27161:27192" ph="SELECT * FRO... g_keyboard" />
-                <marker date="1477018472862" expanded="true" signature="27330:27379" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="27518:27572" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="27713:27768" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="27905:27957" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="28096:28150" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="28286:28337" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="28520:28568" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="28702:28745" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="28885:28934" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="29071:29117" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="29256:29304" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="29440:29485" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="29623:29670" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="29804:29847" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="29985:30032" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="30172:30221" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="30358:30404" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="30541:30587" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="30723:30768" ph="DELETE FROM " />
-                <marker date="1477018472862" expanded="true" signature="30908:30957" ph="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="j_item_moniter.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/list/jeonsan/j_item_moniter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="j_item_pc.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/list/jeonsan/j_item_pc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="59" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="j_item_keyboard.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/list/jeonsan/j_item_keyboard.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -198,33 +54,98 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="j_item_headset.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="j_item_headset.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/list/jeonsan/j_item_headset.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="g_cell.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/list/computational/register/g_cell.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="g_headset.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/list/computational/register/g_headset.php">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+              <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/user/user_login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="653">
+              <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User_model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/User_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding>
+                <marker date="1475816448304" expanded="true" signature="350:464" ph="SELECT usern... users" />
+                <marker date="1475816448304" expanded="true" signature="736:776" ph="SELECT * FRO... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="974:1015" ph="SELECT * FRO... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="1213:1254" ph="SELECT * FRO... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="1456:1501" ph="SELECT * FRO... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="1699:1739" ph="SELECT * FRO... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="1935:1976" ph="SELECT * FRO... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="2278:2601" ph="INSERT INTO g_gs... " />
+                <marker date="1475816448304" expanded="true" signature="2818:2877" ph="insert into g_moniter... " />
+                <marker date="1475816448304" expanded="true" signature="2851:2876" ph="select max(i... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="2938:2992" ph="insert into g_pc... " />
+                <marker date="1475816448304" expanded="true" signature="2966:2991" ph="select max(i... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="3053:3113" ph="insert into g_keyboard... " />
+                <marker date="1475816448304" expanded="true" signature="3087:3112" ph="select max(i... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="3174:3231" ph="insert into g_mouse... " />
+                <marker date="1475816448304" expanded="true" signature="3205:3230" ph="select max(i... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="3292:3351" ph="insert into g_headset... " />
+                <marker date="1475816448304" expanded="true" signature="3325:3350" ph="select max(i... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="3648:3702" ph="insert into g_ms... " />
+                <marker date="1475816448304" expanded="true" signature="3676:3701" ph="select max(i... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="4003:4060" ph="insert into g_quark... " />
+                <marker date="1475816448304" expanded="true" signature="4034:4059" ph="select max(i... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="4121:4178" ph="insert into g_adobe... " />
+                <marker date="1475816448304" expanded="true" signature="4152:4177" ph="select max(i... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="4239:4295" ph="insert into g_font... " />
+                <marker date="1475816448304" expanded="true" signature="4269:4294" ph="select max(i... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="4356:4416" ph="insert into g_compress... " />
+                <marker date="1475816448304" expanded="true" signature="4390:4415" ph="select max(i... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="4565:4594" ph="SELECT * FRO... g_gs" />
+                <marker date="1475816448304" expanded="true" signature="4807:4936" ph="UPDATE g_gs " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="u_header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/user/u_header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="8" column="59" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logo-big.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/img/logo-big.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bg-1.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/img/bg-1.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -244,8 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/views/list/computational/g_gs/g_list.php" />
-        <option value="$PROJECT_DIR$/application/models/user_model.php" />
         <option value="$PROJECT_DIR$/application/views/list/computational/g_edit.php" />
         <option value="$PROJECT_DIR$/system/helpers/alert_helper.php" />
         <option value="$PROJECT_DIR$/application/views/list/computational/register/g_cell.php" />
@@ -295,6 +214,8 @@
         <option value="$PROJECT_DIR$/application/views/list/jeonsan/j_item_mouse.php" />
         <option value="$PROJECT_DIR$/application/views/list/jeonsan/j_item_cell.php" />
         <option value="$PROJECT_DIR$/application/views/list/jeonsan/j_item_headset.php" />
+        <option value="$PROJECT_DIR$/application/views/user/u_header.php" />
+        <option value="$PROJECT_DIR$/application/controllers/User.php" />
       </list>
     </option>
   </component>
@@ -367,6 +288,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SOFT-ADMIN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SOFT-ADMIN" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -385,81 +320,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SOFT-ADMIN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SOFT-ADMIN" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="list" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SOFT-ADMIN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SOFT-ADMIN" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="list" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jeonsan" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SOFT-ADMIN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SOFT-ADMIN" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="list" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="computational" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -588,12 +449,12 @@
       <workItem from="1474328682363" duration="116880000" />
       <workItem from="1475192926485" duration="39395000" />
       <workItem from="1476058694180" duration="65772000" />
-      <workItem from="1477009168101" duration="15980000" />
+      <workItem from="1477009168101" duration="17440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427344000" />
+    <option name="totallyTimeSpent" value="428804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -603,7 +464,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3247768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3247768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -637,44 +498,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/list/computational/register/g_quark.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="260" column="0" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4279" column="25" selection-start-line="4279" selection-start-column="25" selection-end-line="4279" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/list/computational/register/g_adobe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="50" column="130" selection-start-line="50" selection-start-column="130" selection-end-line="50" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="120" column="65" selection-start-line="120" selection-start-column="52" selection-end-line="120" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/list/soft_progress/progress_write.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -978,14 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/production/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1073,14 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-639">
           <caret line="113" column="61" selection-start-line="113" selection-start-column="61" selection-end-line="113" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/user_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1255,8 +1062,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/list/jeonsan/j_item_headset.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
+        <state relative-caret-position="432">
+          <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/jquery-file-upload/server/gae-go/static/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/u_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/logo-big.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/bg-1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/user_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/User_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <marker date="1475816448304" expanded="true" signature="350:464" ph="SELECT usern... users" />
+            <marker date="1475816448304" expanded="true" signature="736:776" ph="SELECT * FRO... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="974:1015" ph="SELECT * FRO... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="1213:1254" ph="SELECT * FRO... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="1456:1501" ph="SELECT * FRO... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="1699:1739" ph="SELECT * FRO... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="1935:1976" ph="SELECT * FRO... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="2278:2601" ph="INSERT INTO g_gs... " />
+            <marker date="1475816448304" expanded="true" signature="2818:2877" ph="insert into g_moniter... " />
+            <marker date="1475816448304" expanded="true" signature="2851:2876" ph="select max(i... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="2938:2992" ph="insert into g_pc... " />
+            <marker date="1475816448304" expanded="true" signature="2966:2991" ph="select max(i... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="3053:3113" ph="insert into g_keyboard... " />
+            <marker date="1475816448304" expanded="true" signature="3087:3112" ph="select max(i... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="3174:3231" ph="insert into g_mouse... " />
+            <marker date="1475816448304" expanded="true" signature="3205:3230" ph="select max(i... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="3292:3351" ph="insert into g_headset... " />
+            <marker date="1475816448304" expanded="true" signature="3325:3350" ph="select max(i... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="3648:3702" ph="insert into g_ms... " />
+            <marker date="1475816448304" expanded="true" signature="3676:3701" ph="select max(i... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="4003:4060" ph="insert into g_quark... " />
+            <marker date="1475816448304" expanded="true" signature="4034:4059" ph="select max(i... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="4121:4178" ph="insert into g_adobe... " />
+            <marker date="1475816448304" expanded="true" signature="4152:4177" ph="select max(i... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="4239:4295" ph="insert into g_font... " />
+            <marker date="1475816448304" expanded="true" signature="4269:4294" ph="select max(i... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="4356:4416" ph="insert into g_compress... " />
+            <marker date="1475816448304" expanded="true" signature="4390:4415" ph="select max(i... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="4565:4594" ph="SELECT * FRO... g_gs" />
+            <marker date="1475816448304" expanded="true" signature="4807:4936" ph="UPDATE g_gs " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
           <folding />
         </state>
       </provider>

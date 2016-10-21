@@ -40,8 +40,8 @@ class User extends CI_Controller
         $this -> load -> helper('alert');
 
         // 폼 검증 필드와 규칙 사전 정의
-        $this -> form_validation -> set_rules('username', '아이디', 'required|alpha_numeric');
-        $this -> form_validation -> set_rules('password', '비밀번호', 'required');
+        $this -> form_validation -> set_rules(md5('username'), '아이디', 'required|alpha_numeric');
+        $this -> form_validation -> set_rules(md5('password'), '비밀번호', 'required');
 
         echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
 
