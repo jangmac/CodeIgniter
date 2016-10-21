@@ -215,7 +215,8 @@
                                                                         <?php if (($lt->product_name) != '') {
                                                                             ?>
                                                                             <div class="btn-group">
-                                                                                <a class="btn btn-success">보관</a>
+                                                                                <a class="btn btn-success"
+                                                                                   href="/group/jeonsan_keep_mouse/<?php echo $lt->idx; ?>">보관</a>
                                                                                 <a class="btn btn-primary"
                                                                                    href="/group/g_mouse/<?php echo $lt->idx; ?>">수정</a>
                                                                                 <a class="btn btn-danger"
@@ -255,7 +256,8 @@
                                                                         <?php if (($lt->product_name) != '') {
                                                                             ?>
                                                                             <div class="btn-group">
-                                                                                <a class="btn btn-success">보관</a>
+                                                                                <a class="btn btn-success"
+                                                                                   href="/group/jeonsan_keep_headset/<?php echo $lt->idx; ?>">보관</a>
                                                                                 <a class="btn btn-primary"
                                                                                    href="/group/g_headset/<?php echo $lt->idx; ?>">수정</a>
                                                                                 <a class="btn btn-danger"
@@ -291,9 +293,8 @@
                                                                 <tr>
                                                                     <td>
                                                                         <div class="btn-group">
-                                                                            <button type="button"
-                                                                                    class="btn btn-success">보관
-                                                                            </button>
+                                                                            <a class="btn btn-success"
+                                                                               href="/group/jeonsan_keep_cell/<?php echo $lt->idx; ?>">보관</a>
                                                                             <a class="btn btn-primary"
                                                                                href="/group/g_cell/<?php echo $lt->idx; ?>">수정</a>
                                                                             <a class="btn btn-danger"

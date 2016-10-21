@@ -111,19 +111,19 @@
                             </tr>
                             <tr>
                                 <td>키보드</td>
-                                <td></td>
+                                <td><?php echo $counter['jeonsan_keyboard']; ?></td>
                             </tr>
                             <tr>
                                 <td>마우스</td>
-                                <td></td>
+                                <td><?php echo $counter['jeonsan_mouse']; ?></td>
                             </tr>
                             <tr>
                                 <td>헤드셋</td>
-                                <td></td>
+                                <td><?php echo $counter['jeonsan_headset']; ?></td>
                             </tr>
                             <tr>
                                 <td>전화기</td>
-                                <td></td>
+                                <td><?php echo $counter['jeonsan_cell']; ?></td>
                             </tr>
                         </table>
                     </div>
@@ -131,7 +131,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h2><i class="fa fa-flag-o red"></i><strong>전산 소프트웨어 현재사용내역</strong></h2>
@@ -143,21 +143,27 @@
                                 <th>#</th>
                                 <th>목록</th>
                                 <th>사용갯수</th>
-                                <th>라이센스제한갯수</th>
                                 <th>Active</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Window7 Home Premium<br>
-                                    CQBVJ-9J697-PWB9R-4K7W4-2BT4</td>
-                                <td><?php echo $counter['win1']; ?></td>
-                                <td>-</td>
-                                <td>
-                                    <a class="btn btn-primary btn-sm" href="/soft/write_progress/">신규 등록</a>
-                                    <a class="btn btn-success btn-sm" href="/soft/progress_list/"> 목록 바로가기</a>
-                                </td>
+                                <td><b>Window</b></td>
+                                <td><?php echo $counter['win']; ?></td>
+                                <td><a class="btn btn-primary btn-sm" href="/soft/use_window/">자세히 보기</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><b>MS-Office</b></td>
+                                <td><?php echo $counter['ms']; ?></td>
+                                <td><a class="btn btn-primary btn-sm" href="/soft/use_ms/">자세히 보기</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><b>한글제품</b></td>
+                                <td><?php echo $counter['hangul']; ?></td>
+                                <td><a class="btn btn-primary btn-sm" href="/soft/use_hangul/">자세히 보기</a></td>
                             </tr>
                             </tbody>
                         </table>

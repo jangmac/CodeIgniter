@@ -117,12 +117,21 @@ class Main_model extends CI_Model
         $result = $this->db->query($sql)->result_array();
         $dash_count += ["g_cell" => $result[0]['cnt']];
 
-        ## 전산 소프트웨어 현재사용내역
-        //
-        $sql = "SELECT count(*) as cnt FROM g_window 
-                WHERE product_number LIKE \"%CQBVJ-9J697-PWB9R-4K7W4-2BT4%\"";
+        ## 전산 소프트웨어 현재사용내역 ##
+        // WINDOW 사용내역
+        $sql = "SELECT count(*) AS cnt FROM g_window WHERE product_number LIKE \"%Window%\"";
         $result = $this->db->query($sql)->result_array();
-        $dash_count += ["win1" => $result[0]['cnt']];
+        $dash_count += ["win" => $result[0]['cnt']];
+
+        // MS-OFFICE 사용내역
+        $sql = "SELECT count(*) AS cnt FROM g_ms WHERE product_number LIKE \"%MS-Office%\"";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["ms" => $result[0]['cnt']];
+
+        // 한글제품 사용내역
+        $sql = "SELECT count(*) AS cnt FROM g_hangul WHERE product_number LIKE \"%한글%\"";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["hangul" => $result[0]['cnt']];
 
         ## 전산실 보관 ##
         //모니터
@@ -134,17 +143,21 @@ class Main_model extends CI_Model
         $result = $this->db->query($sql)->result_array();
         $dash_count += ["jeonsan_pc" => $result[0]['cnt']];
         //키보드
-        //$sql = "SELECT count(*) as cnt FROM jeonsan_keyboard";
-        //$result = $this->db->query($sql)->result_array();
-        //$dash_count += ["jeonsan_keyboard" => $result[0]['cnt']];
+        $sql = "SELECT count(*) as cnt FROM jeonsan_keyboard";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["jeonsan_keyboard" => $result[0]['cnt']];
         //마우스
-        //$sql = "SELECT count(*) as cnt FROM jeonsan_mouse";
-        //$result = $this->db->query($sql)->result_array();
-        //$dash_count += ["jeonsan_mouse" => $result[0]['cnt']];
+        $sql = "SELECT count(*) as cnt FROM jeonsan_mouse";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["jeonsan_mouse" => $result[0]['cnt']];
         //헤드셋
-        //$sql = "SELECT count(*) as cnt FROM jeonsan_headset";
-        //$result = $this->db->query($sql)->result_array();
-        //$dash_count += ["jeonsan_headset" => $result[0]['cnt']];
+        $sql = "SELECT count(*) as cnt FROM jeonsan_headset";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["jeonsan_headset" => $result[0]['cnt']];
+        //전화기
+        $sql = "SELECT count(*) as cnt FROM jeonsan_cell";
+        $result = $this->db->query($sql)->result_array();
+        $dash_count += ["jeonsan_cell" => $result[0]['cnt']];
         
         return $dash_count;
         

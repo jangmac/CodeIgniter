@@ -1067,7 +1067,39 @@ class Group extends CI_Controller
         }
     }
 
-    ### 전산실 보관항목 삭제 ###
+    public function jeonsan_keep_headset()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->add_keep_headset($idx);
+
+        if ($return) {
+            alert('데이터 보관되었습니다.');
+            exit;
+        } else {
+            alert('보관 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function jeonsan_keep_cell()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->add_keep_cell($idx);
+
+        if ($return) {
+            alert('데이터 보관되었습니다.');
+            exit;
+        } else {
+            alert('보관 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    ### 전산실 *보관*항목 삭제 ###
 
     public function jeonsan_moniter_delete()
     {
@@ -1090,6 +1122,38 @@ class Group extends CI_Controller
         // 게시물 번호에 해당하는 게시물 삭제
         $idx = $this->uri->segment(3);
         $return = $this->group_model->delete_keep_pc($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function jeonsan_keyboard_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_keep_keyboard($idx);
+
+        if ($return) {
+            alert('데이터 삭제되었습니다.');
+            exit;
+        } else {
+            alert('삭제 오류입니다. 관리자에게 문의해주세요.');
+            exit;
+        }
+    }
+
+    public function jeonsan_mouse_delete()
+    {
+        $this->load->helper('alert');
+        // 게시물 번호에 해당하는 게시물 삭제
+        $idx = $this->uri->segment(3);
+        $return = $this->group_model->delete_keep_mouse($idx);
 
         if ($return) {
             alert('데이터 삭제되었습니다.');

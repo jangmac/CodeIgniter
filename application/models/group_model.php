@@ -1085,15 +1085,6 @@ class Group_model extends CI_Model
         return $result;
     }
 
-    function delete_keep_pc($idx)
-    {
-        $sql = "DELETE FROM jeonsan_pc WHERE idx = '" . $idx . "'";
-
-        $result = $this->db->query($sql);
-
-        return $result;
-    }
-
     function add_keep_moniter($idx)
     {
         $sql = "INSERT INTO jeonsan_moniter SELECT * FROM g_moniter WHERE idx=$idx";
@@ -1103,9 +1094,91 @@ class Group_model extends CI_Model
         return $result;
     }
 
+    function add_keep_keyboard($idx)
+    {
+        $sql = "INSERT INTO jeonsan_keyboard SELECT * FROM g_keyboard WHERE idx=$idx";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function add_keep_mouse($idx)
+    {
+        $sql = "INSERT INTO jeonsan_mouse SELECT * FROM g_keyboard WHERE idx=$idx";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function add_keep_headset($idx)
+    {
+        $sql = "INSERT INTO jeonsan_headset SELECT * FROM g_headset WHERE idx=$idx";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function add_keep_cell($idx)
+    {
+        $sql = "INSERT INTO jeonsan_cell SELECT * FROM g_cell WHERE idx=$idx";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function delete_keep_pc($idx)
+    {
+        $sql = "DELETE FROM jeonsan_pc WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
     function delete_keep_moniter($idx)
     {
         $sql = "DELETE FROM jeonsan_moniter WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+
+    function delete_keep_keyboard($idx)
+    {
+        $sql = "DELETE FROM jeonsan_keyboard WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function delete_keep_mouse($idx)
+    {
+        $sql = "DELETE FROM jeonsan_mouse WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function delete_keep_headset($idx)
+    {
+        $sql = "DELETE FROM jeonsan_headset WHERE idx = '" . $idx . "'";
+
+        $result = $this->db->query($sql);
+
+        return $result;
+    }
+
+    function delete_keep_cell($idx)
+    {
+        $sql = "DELETE FROM jeonsan_cell WHERE idx = '" . $idx . "'";
 
         $result = $this->db->query($sql);
 

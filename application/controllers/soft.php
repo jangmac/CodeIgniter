@@ -120,12 +120,25 @@ class Soft extends CI_Controller
         $data['asiafont_up'] = $this->soft_model->get_asiafont_up_list();
         $this->load->view('list/asiafont/asiafont_up', $data);
     }
-
-    public function soft_account()
+    
+    public function use_window()
     {
-        $data['soft_account'] = $this->soft_model->get_soft_account_list();
-        $this->load->view('list/account/soft_account', $data);
+        $data['use_window'] = $this->soft_model->get_use_window_list();
+        $this->load->view('list/computational/using_soft/use_window', $data);
     }
+    
+    public function use_ms()
+    {
+        $data['use_ms'] = $this->soft_model->get_use_ms_list();
+        $this->load->view('list/computational/using_soft/use_ms', $data);
+    }
+    
+    public function use_hangul()
+    {
+        $data['use_hangul'] = $this->soft_model->get_use_hangul_list();
+        $this->load->view('list/computational/using_soft/use_hangul', $data);
+    }
+    
     
     /*
      * 전산실 목록불러오기
@@ -154,6 +167,18 @@ class Soft extends CI_Controller
     {
         $data['keep_mouse'] = $this->soft_model->get_keep_mouse();
         $this->load->view('list/jeonsan/j_item_mouse', $data);
+    }
+
+    public function keep_headset()
+    {
+        $data['keep_headset'] = $this->soft_model->get_keep_headset();
+        $this->load->view('list/jeonsan/j_item_headset', $data);
+    }
+
+    public function keep_cell()
+    {
+        $data['keep_cell'] = $this->soft_model->get_keep_cell();
+        $this->load->view('list/jeonsan/j_item_cell', $data);
     }
 
     /*

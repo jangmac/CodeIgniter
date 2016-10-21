@@ -233,6 +233,66 @@ class Soft_model extends CI_Model
         return $result;
     }
 
+    function get_keep_headset()
+    {
+        $sql = "SELECT * FROM jeonsan_headset";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
+    function get_keep_cell()
+    {
+        $sql = "SELECT * FROM jeonsan_cell";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
+    /*
+     * 대시보드에서 보여주는 소프트웨어 상세보기
+     * 각소프트웨어를 전체목록 보여주고 어떤사용자가 쓰고있는지 매칭해준다.
+     */
+
+    function get_use_window_list()
+    {
+        $sql = "SELECT * FROM g_window LEFT JOIN g_gs ON g_window.user_idx=g_gs.idx";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
+    function get_use_ms_list()
+    {
+        $sql = "SELECT * FROM g_ms LEFT JOIN g_gs ON g_ms.user_idx=g_gs.idx";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
+    function get_use_hangul_list()
+    {
+        $sql = "SELECT * FROM g_hangul LEFT JOIN g_gs ON g_hangul.user_idx=g_gs.idx";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
     /*
      * soft_progress 등록
      */

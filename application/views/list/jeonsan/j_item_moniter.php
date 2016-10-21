@@ -14,6 +14,8 @@
                         <li><a href="/soft/keep_moniter" title="moniter">모니터</a></li>
                         <li><a href="/soft/keep_keyboard" title="keyboard">키보드</a></li>
                         <li><a href="/soft/keep_mouse" title="Bootstrap 3 themes generator">마우스</a></li>
+                        <li><a href="/soft/keep_headset" title="headset">헤드셋</a></li>
+                        <li><a href="/soft/keep_cell" title="cell">전화기</a></li>
                     </ul>
                 </div><!-- /btn-group -->
             </div>
