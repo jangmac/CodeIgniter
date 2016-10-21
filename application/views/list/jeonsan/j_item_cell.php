@@ -46,13 +46,11 @@
                             <tr>
                                 <td>
                                     <div class="btn-group">
-                                        <a class="btn btn-primary"
-                                           href="/group/g_cell/<?php echo $lt->idx; ?>">수정</a>
-                                        <a class="btn btn-danger"
-                                           href="/group//<?php echo $lt->idx; ?>">삭제</a>
+                                        <a class="btn btn-danger btn-sm"
+                                           href="/group/jeonsan_cell_delete/<?php echo $lt->idx; ?>">삭제</a>
                                     </div>
                                 </td>
-                                <td>jeonsan_cell_delete
+                                <td>
                                     <?php echo $lt->product_name; ?>
                                 </td>
                                 <td>

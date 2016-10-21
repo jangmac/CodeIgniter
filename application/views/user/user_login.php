@@ -27,7 +27,6 @@
                 <span class="pull-right"> <a href="#"> 비밀번호를 잊으셨나요?</a></span>
             </label>
             <button class="btn btn-primary btn-lg btn-block" type="submit">로그인</button>
-            <button class="btn btn-info btn-lg btn-block" href="user/user_register" type="submit">회원가입</button>
         </div>
     </form>
 

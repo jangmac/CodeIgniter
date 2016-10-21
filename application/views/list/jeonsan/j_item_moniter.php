@@ -50,9 +50,7 @@
                             <tr>
                                 <td>
                                     <div class="btn-group">
-                                        <a class="btn btn-primary"
-                                           href="/group/g_moniter/<?php echo $lt->idx; ?>">수정</a>
-                                        <a class="btn btn-danger"
+                                        <a class="btn btn-danger btn-sm"
                                            href="/group/jeonsan_moniter_delete/<?php echo $lt->idx; ?>">삭제</a>
                                     </div>
                                 </td>

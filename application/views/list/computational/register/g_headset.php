@@ -23,7 +23,7 @@
                                     <div class="col-lg-10">
                                         <input class="form-control" id="product_name"
                                                name="product_name" type="text"
-                                               value=<?php echo $views->product_name; ?>
+                                               value="<?php echo $views->product_name; ?>"
                                         >
                                     </div>
                                 </div>
