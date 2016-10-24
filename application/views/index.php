@@ -170,17 +170,17 @@
                             </tr>
                             <tr>
                                 <td><b>Quark</b></td>
-                                <td></td>
+                                <td>-</td>
                                 <td><a class="btn btn-primary btn-sm" href="/soft/">자세히 보기</a></td>
                             </tr>
                             <tr>
                                 <td><b>Adobe</b></td>
-                                <td></td>
+                                <td>-</td>
                                 <td><a class="btn btn-primary btn-sm" href="/soft/">자세히 보기</a></td>
                             </tr>
                             <tr>
                                 <td><b>폰트</b></td>
-                                <td></td>
+                                <td>-</td>
                                 <td><a class="btn btn-primary btn-sm" href="/soft/">자세히 보기</a></td>
                             </tr>
                             </tbody>
