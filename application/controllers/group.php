@@ -1425,7 +1425,7 @@ class Group extends CI_Controller
 
 
     /*
-     * 전산기록부로 엑셀 데이터 출력해본다
+     * 전산기록부로 엑셀 데이터 출력해본다(개인 전산)
      */
     public function excel_print()
     {

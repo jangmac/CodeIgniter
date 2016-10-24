@@ -120,6 +120,42 @@ class Soft extends CI_Controller
         $data['asiafont_up'] = $this->soft_model->get_asiafont_up_list();
         $this->load->view('list/asiafont/asiafont_up', $data);
     }
+
+    public function use_moniter()
+    {
+        $data['use_moniter'] = $this->soft_model->get_use_moniter_list();
+        $this->load->view('list/computational/using_soft/use_moniter', $data);
+    }
+
+    public function use_pc()
+    {
+        $data['use_pc'] = $this->soft_model->get_use_pc_list();
+        $this->load->view('list/computational/using_soft/use_pc', $data);
+    }
+
+    public function use_keyboard()
+    {
+        $data['use_keyboard'] = $this->soft_model->get_use_keyboard_list();
+        $this->load->view('list/computational/using_soft/use_keyboard', $data);
+    }
+
+    public function use_mouse()
+    {
+        $data['use_mouse'] = $this->soft_model->get_use_mouse_list();
+        $this->load->view('list/computational/using_soft/use_mouse', $data);
+    }
+
+    public function use_headset()
+    {
+        $data['use_headset'] = $this->soft_model->get_use_headset_list();
+        $this->load->view('list/computational/using_soft/use_headset', $data);
+    }
+
+    public function use_cell()
+    {
+        $data['use_cell'] = $this->soft_model->get_use_cell_list();
+        $this->load->view('list/computational/using_soft/use_cell', $data);
+    }
     
     public function use_window()
     {
@@ -1060,51 +1096,243 @@ class Soft extends CI_Controller
     }
 
     /*
-     * 데이터 엑셀 출력
+     * 데이터 엑셀 출력 - 모니터 사용리스트
      */
 
-    public function excel_print()
+    public function print_moniter_list()
     {
-        // PHPExcel 라이브러리 로드
+        # PHPExcel 라이브러리 로드
         $this->load->library('PHPExcel');
 
-        // 워크시트에서 1번째는 활성화
+        # 자료 가져오기
+        $this->load->model('soft_model');
+        $data['use_moniter_list'] = $this->soft_model->get_use_moniter_list();
+
+        # 시트지정
         $this->phpexcel->setActiveSheetIndex(0);
-        // 워크시트 이름 지정
-        $this->phpexcel->getActiveSheet()->setTitle('테스트 워크시트');
-        // A1의 내용을 입력 합니다.
-        $this->phpexcel->getActiveSheet()->setCellValue('A1', '여기에 텍스트 입력');
-        // A1의 폰트를 변경 합니다.
-        $this->phpexcel->getActiveSheet()->getStyle('A1')->getFont()->setSize(20);
-        // A1의 글씨를 볼드로 변경합니다.
-        $this->phpexcel->getActiveSheet()->getStyle('A1')->getFont()->setBold(true);
-        // A1부터 D1까지 셀을 합칩니다.
-        $this->phpexcel->getActiveSheet()->mergeCells('A1:D1');
-        // A1의 컬럼에서 가운데 쓰기를 합니다.
+        $this->phpexcel->getActiveSheet()->setTitle('Sheet1');
+
+        # 테두리
+        # 셀 전체(윤곽선 + 안쪽)
+        $this->phpexcel->getActiveSheet()->getStyle('A1:J60')->getBorders()
+            ->getAllBorders()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+
+        # 전체 폰트 및 텍스트정렬 설정
+        $this->phpexcel->getActiveSheet()->duplicateStyleArray(
+            array(
+                'font' => array(
+                    'size' => 11
+                ),
+                'alignment' => array(
+                    'horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_LEFT,
+                    'vertical'   => PHPExcel_Style_Alignment::VERTICAL_CENTER
+                )
+            ),
+            'A1:J60'
+        );
+
+        //개행문자처리
+        $this->phpexcel->getActiveSheet()->getStyle('A1:J60')->getAlignment()->setWrapText(true);
+
+        # cell 헤더 설정
         $this->phpexcel->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+        $this->phpexcel->getActiveSheet()->getStyle("A1")->getFill()
+            ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB("FFE400");
+        $this->phpexcel->getActiveSheet()->setCellValue('A1', '모니터 현재사용내역');
+        $this->phpexcel->getActiveSheet()->getStyle('A2:J2')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+        $this->phpexcel->getActiveSheet()->getStyle('A')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+        $this->phpexcel->getActiveSheet()->getStyle("A2:J2")->getFill()
+            ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB("FFE400");
+        $this->phpexcel->getActiveSheet()->setCellValue('A2', '사용자');
+        $this->phpexcel->getActiveSheet()->setCellValue('B2', '제조사');
+        $this->phpexcel->getActiveSheet()->setCellValue('C2', '제품명');
+        $this->phpexcel->getActiveSheet()->setCellValue('D2', '모델코드');
+        $this->phpexcel->getActiveSheet()->setCellValue('E2', '모델명');
+        $this->phpexcel->getActiveSheet()->setCellValue('F2', '식별부호');
+        $this->phpexcel->getActiveSheet()->setCellValue('G2', '제조년월');
+        $this->phpexcel->getActiveSheet()->setCellValue('H2', 'S/N');
+        $this->phpexcel->getActiveSheet()->setCellValue('I2', '기안문서번호');
+        $this->phpexcel->getActiveSheet()->setCellValue('J2', '구매일');
 
-        $filename = 'just_some_random_name.xls'; // 엑셀 파일 이름
-        header('Content-Type: application/vnd.ms-excel'); //mime 타입
-        header('Content-Disposition: attachment;filename="' . $filename . '"'); // 브라우저에서 받을 파일 이름
-        header('Cache-Control: max-age=0'); //no cache
+        // 글자 진하게
+        $this->phpexcel->getActiveSheet()->getStyle('A1')->getFont()->setBold(true);
 
-        // Excel5 포맷으로 저장 엑셀 2007 포맷으로 저장하고 싶은 경우 'Excel2007'로 변경합니다.
+        /*
+         * cell 헤더 병합
+         */
+        $this->phpexcel->getActiveSheet()->mergeCells('A1:J1');
+
+        /*
+         * cell 크기 지정
+         */
+        $this->phpexcel->getActiveSheet()->getColumnDimension('A')->setWidth(14);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('B')->setWidth(12);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('C')->setWidth(12);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('D')->setWidth(20);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('E')->setWidth(11);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('F')->setWidth(24);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('G')->setWidth(10);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('H')->setWidth(20);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('I')->setWidth(20);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('J')->setWidth(11);
+
+        /*
+         * cell 데이터 출력
+         */
+        $num='3';
+        foreach ($data['use_moniter_list'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue('A'.$num, $lt->user_name);
+            $this->phpexcel->getActiveSheet()->setCellValue('B'.$num, $lt->company);
+            $this->phpexcel->getActiveSheet()->setCellValue('C'.$num, $lt->product_name);
+            $this->phpexcel->getActiveSheet()->setCellValue('D'.$num, $lt->model_code);
+            $this->phpexcel->getActiveSheet()->setCellValue('E'.$num, $lt->model_name);
+            $this->phpexcel->getActiveSheet()->setCellValue('F'.$num, $lt->identify);
+            $this->phpexcel->getActiveSheet()->setCellValue('G'.$num, $lt->produce_ym);
+            $this->phpexcel->getActiveSheet()->setCellValue('H'.$num, $lt->soft_num);
+            $this->phpexcel->getActiveSheet()->setCellValue('I'.$num, $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue('J'.$num, $lt->buy_day);
+            $num++;
+        endforeach;
+
+
+        # 파일로 내보낸다. 파일명은 'filename.xls' 이다.
+        $filename = '모니터현재사용내역_' . date('Ymd') . '.xls';
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="' . $filename . '"');
+        header('Cache-Control: max-age=0');
+        # Excel5 포맷(excel 2003 .XLS file)으로 저장한다.
+        # 두 번째 매개변수를 'Excel2007'로 바꾸면 Excel 2007 .XLSX 포맷으로 저장한다.
         $objWriter = PHPExcel_IOFactory::createWriter($this->phpexcel, 'Excel5');
-        // 서버에 파일을 쓰지 않고 바로 다운로드 받습니다.
+        # 이용자가 다운로드하여 컴퓨터 HD에 저장하도록 강제한다.
         $objWriter->save('php://output');
     }
+
+    /*
+     * 데이터 엑셀 출력 - 본체(PC) 사용리스트
+     */
+
+    public function print_pc_list()
+    {
+        # PHPExcel 라이브러리 로드
+        $this->load->library('PHPExcel');
+
+        # 자료 가져오기
+        $this->load->model('soft_model');
+        $data['use_pc_list'] = $this->soft_model->get_use_pc_list();
+
+        # 시트지정
+        $this->phpexcel->setActiveSheetIndex(0);
+        $this->phpexcel->getActiveSheet()->setTitle('Sheet1');
+
+        # 테두리
+        # 셀 전체(윤곽선 + 안쪽)
+        $this->phpexcel->getActiveSheet()->getStyle('A1:O60')->getBorders()
+            ->getAllBorders()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+
+        # 전체 폰트 및 텍스트정렬 설정
+        $this->phpexcel->getActiveSheet()->duplicateStyleArray(
+            array(
+                'font' => array(
+                    'size' => 11
+                ),
+                'alignment' => array(
+                    'horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_LEFT,
+                    'vertical'   => PHPExcel_Style_Alignment::VERTICAL_CENTER
+                )
+            ),
+            'A1:O60'
+        );
+
+        //개행문자처리
+        $this->phpexcel->getActiveSheet()->getStyle('A1:O60')->getAlignment()->setWrapText(true);
+
+        # cell 헤더 설정
+        $this->phpexcel->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+        $this->phpexcel->getActiveSheet()->getStyle("A1")->getFill()
+            ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB("FFE400");
+        $this->phpexcel->getActiveSheet()->setCellValue('A1', '본체(PC) 현재사용내역');
+        $this->phpexcel->getActiveSheet()->getStyle('A2:O2')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+        $this->phpexcel->getActiveSheet()->getStyle('A')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+        $this->phpexcel->getActiveSheet()->getStyle("A2:O2")->getFill()
+            ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB("FFE400");
+        $this->phpexcel->getActiveSheet()->setCellValue('A2', '사용자');
+        $this->phpexcel->getActiveSheet()->setCellValue('B2', '제조사');
+        $this->phpexcel->getActiveSheet()->setCellValue('C2', '모델명');
+        $this->phpexcel->getActiveSheet()->setCellValue('D2', '모델코드');
+        $this->phpexcel->getActiveSheet()->setCellValue('E2', '제조번호');
+        $this->phpexcel->getActiveSheet()->setCellValue('F2', '제품코드');
+        $this->phpexcel->getActiveSheet()->setCellValue('G2', '식별부호');
+        $this->phpexcel->getActiveSheet()->setCellValue('H2', '제조년월');
+        $this->phpexcel->getActiveSheet()->setCellValue('I2', 'CPU');
+        $this->phpexcel->getActiveSheet()->setCellValue('J2', 'RAM');
+        $this->phpexcel->getActiveSheet()->setCellValue('K2', 'HDD(C:)');
+        $this->phpexcel->getActiveSheet()->setCellValue('L2', 'HDD(D:)');
+        $this->phpexcel->getActiveSheet()->setCellValue('M2', '그래픽카드');
+        $this->phpexcel->getActiveSheet()->setCellValue('N2', '기안문서번호');
+        $this->phpexcel->getActiveSheet()->setCellValue('O2', '구매일');
+
+        // 글자 진하게
+        $this->phpexcel->getActiveSheet()->getStyle('A1')->getFont()->setBold(true);
+
+        /*
+         * cell 헤더 병합
+         */
+        $this->phpexcel->getActiveSheet()->mergeCells('A1:O1');
+
+        /*
+         * cell 크기 지정
+         */
+        $this->phpexcel->getActiveSheet()->getColumnDimension('A')->setWidth(14);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('B')->setWidth(12);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('C')->setWidth(11);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('D')->setWidth(18);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('E')->setWidth(19);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('F')->setWidth(19);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('G')->setWidth(25);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('H')->setWidth(12);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('I')->setWidth(43);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('J')->setWidth(8);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('K')->setWidth(11);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('L')->setWidth(11);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('M')->setWidth(14);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('N')->setWidth(20);
+        $this->phpexcel->getActiveSheet()->getColumnDimension('O')->setWidth(19);
+
+        /*
+         * cell 데이터 출력
+         */
+        $num='3';
+        foreach ($data['use_pc_list'] as $lt):
+            $this->phpexcel->getActiveSheet()->setCellValue('A'.$num, $lt->user_name);
+            $this->phpexcel->getActiveSheet()->setCellValue('B'.$num, $lt->company);
+            $this->phpexcel->getActiveSheet()->setCellValue('C'.$num, $lt->model_name);
+            $this->phpexcel->getActiveSheet()->setCellValue('D'.$num, $lt->model_code);
+            $this->phpexcel->getActiveSheet()->setCellValue('E'.$num, $lt->produce_number);
+            $this->phpexcel->getActiveSheet()->setCellValue('F'.$num, $lt->product_code);
+            $this->phpexcel->getActiveSheet()->setCellValue('G'.$num, $lt->identify);
+            $this->phpexcel->getActiveSheet()->setCellValue('H'.$num, $lt->produce_ym);
+            $this->phpexcel->getActiveSheet()->setCellValue('I'.$num, $lt->g_cpu);
+            $this->phpexcel->getActiveSheet()->setCellValue('J'.$num, $lt->g_ram);
+            $this->phpexcel->getActiveSheet()->setCellValue('K'.$num, $lt->g_hdd_c);
+            $this->phpexcel->getActiveSheet()->setCellValue('L'.$num, $lt->g_hdd_d);
+            $this->phpexcel->getActiveSheet()->setCellValue('M'.$num, $lt->g_graphic);
+            $this->phpexcel->getActiveSheet()->setCellValue('N'.$num, $lt->gian_num);
+            $this->phpexcel->getActiveSheet()->setCellValue('O'.$num, $lt->buy_day);
+            $num++;
+        endforeach;
+
+
+        # 파일로 내보낸다. 파일명은 'filename.xls' 이다.
+        $filename = '본체(PC)현재사용내역_' . date('Ymd') . '.xls';
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="' . $filename . '"');
+        header('Cache-Control: max-age=0');
+        # Excel5 포맷(excel 2003 .XLS file)으로 저장한다.
+        # 두 번째 매개변수를 'Excel2007'로 바꾸면 Excel 2007 .XLSX 포맷으로 저장한다.
+        $objWriter = PHPExcel_IOFactory::createWriter($this->phpexcel, 'Excel5');
+        # 이용자가 다운로드하여 컴퓨터 HD에 저장하도록 강제한다.
+        $objWriter->save('php://output');
+    }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 

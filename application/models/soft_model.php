@@ -260,6 +260,72 @@ class Soft_model extends CI_Model
      * 각소프트웨어를 전체목록 보여주고 어떤사용자가 쓰고있는지 매칭해준다.
      */
 
+    function get_use_moniter_list()
+    {
+        $sql = "SELECT * FROM g_moniter LEFT JOIN g_gs ON g_moniter.user_idx=g_gs.idx";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+    
+    function get_use_pc_list()
+    {
+        $sql = "SELECT * FROM g_pc LEFT JOIN g_gs ON g_pc.user_idx=g_gs.idx";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
+    function get_use_keyboard_list()
+    {
+        $sql = "SELECT * FROM g_keyboard LEFT JOIN g_gs ON g_keyboard.user_idx=g_gs.idx";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
+    function get_use_mouse_list()
+    {
+        $sql = "SELECT * FROM g_mouse LEFT JOIN g_gs ON g_mouse.user_idx=g_gs.idx";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
+    function get_use_headset_list()
+    {
+        $sql = "SELECT * FROM g_headset LEFT JOIN g_gs ON g_headset.user_idx=g_gs.idx";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
+    function get_use_cell_list()
+    {
+        $sql = "SELECT * FROM g_cell LEFT JOIN g_gs ON g_cell.user_idx=g_gs.idx";
+
+        $query = $this->db->query($sql);
+
+        $result = $query->result();
+
+        return $result;
+    }
+
     function get_use_window_list()
     {
         $sql = "SELECT * FROM g_window LEFT JOIN g_gs ON g_window.user_idx=g_gs.idx";

@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h2><i class="fa fa-flag-o red"></i><strong>그룹원 등록현황</strong></h2>
@@ -21,7 +21,7 @@
                         <table class="table bootstrap-datatable countries">
                             <tr>
                                 <th>부서</th>
-                                <th>등록 인원</th>
+                                <th>등록인원</th>
                             </tr>
                             <tr>
                                 <td>경영지원본부</td>
@@ -51,46 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h2><i class="fa fa-flag-o red"></i><strong>보급품 사용현황</strong></h2>
-                    </div>
-                    <div class="panel-body">
-                        <table class="table bootstrap-datatable countries">
-                            <tr>
-                                <th>항목</th>
-                                <th>현재 사용 갯수</th>
-                            </tr>
-                            <tr>
-                                <td>모니터</td>
-                                <td><?php echo $counter['g_moniter']; ?></td>
-                            </tr>
-                            <tr>
-                                <td>본체</td>
-                                <td><?php echo $counter['g_pc']; ?></td>
-                            </tr>
-                            <tr>
-                                <td>키보드</td>
-                                <td><?php echo $counter['g_keyboard']; ?></td>
-                            </tr>
-                            <tr>
-                                <td>마우스</td>
-                                <td><?php echo $counter['g_mouse']; ?></td>
-                            </tr>
-                            <tr>
-                                <td>헤드셋</td>
-                                <td><?php echo $counter['g_headset']; ?></td>
-                            </tr>
-                            <tr>
-                                <td>전화기</td>
-                                <td><?php echo $counter['g_cell']; ?></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h2><i class="fa fa-flag-o red"></i><strong>전산실 보관현황</strong></h2>
@@ -99,7 +60,7 @@
                         <table class="table bootstrap-datatable countries">
                             <tr>
                                 <th>항목</th>
-                                <th>보관 갯수</th>
+                                <th>보관갯수</th>
                             </tr>
                             <tr>
                                 <td>모니터</td>
@@ -131,6 +92,52 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2><i class="fa fa-flag-o red"></i><strong>보급품 사용현황</strong></h2>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table bootstrap-datatable countries">
+                            <tr>
+                                <th>항목</th>
+                                <th>사용갯수</th>
+                                <th>Active</th>
+                            </tr>
+                            <tr>
+                                <td>모니터</td>
+                                <td><?php echo $counter['g_moniter']; ?></td>
+                                <td><a class="btn btn-primary btn-sm" href="/soft/use_moniter">자세히 보기</a></td>
+                            </tr>
+                            <tr>
+                                <td>본체</td>
+                                <td><?php echo $counter['g_pc']; ?></td>
+                                <td><a class="btn btn-primary btn-sm" href="/soft/use_pc">자세히 보기</a></td>
+                            </tr>
+                            <tr>
+                                <td>키보드</td>
+                                <td><?php echo $counter['g_keyboard']; ?></td>
+                                <td><a class="btn btn-primary btn-sm" href="/soft/use_keyboard">자세히 보기</a></td>
+                            </tr>
+                            <tr>
+                                <td>마우스</td>
+                                <td><?php echo $counter['g_mouse']; ?></td>
+                                <td><a class="btn btn-primary btn-sm" href="/soft/use_mouse">자세히 보기</a></td>
+                            </tr>
+                            <tr>
+                                <td>헤드셋</td>
+                                <td><?php echo $counter['g_headset']; ?></td>
+                                <td><a class="btn btn-primary btn-sm" href="/soft/use_headset">자세히 보기</a></td>
+                            </tr>
+                            <tr>
+                                <td>전화기</td>
+                                <td><?php echo $counter['g_cell']; ?></td>
+                                <td><a class="btn btn-primary btn-sm" href="/soft/use_cell">자세히 보기</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-6 col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -140,7 +147,6 @@
                         <table class="table bootstrap-datatable countries">
                             <thead>
                             <tr>
-                                <th>#</th>
                                 <th>목록</th>
                                 <th>사용갯수</th>
                                 <th>Active</th>
@@ -148,22 +154,34 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td>1</td>
                                 <td><b>Window</b></td>
                                 <td><?php echo $counter['win']; ?></td>
                                 <td><a class="btn btn-primary btn-sm" href="/soft/use_window/">자세히 보기</a></td>
                             </tr>
                             <tr>
-                                <td>2</td>
                                 <td><b>MS-Office</b></td>
                                 <td><?php echo $counter['ms']; ?></td>
                                 <td><a class="btn btn-primary btn-sm" href="/soft/use_ms/">자세히 보기</a></td>
                             </tr>
                             <tr>
-                                <td>3</td>
                                 <td><b>한글제품</b></td>
                                 <td><?php echo $counter['hangul']; ?></td>
                                 <td><a class="btn btn-primary btn-sm" href="/soft/use_hangul/">자세히 보기</a></td>
+                            </tr>
+                            <tr>
+                                <td><b>Quark</b></td>
+                                <td></td>
+                                <td><a class="btn btn-primary btn-sm" href="/soft/">자세히 보기</a></td>
+                            </tr>
+                            <tr>
+                                <td><b>Adobe</b></td>
+                                <td></td>
+                                <td><a class="btn btn-primary btn-sm" href="/soft/">자세히 보기</a></td>
+                            </tr>
+                            <tr>
+                                <td><b>폰트</b></td>
+                                <td></td>
+                                <td><a class="btn btn-primary btn-sm" href="/soft/">자세히 보기</a></td>
                             </tr>
                             </tbody>
                         </table>
