@@ -35,20 +35,22 @@ class User extends CI_Controller
     public function login() {
         // Form validation 라이브러리 로드 ( 폼 검증 라이브러리 로드)
         $this -> load -> library('form_validation');
+        //보안 헬퍼 로딩
+        $this->load->helper('security');
 
         // Alert 라이브러리 로드(메시지)
         $this -> load -> helper('alert');
 
         // 폼 검증 필드와 규칙 사전 정의
-        $this -> form_validation -> set_rules(md5('username'), '아이디', 'required|alpha_numeric');
-        $this -> form_validation -> set_rules(md5('password'), '비밀번호', 'required');
+        $this -> form_validation -> set_rules('username', '아이디', 'required|alpha_numeric');
+        $this -> form_validation -> set_rules('password', '비밀번호', 'required');
 
         echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
 
         if ($this -> form_validation -> run() == TRUE) {
             $auth_data = array(
-                'username' => $this -> input -> post('username', TRUE),
-                'password' => $this -> input -> post('password', TRUE)
+                'username' => $this -> input -> post('username'),
+                'password' => md5($this -> input -> post('password'))
             );
 
             $result = $this -> user_model -> login($auth_data);
