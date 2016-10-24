@@ -141,7 +141,7 @@
             <div class="col-lg-6 col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h2><i class="fa fa-flag-o red"></i><strong>전산 소프트웨어 현재사용내역t</strong></h2>
+                        <h2><i class="fa fa-flag-o red"></i><strong>전산 소프트웨어 현재사용내역</strong></h2>
                     </div>
                     <div class="panel-body">
                         <table class="table bootstrap-datatable countries">
